@@ -1,0 +1,13 @@
+{
+  "name": "vins-website-workspace",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix \"vins website update\" run dev",
+    "dev:client": "npm --prefix \"vins website update\" run dev:client",
+    "dev:server": "npm --prefix \"vins website update\" run dev:server",
+    "build": "npm --prefix \"vins website update\" run build",
+    "lint": "npm --prefix \"vins website update\" run lint",
+    "start": "npm --prefix \"vins website update\" run dev"
+  }
+}
