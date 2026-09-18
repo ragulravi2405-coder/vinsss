@@ -20,7 +20,6 @@ import { FloatingElement } from '../components/common/FloatingElement';
 import { ScrollReveal } from '../components/common/ScrollReveal';
 import { EventNotificationPopup } from '../components/common/EventNotificationPopup';
 import { FloatingEventsButton } from '../components/common/FloatingEventsButton';
-import { Vins3DExplodedHeroText } from '../components/common/Vins3DExplodedHeroText';
 
 interface HomePageProps {
   onTabChange: (tab: NavigationTab, anchorId?: string, departmentId?: string) => void;
@@ -96,108 +95,29 @@ export const HomePage: React.FC<HomePageProps> = ({ onTabChange, onOpenExplodedV
       </div>
 
 
-      {/* Responsive Mobile Background Fix for Hero Section */}
-      <style>{`
-        /* Hero Section Height Optimization */
-        .hero-responsive-container {
-          /* Mobile: Full-screen height */
-          min-height: 100vh;
-          margin-top: 0 !important;
-          padding-top: 0 !important;
-        }
-        @media (min-width: 640px) {
-          .hero-responsive-container {
-            /* Desktop: Original layout and height */
-            min-height: clamp(520px, 85vh, 900px);
-            margin-top: 0 !important;
-            padding-top: 0 !important;
-          }
-        }
-
-        /* Hero Background Image Optimization */
-        .hero-responsive-bg {
-          /* Mobile View: High-res portrait mobile campus image */
-          background-image: url('/images/clg%20photo/vins%20clg%20bg%20mobile%20view%20img.png');
-          background-repeat: no-repeat;
-          background-size: cover;
-          background-position: center center;
-          filter: brightness(0.70) contrast(1.05);
-        }
-        
-        @media (min-width: 640px) {
-          .hero-responsive-bg {
-            /* Desktop / Windows View: Full wide landscape campus image */
-            background-image: url('/images/clg%20photo/vins%20colleg%20bg%20windows%20%20img.png');
-            background-size: cover;
-            background-position: center 22%;
-            filter: brightness(0.68) contrast(1.05);
-          }
-        }
-      `}</style>
-
-      {/* 1. HERO SECTION - 5-LAYER 3D PARALLAX & CINEMATIC DEPTH */}
+      {/* 1. HERO SECTION - FULL COVER CLEAR VINS COLLEGE CAMPUS PHOTO (BETWEEN NAVBAR & SLIDER) */}
       <section 
-        ref={heroRef}
-        onMouseMove={handleHeroMouseMove}
-        onMouseLeave={handleHeroMouseLeave}
-        className="relative text-white overflow-hidden hero-responsive-container perspective-1000 mt-0 pt-0"
-        style={{ marginTop: 0, paddingTop: 0 }}
+        className="w-full relative overflow-hidden mt-0 mb-4 sm:mb-8"
+        aria-label="VINS Christian College of Engineering Campus"
       >
-
-        {/* Layer 1 background with animated fade/scale */}
-        <AnimatePresence>
-          <motion.div
-            key={currentSlide}
-            className="absolute inset-0 z-0 hero-responsive-bg will-change-transform"
-            initial={{ opacity: 0, scale: 1.08 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.95 }}
-            transition={{ duration: 1.2, ease: 'easeOut' }}
-            style={{
-              transform: `translate3d(${-heroMouse.x * 14}px, ${-heroMouse.y * 12}px, 0px)`,
-            }}
-            aria-hidden="true"
+        <picture className="w-full block">
+          {/* Mobile Screen: Full cover portrait mobile campus photo */}
+          <source 
+            media="(max-width: 639px)" 
+            srcSet="/images/clg%20photo/vins%20clg%20bg%20mobile%20view%20img.png" 
           />
-        </AnimatePresence>
-
-        {/* ── Layer 2: Soft Dull Shade Overlay for Text Clarity ── */}
-        <div 
-          className="absolute inset-0 z-0 pointer-events-none"
-          style={{
-            background: 'linear-gradient(180deg, rgba(6, 16, 33, 0.45) 0%, rgba(4, 10, 24, 0.52) 50%, rgba(6, 16, 33, 0.65) 100%)',
-          }}
-          aria-hidden="true" 
-        />
-
-        {/* ── Layer 3: Decorative Floating 3D Depth Elements (Luminous Orbs & Geometric Rings) ── */}
-        <div 
-          className="absolute inset-0 z-[1] pointer-events-none overflow-hidden transition-transform duration-500 ease-out preserve-3d"
-          style={{
-            transform: `translate3d(${heroMouse.x * 16}px, ${heroMouse.y * 14}px, 15px)`,
-            transformStyle: 'preserve-3d',
-          }}
-          aria-hidden="true"
-        >
-          {/* Soft Blurred Luminous Ambient Glow Orbs */}
-          <div className="absolute -top-24 left-1/4 w-96 h-96 rounded-full bg-amber-400/15 blur-3xl animate-float-a" />
-          <div className="absolute bottom-12 right-1/4 w-80 h-80 rounded-full bg-blue-500/15 blur-3xl animate-float-b" />
-          
-          {/* Elegant Subtle Geometric Depth Rings */}
-          <div className="absolute top-1/4 left-8 w-44 h-44 rounded-full border border-white/10 animate-float-c hidden lg:block" />
-          <div className="absolute bottom-1/4 right-12 w-64 h-64 rounded-full border border-amber-300/15 animate-float-b hidden lg:block" />
-        </div>
-
-        {/* ── Layer 4 & 5: Interactive 3D "VINS" Master Hero Typography ── */}
-        <div className="relative z-10 flex items-center justify-center w-full h-full min-h-[inherit] py-6 sm:py-8 lg:py-12 px-2 sm:px-4 lg:px-6 preserve-3d">
-          <Vins3DExplodedHeroText
-            heroMouse={heroMouse}
-            onNavigateAdmissions={() => onTabChange('admissions', 'online-form')}
-            onOpenVideo={() => setVideoModalOpen(true)}
-            onOpenExplodedView={onOpenExplodedView}
-            tneaCode={siteTheme?.tneaCode || '4982'}
+          {/* Desktop Screen: Full cover wide landscape campus photo */}
+          <source 
+            media="(min-width: 640px)" 
+            srcSet="/images/clg%20photo/vins%20colleg%20bg%20windows%20%20img.png" 
           />
-        </div>
-
+          <img
+            src="/images/clg%20photo/vins%20colleg%20bg%20windows%20%20img.png"
+            alt="VINS Christian College of Engineering Campus"
+            className="w-full h-[68vh] sm:h-[78vh] lg:h-[85vh] min-h-[420px] object-cover object-center block"
+            loading="eager"
+          />
+        </picture>
       </section>
 
       {/* 2. 3D EXPLODE TRANSITION IMAGE SLIDER */}
