@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { 
-  ArrowRight, ChevronLeft, ChevronRight, Play, Award, Users, GraduationCap, 
+  ArrowRight, Play, Award, Users, GraduationCap, 
   Trophy, BookOpen, UserCheck, Cpu, Briefcase, FlaskConical, Bus, PartyPopper, 
   Calendar, CheckCircle2, Sparkles, ShieldCheck, HeartHandshake, Globe, Shield,
-  Building, Star, Quote, Eye, Image as ImageIcon, MapPin, Clock, Share2, Pause,
+  Building, Star, Quote, Eye, Image as ImageIcon, MapPin, Clock, Share2,
   Bell, FileText, Download, Megaphone, Video, ExternalLink, Layers
 } from 'lucide-react';
 import { COLLEGE_INFO, STATS_COUNTERS, HERO_SLIDES, NEWS_EVENTS, GALLERY_IMAGES } from '../data/collegeData';
@@ -34,53 +34,12 @@ export const HomePage: React.FC<HomePageProps> = ({ onTabChange, onOpenExplodedV
   const activeDepartments = departments && departments.length > 0 ? departments : DEPARTMENTS_DATA;
   const activeNotifications = notifications && notifications.length > 0 ? notifications : NOTIFICATIONS_DATA;
 
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(true);
   const [selectedEvent, setSelectedEvent] = useState<typeof NEWS_EVENTS[0] | null>(null);
   const [galleryFilter, setGalleryFilter] = useState<string>('All');
   const [selectedGalleryImg, setSelectedGalleryImg] = useState<typeof GALLERY_IMAGES[0] | null>(null);
   const [videoModalOpen, setVideoModalOpen] = useState(false);
   const [selectedPdfDoc, setSelectedPdfDoc] = useState<DocumentItem | null>(null);
-
-  // Hero Section 3D Parallax Tracking
-  const heroRef = useRef<HTMLElement>(null);
-  const heroRafId = useRef<number | null>(null);
-  const [heroMouse, setHeroMouse] = useState({ x: 0, y: 0 });
-
-  const handleHeroMouseMove = useCallback((e: React.MouseEvent<HTMLElement>) => {
-    if (!heroRef.current || typeof window === 'undefined' || window.innerWidth < 768) return;
-    const rect = heroRef.current.getBoundingClientRect();
-    const nx = ((e.clientX - rect.left) / rect.width - 0.5) * 2;
-    const ny = ((e.clientY - rect.top) / rect.height - 0.5) * 2;
-
-    if (heroRafId.current) cancelAnimationFrame(heroRafId.current);
-    heroRafId.current = requestAnimationFrame(() => {
-      setHeroMouse({ x: nx, y: ny });
-    });
-  }, []);
-
-  const handleHeroMouseLeave = useCallback(() => {
-    if (heroRafId.current) cancelAnimationFrame(heroRafId.current);
-    setHeroMouse({ x: 0, y: 0 });
-  }, []);
-
-  useEffect(() => {
-    return () => {
-      if (heroRafId.current) cancelAnimationFrame(heroRafId.current);
-    };
-  }, []);
-
-  // Auto-slide image timer (5 seconds)
-  useEffect(() => {
-    if (!isPlaying) return;
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % activeSlides.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [isPlaying, activeSlides.length]);
-
-  const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % activeSlides.length);
-  const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + activeSlides.length) % activeSlides.length);
+  const [marqueeHovered, setMarqueeHovered] = useState(false);
 
   // Filter gallery images
   const filteredGallery = galleryFilter === 'All' 
@@ -120,128 +79,136 @@ export const HomePage: React.FC<HomePageProps> = ({ onTabChange, onOpenExplodedV
         </picture>
       </section>
 
-      {/* 2. 3D EXPLODE TRANSITION IMAGE SLIDER */}
-      <section className="relative w-full max-w-[1720px] mx-auto px-3 sm:px-6 lg:px-8 mt-6 sm:mt-10 mb-10 sm:mb-16 z-20">
+      {/* 2. INFINITE AUTO-RUNNING MARQUEE IMAGE STRIP */}
+      <section className="relative w-full mt-4 sm:mt-8 mb-10 sm:mb-16 z-20 overflow-hidden">
         <style>{`
-          @keyframes kbSlider {
-            0%   { transform: scale(1.0) translate(0px, 0px); }
-            50%  { transform: scale(1.06) translate(-8px, -4px); }
-            100% { transform: scale(1.0) translate(0px, 0px); }
+          @keyframes marquee-slide {
+            0%   { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
           }
-          .kb-slider-img { animation: kbSlider 8s ease-in-out infinite; }
+          .marquee-track {
+            display: flex;
+            width: max-content;
+            animation: marquee-slide 36s linear infinite;
+            will-change: transform;
+          }
+          .marquee-track.paused {
+            animation-play-state: paused;
+          }
+          .marquee-card {
+            flex-shrink: 0;
+            margin-right: 16px;
+            border-radius: 18px;
+            overflow: hidden;
+            width: 340px;
+            height: 220px;
+            box-shadow: 0 8px 32px rgba(10,37,64,0.18);
+            transition: transform 0.35s cubic-bezier(0.22,1,0.36,1), box-shadow 0.35s ease;
+            cursor: pointer;
+            position: relative;
+            border: 2px solid rgba(255,255,255,0.15);
+          }
+          @media (min-width: 640px) {
+            .marquee-card {
+              width: 440px;
+              height: 290px;
+              margin-right: 22px;
+              border-radius: 22px;
+            }
+          }
+          @media (min-width: 1024px) {
+            .marquee-card {
+              width: 580px;
+              height: 360px;
+              margin-right: 28px;
+              border-radius: 26px;
+            }
+          }
+          .marquee-card:hover {
+            transform: scale(1.045) translateY(-4px);
+            box-shadow: 0 22px 56px rgba(10,37,64,0.32), 0 0 0 3px rgba(251,191,36,0.5);
+            z-index: 10;
+          }
+          .marquee-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transition: transform 0.5s ease;
+            display: block;
+          }
+          .marquee-card:hover img {
+            transform: scale(1.06);
+          }
+          .marquee-card-overlay {
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            background: linear-gradient(to top, rgba(6,16,33,0.82) 0%, transparent 100%);
+            padding: 14px 18px 14px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+          }
+          .marquee-card:hover .marquee-card-overlay {
+            opacity: 1;
+          }
+          /* Edge fade masks */
+          .marquee-fade-left  { background: linear-gradient(to right, white 0%, transparent 100%); }
+          .marquee-fade-right { background: linear-gradient(to left,  white 0%, transparent 100%); }
         `}</style>
 
-        {/* Floating Organic Halo Effect */}
-        <div className="relative organic-glass-slider-wrapper" style={{ perspective: '1400px' }}>
-          <div className="organic-glass-halo" />
+        {/* Strip Header Badge */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-4 flex items-center gap-3">
+          <div className="h-[2px] flex-1 max-w-[40px] bg-gradient-to-r from-transparent to-amber-400" />
+          <span className="text-[10px] sm:text-xs font-black tracking-[0.22em] uppercase text-[#54524e] flex items-center gap-1.5">
+            <Sparkles className="w-3 h-3 text-amber-500" />
+            VINS CAMPUS &amp; EVENTS
+            <Sparkles className="w-3 h-3 text-amber-500" />
+          </span>
+          <div className="h-[2px] flex-1 max-w-[40px] bg-gradient-to-l from-transparent to-amber-400" />
+        </div>
 
+        {/* Marquee Wrapper with edge fade */}
+        <div className="relative">
+          {/* Left fade mask */}
+          <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-28 marquee-fade-left z-10 pointer-events-none" />
+          {/* Right fade mask */}
+          <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-28 marquee-fade-right z-10 pointer-events-none" />
+
+          {/* The continuously scrolling track */}
           <div
-            className="organic-glass-slider-inner aspect-[21/10] sm:aspect-[21/9] min-h-[340px] sm:min-h-[520px] lg:min-h-[620px] overflow-hidden"
-            style={{ transformStyle: 'preserve-3d' }}
+            className={`marquee-track${marqueeHovered ? ' paused' : ''}`}
+            onMouseEnter={() => setMarqueeHovered(true)}
+            onMouseLeave={() => setMarqueeHovered(false)}
+            aria-label="VINS Campus image gallery"
           >
-            {/* 3D Explode Slide Transition */}
-            <AnimatePresence mode="wait">
-              {(() => {
-                const slide = activeSlides[currentSlide];
-                const variants = [
-                  // 0: Explode Scale — centre burst outward
-                  {
-                    initial: { opacity: 0, scale: 0.55, rotateY: 0, z: -400, filter: 'blur(18px) brightness(0.4)' },
-                    animate: { opacity: 1, scale: 1, rotateY: 0, z: 0, filter: 'blur(0px) brightness(1)' },
-                    exit:    { opacity: 0, scale: 1.25, rotateY: 0, z: 200, filter: 'blur(12px) brightness(1.4)' },
-                    transition: { duration: 0.92, ease: [0.22, 1, 0.36, 1] },
-                  },
-                  // 1: Depth Rotate — flips in from left on Y-axis
-                  {
-                    initial: { opacity: 0, rotateY: -90, z: -300, scale: 0.8, filter: 'blur(10px)' },
-                    animate: { opacity: 1, rotateY: 0, z: 0, scale: 1, filter: 'blur(0px)' },
-                    exit:    { opacity: 0, rotateY: 90, z: -200, scale: 0.85, filter: 'blur(8px)' },
-                    transition: { duration: 1.0, ease: [0.16, 1, 0.3, 1] },
-                  },
-                  // 2: Slice Up — rises like a curtain with X-rotate
-                  {
-                    initial: { opacity: 0, rotateX: 55, z: -250, scale: 0.85, filter: 'blur(14px) brightness(0.5)' },
-                    animate: { opacity: 1, rotateX: 0, z: 0, scale: 1, filter: 'blur(0px) brightness(1)' },
-                    exit:    { opacity: 0, rotateX: -45, z: -150, scale: 0.9, filter: 'blur(8px) brightness(0.6)' },
-                    transition: { duration: 0.95, ease: [0.34, 1.56, 0.64, 1] },
-                  },
-                  // 3: Z-Burst — image rockets toward camera
-                  {
-                    initial: { opacity: 0, scale: 2.2, z: 800, filter: 'blur(22px) brightness(2)' },
-                    animate: { opacity: 1, scale: 1, z: 0, filter: 'blur(0px) brightness(1)' },
-                    exit:    { opacity: 0, scale: 0.4, z: -600, filter: 'blur(16px) brightness(0.3)' },
-                    transition: { duration: 1.05, ease: [0.22, 1, 0.36, 1] },
-                  },
-                  // 4: Diagonal Split — comes in from top-right corner
-                  {
-                    initial: { opacity: 0, x: '40%', y: '-35%', rotate: 8, scale: 0.7, filter: 'blur(16px)' },
-                    animate: { opacity: 1, x: '0%', y: '0%', rotate: 0, scale: 1, filter: 'blur(0px)' },
-                    exit:    { opacity: 0, x: '-40%', y: '35%', rotate: -8, scale: 0.75, filter: 'blur(12px)' },
-                    transition: { duration: 0.9, ease: [0.16, 1, 0.3, 1] },
-                  },
-                  // 5: Roll In — rotateZ spin with scale
-                  {
-                    initial: { opacity: 0, rotate: -12, scale: 0.6, z: -300, filter: 'blur(20px) saturate(0)' },
-                    animate: { opacity: 1, rotate: 0, scale: 1, z: 0, filter: 'blur(0px) saturate(1)' },
-                    exit:    { opacity: 0, rotate: 12, scale: 0.65, z: -200, filter: 'blur(14px) saturate(0)' },
-                    transition: { duration: 1.0, ease: [0.34, 1.56, 0.64, 1] },
-                  },
-                ];
-                const v = variants[currentSlide % variants.length];
-                return (
-                  <motion.div
-                    key={currentSlide}
-                    className="absolute inset-0 z-0"
-                    initial={v.initial as any}
-                    animate={v.animate as any}
-                    exit={v.exit as any}
-                    transition={v.transition}
-                    style={{ transformStyle: 'preserve-3d' }}
-                  >
-                    {/* Slide Image — pure, no text overlay */}
-                    <img
-                      src={slide?.visualUrl || '/images/college events and news galeery/h9.jpg'}
-                      alt={slide?.title || 'VINS Campus Slide'}
-                      className="w-full h-full object-cover object-center kb-slider-img"
-                    />
-                  </motion.div>
-                );
-              })()}
-            </AnimatePresence>
-
-            {/* ── Navigation Arrows ONLY ── */}
-            <button
-              onClick={prevSlide}
-              className="absolute left-3 sm:left-5 top-1/2 -translate-y-1/2 z-20 cursor-pointer"
-              aria-label="Previous slide"
-            >
+            {/* Render slides twice for seamless looping */}
+            {[...activeSlides, ...activeSlides].map((slide, idx) => (
               <div
-                className="w-9 h-9 sm:w-12 sm:h-12 rounded-full flex items-center justify-center transition-all duration-300"
-                style={{ background: 'rgba(255,255,255,0.13)', backdropFilter: 'blur(12px)', border: '1px solid rgba(255,255,255,0.22)' }}
-                onMouseEnter={e => (e.currentTarget.style.background = 'rgba(255,255,255,0.28)')}
-                onMouseLeave={e => (e.currentTarget.style.background = 'rgba(255,255,255,0.13)')}
+                key={`${slide.id}-${idx}`}
+                className="marquee-card"
+                title={slide.title}
               >
-                <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
+                <img
+                  src={slide.visualUrl || slide.imagePath}
+                  alt={slide.title}
+                  loading={idx < 4 ? 'eager' : 'lazy'}
+                />
+                {/* Hover Caption Overlay */}
+                <div className="marquee-card-overlay">
+                  <p className="text-[11px] sm:text-xs font-bold text-amber-300 uppercase tracking-wider truncate">{slide.subtitle}</p>
+                  <p className="text-xs sm:text-sm font-black text-white leading-snug line-clamp-1 mt-0.5">{slide.title}</p>
+                </div>
               </div>
-            </button>
-            <button
-              onClick={nextSlide}
-              className="absolute right-3 sm:right-5 top-1/2 -translate-y-1/2 z-20 cursor-pointer"
-              aria-label="Next slide"
-            >
-              <div
-                className="w-9 h-9 sm:w-12 sm:h-12 rounded-full flex items-center justify-center transition-all duration-300"
-                style={{ background: 'rgba(255,255,255,0.13)', backdropFilter: 'blur(12px)', border: '1px solid rgba(255,255,255,0.22)' }}
-                onMouseEnter={e => (e.currentTarget.style.background = 'rgba(255,255,255,0.28)')}
-                onMouseLeave={e => (e.currentTarget.style.background = 'rgba(255,255,255,0.13)')}
-              >
-                <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
-              </div>
-            </button>
-
+            ))}
           </div>
         </div>
 
+        {/* Pause-on-hover label */}
+        {marqueeHovered && (
+          <div className="flex justify-center mt-3">
+            <span className="text-[10px] text-slate-400 font-medium tracking-wider uppercase">⏸ Paused — move cursor away to continue</span>
+          </div>
+        )}
       </section>
 
       {/* 3. REST OF HOME PAGE - LAYERED GLASSY CEMENT GREY */}
