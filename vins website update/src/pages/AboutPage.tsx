@@ -48,7 +48,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ initialAnchor = 'vision' }
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#0A2540] via-[#061727]/85 to-transparent pointer-events-none" />
           <div className="relative z-10 space-y-3">
-            <div className="badge-academic bg-gradient-to-r from-[#8B0000] to-[#5B0000] text-white border border-white/25 shadow-md">
+            <div className="badge-academic bg-gradient-to-r from-[#FF6B00] to-[#E05E00] text-white border border-white/25 shadow-md">
               <Sparkles className="w-3.5 h-3.5 text-white" />
               <span>Established 2004 · Chunkankadai, Nagercoil</span>
             </div>
@@ -67,7 +67,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ initialAnchor = 'vision' }
         
         {/* Left Sub-Nav Sidebar */}
         <div className="lg:col-span-3 sticky top-24 bg-white rounded-3xl border-2 border-[#0A2540]/15 p-4 shadow-md space-y-1.5">
-          <span className="text-xs font-bold text-[#8B0000] uppercase tracking-wider block px-3 py-1">
+          <span className="text-xs font-bold text-[#FF6B00] uppercase tracking-wider block px-3 py-1">
             Section Directory
           </span>
 
@@ -87,7 +87,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ initialAnchor = 'vision' }
                   : 'text-[#0A2540] hover:bg-[#1E40AF]/10 hover:text-[#1E40AF]'
               }`}
             >
-              <Icon className={`w-4 h-4 shrink-0 ${activeSection === id ? 'text-[#8B0000]' : 'text-[#1E40AF]'}`} />
+              <Icon className={`w-4 h-4 shrink-0 ${activeSection === id ? 'text-[#FF6B00]' : 'text-[#1E40AF]'}`} />
               {label}
             </button>
           ))}
@@ -99,7 +99,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ initialAnchor = 'vision' }
           {/* Section 1: Vision & Mission */}
           <div id="vision" className="bg-white rounded-3xl p-6 sm:p-8 border-2 border-[#0A2540]/15 shadow-md space-y-6 scroll-mt-28">
             <div className="flex items-center gap-3 border-b-2 border-[#0A2540]/10 pb-4">
-              <div className="w-10 h-10 rounded-xl bg-[#8B0000] flex items-center justify-center shadow-md">
+              <div className="w-10 h-10 rounded-xl bg-[#FF6B00] flex items-center justify-center shadow-md">
                 <Target className="w-5 h-5 text-white" />
               </div>
               <div>
@@ -111,11 +111,11 @@ export const AboutPage: React.FC<AboutPageProps> = ({ initialAnchor = 'vision' }
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Vision Card with 3D Tilt */}
               <TiltCard maxTilt={5} scale={1.015} className="h-full">
-                <div className="bg-white rounded-2xl p-6 sm:p-7 space-y-3 border border-gray-200 hover:border-[#8B0000]/40 transition-all shadow-3d-soft h-full flex flex-col justify-between">
+                <div className="bg-white rounded-2xl p-6 sm:p-7 space-y-3 border border-gray-200 hover:border-[#FF6B00]/40 transition-all shadow-3d-soft h-full flex flex-col justify-between">
                   <div className="space-y-3">
                     <div className="flex items-center gap-2 text-[#0A2540] font-bold text-sm uppercase tracking-wider">
-                      <div className="w-8 h-8 rounded-lg bg-red-50 text-[#8B0000] flex items-center justify-center">
-                        <Compass className="w-4 h-4 text-[#8B0000]" />
+                      <div className="w-8 h-8 rounded-lg bg-orange-50 text-[#FF6B00] flex items-center justify-center">
+                        <Compass className="w-4 h-4 text-[#FF6B00]" />
                       </div>
                       <span className="font-playfair text-base">Our Vision</span>
                     </div>
@@ -172,11 +172,11 @@ export const AboutPage: React.FC<AboutPageProps> = ({ initialAnchor = 'vision' }
 
               {/* Official AICTE / Anna University Affiliation Notice */}
               <div className="bg-[#0A2540] rounded-2xl p-5 border border-white/15 flex items-center gap-4 mt-4 shadow-md">
-                <Landmark className="w-8 h-8 text-[#8B0000] shrink-0" />
+                <Landmark className="w-8 h-8 text-[#FF6B00] shrink-0" />
                 <div className="space-y-1">
                   <h4 className="font-bold text-sm text-white">Statutory Approval &amp; Affiliation Status</h4>
                   <p className="text-[11px] text-white/85">
-                    VINS Christian College of Engineering is permanently approved by AICTE, New Delhi and affiliated with Anna University, Chennai. Anna University Counselling TNEA Code: <strong className="text-[#8B0000]">{COLLEGE_INFO.code}</strong>.
+                    VINS Christian College of Engineering is permanently approved by AICTE, New Delhi and affiliated with Anna University, Chennai. Anna University Counselling TNEA Code: <strong className="text-[#FF6B00]">{COLLEGE_INFO.code}</strong>.
                   </p>
                 </div>
               </div>
@@ -186,7 +186,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ initialAnchor = 'vision' }
           {/* Section 3: Founder Chairman Desk */}
           <div id="chairman" className="bg-white rounded-3xl p-6 sm:p-8 border-2 border-[#0A2540]/15 shadow-md space-y-6 scroll-mt-28">
             <div className="flex items-center gap-4 border-b-2 border-[#0A2540]/10 pb-4">
-              <div className="w-10 h-10 rounded-xl bg-[#8B0000] flex items-center justify-center shadow-md">
+              <div className="w-10 h-10 rounded-xl bg-[#FF6B00] flex items-center justify-center shadow-md">
                 <Award className="w-5 h-5 text-white" />
               </div>
               <div>
@@ -223,7 +223,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ initialAnchor = 'vision' }
 
                 <div className="space-y-3 text-xs text-[#0A2540]/85 leading-relaxed">
                   <h3 className="font-bold font-poppins text-[#0A2540] text-sm uppercase tracking-wide flex items-center gap-2 border-b-2 border-[#0A2540]/10 pb-2">
-                    <Quote className="w-4 h-4 text-[#8B0000]" />
+                    <Quote className="w-4 h-4 text-[#FF6B00]" />
                     Chairman's Address to Students &amp; Parents
                   </h3>
                   {FOUNDER_CHAIRMAN_DATA.messageParagraphs.map((para, idx) => (
@@ -265,14 +265,14 @@ export const AboutPage: React.FC<AboutPageProps> = ({ initialAnchor = 'vision' }
                 </div>
                 <div className="bg-white p-4 sm:p-5 rounded-2xl border border-gray-200 text-xs space-y-1 text-center shadow-3d-soft">
                   <p className="font-bold text-base font-playfair text-[#0A2540]">{PRINCIPAL_DESK_DATA.name}</p>
-                  <p className="text-[#8B0000] font-bold">Principal, Vins Christian College of Engineering</p>
+                  <p className="text-[#FF6B00] font-bold">Principal, Vins Christian College of Engineering</p>
                 </div>
               </div>
 
               {/* Principal Message */}
               <div className="md:col-span-8 space-y-4">
                 <h3 className="font-bold font-poppins text-[#0A2540] text-sm uppercase tracking-wide border-b-2 border-[#0A2540]/10 pb-2 flex items-center gap-2">
-                  <Quote className="w-4 h-4 text-[#8B0000]" />
+                  <Quote className="w-4 h-4 text-[#FF6B00]" />
                   Academic Leadership &amp; Vision Message
                 </h3>
                 <div className="space-y-3 text-xs text-[#0A2540]/85 leading-relaxed">
@@ -295,7 +295,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ initialAnchor = 'vision' }
           <div id="organogram" className="bg-white rounded-3xl p-6 sm:p-8 border-2 border-[#0A2540]/15 shadow-md space-y-6 scroll-mt-28">
             <div className="flex items-center gap-3 border-b-2 border-[#0A2540]/10 pb-4">
               <div className="w-10 h-10 rounded-xl bg-[#0A2540] flex items-center justify-center shadow-md">
-                <Network className="w-5 h-5 text-[#8B0000]" />
+                <Network className="w-5 h-5 text-[#FF6B00]" />
               </div>
               <div>
                 <h2 className="text-xl font-bold font-poppins text-[#0A2540]">Administrative Organogram</h2>
@@ -310,19 +310,19 @@ export const AboutPage: React.FC<AboutPageProps> = ({ initialAnchor = 'vision' }
               </div>
               <div className="w-0.5 h-6 bg-[#0A2540]/30" />
               {/* Middle box */}
-              <div className="bg-[#8B0000] text-white font-bold rounded-2xl shadow-md text-center w-64 px-4 py-3 text-sm border border-white/20">
+              <div className="bg-[#FF6B00] text-white font-bold rounded-2xl shadow-md text-center w-64 px-4 py-3 text-sm border border-white/20">
                 Principal &amp; Academic Council
               </div>
               <div className="w-0.5 h-6 bg-[#0A2540]/30" />
               {/* Bottom row */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 w-full max-w-2xl">
-                <div className="bg-white border-2 border-[#1E40AF]/20 hover:border-[#8B0000]/50 text-[#0A2540] font-bold text-xs rounded-2xl shadow-xs text-center px-3 py-3 transition-all">
+                <div className="bg-white border-2 border-[#1E40AF]/20 hover:border-[#FF6B00]/50 text-[#0A2540] font-bold text-xs rounded-2xl shadow-xs text-center px-3 py-3 transition-all">
                   Heads of Departments (HODs)
                 </div>
-                <div className="bg-white border-2 border-[#1E40AF]/20 hover:border-[#8B0000]/50 text-[#0A2540] font-bold text-xs rounded-2xl shadow-xs text-center px-3 py-3 transition-all">
+                <div className="bg-white border-2 border-[#1E40AF]/20 hover:border-[#FF6B00]/50 text-[#0A2540] font-bold text-xs rounded-2xl shadow-xs text-center px-3 py-3 transition-all">
                   Training &amp; Placement Head
                 </div>
-                <div className="bg-white border-2 border-[#1E40AF]/20 hover:border-[#8B0000]/50 text-[#0A2540] font-bold text-xs rounded-2xl shadow-xs text-center px-3 py-3 transition-all">
+                <div className="bg-white border-2 border-[#1E40AF]/20 hover:border-[#FF6B00]/50 text-[#0A2540] font-bold text-xs rounded-2xl shadow-xs text-center px-3 py-3 transition-all">
                   Administrative Officer &amp; Labs
                 </div>
               </div>

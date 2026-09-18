@@ -162,9 +162,9 @@ export const Vins3DExplodedHeroText: React.FC<Vins3DExplodedHeroTextProps> = ({
       >
         <button
           onClick={onNavigateAdmissions}
-          className="group relative inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 rounded-xl font-black text-xs sm:text-sm uppercase tracking-wider text-white shadow-[0_10px_30px_rgba(139, 0, 0,0.45)] transition-all duration-300 cursor-pointer overflow-hidden transform hover:scale-105 active:scale-95"
+          className="group relative inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 rounded-xl font-black text-xs sm:text-sm uppercase tracking-wider text-white shadow-[0_10px_30px_rgba(255,107,0,0.45)] transition-all duration-300 cursor-pointer overflow-hidden transform hover:scale-105 active:scale-95"
           style={{
-            background: 'linear-gradient(135deg, #8B0000 0%, #700000 50%, #4A0000 100%)',
+            background: 'linear-gradient(135deg, #FF6B00 0%, #EA580C 50%, #C2410C 100%)',
             border: '1px solid rgba(255, 255, 255, 0.35)',
           }}
         >

@@ -59,7 +59,7 @@ export const Image3DCard: React.FC<Image3DCardProps> = ({
       {(title || subtitle) && (
         <div className="p-4 sm:p-5 bg-white/95 backdrop-blur-md border-t border-gray-100 flex flex-col gap-1 transition-colors group-hover:bg-white">
           {title && (
-            <h4 className="text-sm sm:text-base font-bold text-[#0A2540] font-sans group-hover:text-[#8B0000] transition-colors line-clamp-1">
+            <h4 className="text-sm sm:text-base font-bold text-[#0A2540] font-sans group-hover:text-[#FF6B00] transition-colors line-clamp-1">
               {title}
             </h4>
           )}

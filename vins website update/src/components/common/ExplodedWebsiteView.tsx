@@ -108,7 +108,7 @@ export const ExplodedWebsiteView: React.FC<ExplodedWebsiteViewProps> = ({
       badge: 'LAYER 01',
       tag: 'Helpline & TNEA Code 4983',
       color: '#0A2540',
-      accentColor: '#8B0000',
+      accentColor: '#FF6B00',
       zMultiplier: 3.2,
       tab: 'contact' as NavigationTab,
       content: (
@@ -157,12 +157,12 @@ export const ExplodedWebsiteView: React.FC<ExplodedWebsiteViewProps> = ({
             </div>
           </div>
           <div className="hidden lg:flex items-center gap-4 text-xs font-bold text-[#0A2540]">
-            <span className="text-[#8B0000] border-b-2 border-[#8B0000] pb-0.5">Home</span>
-            <span className="hover:text-[#8B0000]">About</span>
-            <span className="hover:text-[#8B0000]">Admissions</span>
-            <span className="hover:text-[#8B0000]">Departments</span>
-            <span className="hover:text-[#8B0000]">Placements</span>
-            <span className="hover:text-[#8B0000]">NAAC</span>
+            <span className="text-[#FF6B00] border-b-2 border-[#FF6B00] pb-0.5">Home</span>
+            <span className="hover:text-[#FF6B00]">About</span>
+            <span className="hover:text-[#FF6B00]">Admissions</span>
+            <span className="hover:text-[#FF6B00]">Departments</span>
+            <span className="hover:text-[#FF6B00]">Placements</span>
+            <span className="hover:text-[#FF6B00]">NAAC</span>
           </div>
         </div>
       )
@@ -173,12 +173,12 @@ export const ExplodedWebsiteView: React.FC<ExplodedWebsiteViewProps> = ({
       badge: 'LAYER 03',
       tag: 'Prime Value Proposition & Admissions 2026',
       color: '#0A2540',
-      accentColor: '#8B0000',
+      accentColor: '#FF6B00',
       zMultiplier: 1.2,
       tab: 'admissions' as NavigationTab,
       content: (
         <div className="p-6 sm:p-8 bg-gradient-to-br from-[#0A2540] via-[#0F365E] to-[#0A2540] text-white relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-72 h-72 bg-[#8B0000]/15 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute top-0 right-0 w-72 h-72 bg-[#FF6B00]/15 rounded-full blur-3xl pointer-events-none" />
           <div className="relative z-10 max-w-xl space-y-3">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 border border-white/25 text-amber-300 text-xs font-bold uppercase tracking-wider">
               <Award className="w-3.5 h-3.5" /> 20+ Years of Academic Brilliance
@@ -190,7 +190,7 @@ export const ExplodedWebsiteView: React.FC<ExplodedWebsiteViewProps> = ({
               Anna University Affiliated · State-of-the-art Labs · 90%+ Consistent Campus Placements · 15-Acre Lush Green Campus
             </p>
             <div className="flex flex-wrap gap-2.5 pt-2">
-              <span className="px-3.5 py-1.5 rounded-lg bg-[#8B0000] text-white text-xs font-bold shadow-md">
+              <span className="px-3.5 py-1.5 rounded-lg bg-[#FF6B00] text-white text-xs font-bold shadow-md">
                 Apply for UG/PG 2026
               </span>
               <span className="px-3.5 py-1.5 rounded-lg bg-white/10 border border-white/20 text-white text-xs font-bold">
@@ -214,7 +214,7 @@ export const ExplodedWebsiteView: React.FC<ExplodedWebsiteViewProps> = ({
         <div className="p-5 sm:p-6 bg-slate-50 border-t border-slate-200 text-[#0A2540]">
           <div className="flex items-center justify-between mb-3.5">
             <div>
-              <span className="text-[10px] font-black uppercase tracking-widest text-[#8B0000]">Departments</span>
+              <span className="text-[10px] font-black uppercase tracking-widest text-[#FF6B00]">Departments</span>
               <h3 className="font-playfair font-bold text-base text-[#0A2540]">Undergraduate &amp; Postgraduate Programs</h3>
             </div>
             <span className="text-xs font-bold text-slate-500">6 Core Disciplines</span>
@@ -229,7 +229,7 @@ export const ExplodedWebsiteView: React.FC<ExplodedWebsiteViewProps> = ({
               { code: 'MBA', name: 'Master of Business Admin', seats: '60 Seats' },
             ].map((dept, i) => (
               <div key={i} className="p-2.5 rounded-xl bg-white border border-slate-200 shadow-sm">
-                <span className="text-xs font-black text-[#8B0000]">{dept.code}</span>
+                <span className="text-xs font-black text-[#FF6B00]">{dept.code}</span>
                 <p className="text-[11px] font-bold text-[#0A2540] truncate">{dept.name}</p>
                 <span className="text-[9px] text-slate-500 font-semibold">{dept.seats}</span>
               </div>
@@ -309,18 +309,18 @@ export const ExplodedWebsiteView: React.FC<ExplodedWebsiteViewProps> = ({
       <div 
         className="absolute inset-0 pointer-events-none opacity-30"
         style={{
-          backgroundImage: 'radial-gradient(#8B0000 1px, transparent 1px), radial-gradient(#38BDF8 1px, #071321 1px)',
+          backgroundImage: 'radial-gradient(#FF6B00 1px, transparent 1px), radial-gradient(#38BDF8 1px, #071321 1px)',
           backgroundSize: '40px 40px',
           backgroundPosition: '0 0, 20px 20px'
         }}
       />
-      <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#8B0000]/10 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#FF6B00]/10 rounded-full blur-[140px] pointer-events-none" />
       <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-[#0284C7]/15 rounded-full blur-[140px] pointer-events-none" />
 
       {/* Top Interactive Controls HUD */}
       <header className="relative z-50 bg-[#0A2540]/90 backdrop-blur-xl border-b border-white/15 px-4 sm:px-6 py-3.5 flex flex-wrap items-center justify-between gap-3 shadow-2xl">
         <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-xl bg-gradient-to-tr from-[#8B0000] to-amber-400 flex items-center justify-center text-white shadow-md">
+          <div className="w-8 h-8 rounded-xl bg-gradient-to-tr from-[#FF6B00] to-amber-400 flex items-center justify-center text-white shadow-md">
             <Layers className="w-4 h-4" />
           </div>
           <div>
@@ -352,7 +352,7 @@ export const ExplodedWebsiteView: React.FC<ExplodedWebsiteViewProps> = ({
               max="100"
               value={explosionDepth}
               onChange={(e) => setExplosionDepth(Number(e.target.value))}
-              className="w-24 sm:w-32 accent-[#8B0000] cursor-pointer"
+              className="w-24 sm:w-32 accent-[#FF6B00] cursor-pointer"
               title="Adjust 3D Explosion Spacing"
             />
             <span className="text-xs font-mono font-bold text-white w-8 text-right">
@@ -386,7 +386,7 @@ export const ExplodedWebsiteView: React.FC<ExplodedWebsiteViewProps> = ({
           {/* Return to Standard Website Button */}
           <button
             onClick={onClose}
-            className="px-4 py-1.5 sm:px-5 sm:py-2 rounded-full text-xs font-black uppercase tracking-wider bg-gradient-to-r from-[#8B0000] to-amber-500 hover:brightness-110 text-white shadow-lg transition-all flex items-center gap-1.5 cursor-pointer active:scale-95"
+            className="px-4 py-1.5 sm:px-5 sm:py-2 rounded-full text-xs font-black uppercase tracking-wider bg-gradient-to-r from-[#FF6B00] to-amber-500 hover:brightness-110 text-white shadow-lg transition-all flex items-center gap-1.5 cursor-pointer active:scale-95"
           >
             <span>Live Website</span>
             <ArrowRight className="w-3.5 h-3.5" />
@@ -439,7 +439,7 @@ export const ExplodedWebsiteView: React.FC<ExplodedWebsiteViewProps> = ({
                   transform: `translateZ(${zDistance}px) scale(${isActive ? 1.04 : 1})`,
                   zIndex: 10 + index,
                   boxShadow: isActive
-                    ? '0 25px 60px -15px rgba(139, 0, 0,0.45), 0 0 30px 2px rgba(251,191,36,0.35)'
+                    ? '0 25px 60px -15px rgba(255,107,0,0.45), 0 0 30px 2px rgba(251,191,36,0.35)'
                     : '0 20px 40px -10px rgba(0,0,0,0.7)',
                 }}
               >
@@ -447,7 +447,7 @@ export const ExplodedWebsiteView: React.FC<ExplodedWebsiteViewProps> = ({
                 <div 
                   className={`absolute -top-3 left-4 z-30 px-3 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider flex items-center gap-2 border shadow-lg transition-all ${
                     isActive 
-                      ? 'bg-[#8B0000] text-white border-amber-300 scale-105' 
+                      ? 'bg-[#FF6B00] text-white border-amber-300 scale-105' 
                       : 'bg-[#0A2540] text-amber-300 border-white/20'
                   }`}
                   style={{ transform: 'translateZ(15px)' }}
@@ -461,7 +461,7 @@ export const ExplodedWebsiteView: React.FC<ExplodedWebsiteViewProps> = ({
                 {/* Layer Actual Rendered Surface */}
                 <div 
                   className={`rounded-2xl overflow-hidden border-2 transition-all duration-300 ${
-                    isActive ? 'border-[#8B0000] ring-4 ring-[#8B0000]/30' : 'border-white/30 group-hover:border-amber-400/80'
+                    isActive ? 'border-[#FF6B00] ring-4 ring-[#FF6B00]/30' : 'border-white/30 group-hover:border-amber-400/80'
                   }`}
                 >
                   {layer.content}

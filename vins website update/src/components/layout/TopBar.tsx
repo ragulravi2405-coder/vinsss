@@ -118,7 +118,7 @@ export const TopBar: React.FC<TopBarProps> = ({ onNavigate, currentTab }) => {
               href="tel:+914651255000" 
               className="group flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/5 hover:bg-white/12 border border-white/10 hover:border-amber-400/40 hover:shadow-sm transition-all duration-200 transform hover:-translate-y-0.5 whitespace-nowrap shrink-0 cursor-pointer"
             >
-              <Phone className="w-3 sm:w-3.5 h-3 sm:h-3.5 text-[#8B0000] group-hover:scale-110 transition-transform shrink-0" />
+              <Phone className="w-3 sm:w-3.5 h-3 sm:h-3.5 text-[#FF6B00] group-hover:scale-110 transition-transform shrink-0" />
               <span className="font-semibold group-hover:text-amber-200 transition-colors">+91 4651 255 000</span>
             </a>
 
@@ -128,7 +128,7 @@ export const TopBar: React.FC<TopBarProps> = ({ onNavigate, currentTab }) => {
               href="mailto:info@vinschristiancollege.in" 
               className="hidden min-[420px]:flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/5 hover:bg-white/12 border border-white/10 hover:border-amber-400/40 hover:shadow-sm transition-all duration-200 transform hover:-translate-y-0.5 whitespace-nowrap truncate max-w-[170px] sm:max-w-none cursor-pointer"
             >
-              <Mail className="w-3 sm:w-3.5 h-3 sm:h-3.5 text-[#8B0000] group-hover:scale-110 transition-transform shrink-0" />
+              <Mail className="w-3 sm:w-3.5 h-3 sm:h-3.5 text-[#FF6B00] group-hover:scale-110 transition-transform shrink-0" />
               <span className="truncate group-hover:text-amber-200 transition-colors">info@vinschristiancollege.in</span>
             </a>
           </div>
@@ -139,21 +139,21 @@ export const TopBar: React.FC<TopBarProps> = ({ onNavigate, currentTab }) => {
             <div className="hidden min-[640px]:flex items-center gap-1.5 text-white">
               <a 
                 href="#" 
-                className="w-6 h-6 rounded-full bg-white/10 hover:bg-[#8B0000] flex items-center justify-center transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md cursor-pointer" 
+                className="w-6 h-6 rounded-full bg-white/10 hover:bg-[#FF6B00] flex items-center justify-center transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md cursor-pointer" 
                 title="Facebook"
               >
                 <span className="font-bold text-[11px]">f</span>
               </a>
               <a 
                 href="#" 
-                className="w-6 h-6 rounded-full bg-white/10 hover:bg-[#8B0000] flex items-center justify-center transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md cursor-pointer" 
+                className="w-6 h-6 rounded-full bg-white/10 hover:bg-[#FF6B00] flex items-center justify-center transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md cursor-pointer" 
                 title="Instagram"
               >
                 <span className="font-bold text-[10px]">📷</span>
               </a>
               <a 
                 href="#" 
-                className="w-6 h-6 rounded-full bg-white/10 hover:bg-[#8B0000] flex items-center justify-center transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md cursor-pointer" 
+                className="w-6 h-6 rounded-full bg-white/10 hover:bg-[#FF6B00] flex items-center justify-center transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md cursor-pointer" 
                 title="YouTube"
               >
                 <span className="font-bold text-[10px]">▶</span>
@@ -164,7 +164,7 @@ export const TopBar: React.FC<TopBarProps> = ({ onNavigate, currentTab }) => {
             {/* Admin Portal Button with Tactile 3D Click */}
             <button 
               onClick={() => onNavigate?.('admin')}
-              className="bg-[#8B0000] hover:bg-[#5B0000] text-white px-3 py-1.5 rounded-lg font-bold flex items-center gap-1.5 transition-all whitespace-nowrap text-[10px] sm:text-xs"
+              className="bg-[#FF6B00] hover:bg-[#E05E00] text-white px-3 py-1.5 rounded-lg font-bold flex items-center gap-1.5 transition-all whitespace-nowrap text-[10px] sm:text-xs"
               title="Open Admin Content Portal"
             >
               <Lock className="w-3 h-3 text-white shrink-0" />
@@ -222,7 +222,7 @@ export const TopBar: React.FC<TopBarProps> = ({ onNavigate, currentTab }) => {
                       className="p-3 rounded-2xl bg-white hover:bg-[#1E40AF]/10 border-2 border-[#0A2540]/20 hover:border-[#1E40AF] cursor-pointer flex items-center justify-between group transition-all active:scale-95"
                     >
                       <div className="min-w-0">
-                        <span className="text-[10px] uppercase font-bold text-[#8B0000] tracking-wider block">
+                        <span className="text-[10px] uppercase font-bold text-[#FF6B00] tracking-wider block">
                           {res.type}
                         </span>
                         <h4 className="text-xs sm:text-sm font-bold text-[#0A2540] truncate">
@@ -243,7 +243,7 @@ export const TopBar: React.FC<TopBarProps> = ({ onNavigate, currentTab }) => {
 
             <div className="p-2.5 sm:p-3 bg-white border-t-2 border-[#0A2540]/15 flex items-center justify-between text-xs text-[#0A2540] font-bold">
               <span>Press ESC to close</span>
-              <span className="hidden sm:inline text-[#8B0000] counselling-badge">Counselling Code: 4982</span>
+              <span className="hidden sm:inline text-[#FF6B00] counselling-badge">Counselling Code: 4982</span>
             </div>
           </div>
         </div>

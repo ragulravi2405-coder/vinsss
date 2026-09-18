@@ -587,7 +587,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onTabChange, onOpenExplodedV
                     {/* Content */}
                     <div className="p-4 sm:p-5 flex-1 flex flex-col justify-between space-y-3">
                       <div className="space-y-1.5">
-                        <div className="flex items-center gap-2 text-xs font-bold text-[#8B0000]">
+                        <div className="flex items-center gap-2 text-xs font-bold text-[#FF6B00]">
                           <Calendar className="w-3.5 h-3.5 shrink-0" />
                           <span>{evt.date}</span>
                           {evt.subtitle && <span className="text-slate-400 font-normal">· {evt.subtitle}</span>}
@@ -606,7 +606,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onTabChange, onOpenExplodedV
                         <span className="text-[#6B4C14] text-[11px] font-semibold">
                           {evt.category}
                         </span>
-                        <span className="text-[#252528] group-hover:text-[#8B0000] transition-colors inline-flex items-center gap-1">
+                        <span className="text-[#252528] group-hover:text-[#FF6B00] transition-colors inline-flex items-center gap-1">
                           <span>Details</span>
                           <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                         </span>
@@ -821,7 +821,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onTabChange, onOpenExplodedV
           <div className="bg-[#0A2540] rounded-3xl p-6 sm:p-10 shadow-2xl border-2 border-white/20 space-y-8">
             
             <div className="text-center max-w-3xl mx-auto space-y-3">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#8B0000] text-white text-xs font-bold tracking-widest uppercase border border-white/30 shadow-md">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FF6B00] text-white text-xs font-bold tracking-widest uppercase border border-white/30 shadow-md">
                 <Video className="w-3.5 h-3.5 text-white" />
                 <span>OFFICIAL VIDEO BROADCASTS</span>
               </div>
@@ -1012,7 +1012,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onTabChange, onOpenExplodedV
                         </h3>
                       </div>
 
-                      <div className="w-8 h-8 rounded-full bg-[#0A2540] group-hover:bg-[#8B0000] text-white flex items-center justify-center shrink-0 shadow-sm transition-colors duration-300">
+                      <div className="w-8 h-8 rounded-full bg-[#0A2540] group-hover:bg-[#FF6B00] text-white flex items-center justify-center shrink-0 shadow-sm transition-colors duration-300">
                         <Eye className="w-3.5 h-3.5 text-white" />
                       </div>
                     </div>
@@ -1024,16 +1024,16 @@ export const HomePage: React.FC<HomePageProps> = ({ onTabChange, onOpenExplodedV
 
         </section>
 
-        {/* SECTION G: ADMISSIONS CTA BANNER - Deep Navy Blue (#0A2540) + Vibrant Amber Orange (#8B0000) */}
+        {/* SECTION G: ADMISSIONS CTA BANNER - Deep Navy Blue (#0A2540) + Vibrant Amber Orange (#FF6B00) */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-[#0A2540] text-white rounded-3xl p-6 sm:p-12 lg:p-14 shadow-2xl border-2 border-white/20 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center relative overflow-hidden">
             
             {/* Subtle Royal Indigo / Orange lighting accents */}
             <div className="absolute top-0 right-0 w-80 h-80 bg-[#1E40AF]/30 rounded-full blur-3xl pointer-events-none" />
-            <div className="absolute -bottom-10 -left-10 w-60 h-60 bg-[#8B0000]/20 rounded-full blur-2xl pointer-events-none" />
+            <div className="absolute -bottom-10 -left-10 w-60 h-60 bg-[#FF6B00]/20 rounded-full blur-2xl pointer-events-none" />
 
             <div className="lg:col-span-7 space-y-4 relative z-10">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#8B0000] text-white text-xs font-bold tracking-wider uppercase shadow-md">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#FF6B00] text-white text-xs font-bold tracking-wider uppercase shadow-md">
                 <Sparkles className="w-3.5 h-3.5 text-white" />
                 <span>ADMISSIONS OPEN 2026-2027</span>
               </div>
@@ -1049,7 +1049,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onTabChange, onOpenExplodedV
               <div className="flex flex-wrap items-center gap-3 sm:gap-4 pt-2">
                 <button
                   onClick={() => onTabChange('admissions', 'online-form')}
-                  className="bg-[#8B0000] hover:bg-[#5B0000] btn-micro text-white text-xs font-bold uppercase tracking-widest px-6 sm:px-8 py-3.5 rounded-full cursor-pointer shadow-xl transition-all flex items-center justify-center gap-2 w-full sm:w-auto border border-white/20"
+                  className="bg-[#FF6B00] hover:bg-[#E05E00] btn-micro text-white text-xs font-bold uppercase tracking-widest px-6 sm:px-8 py-3.5 rounded-full cursor-pointer shadow-xl transition-all flex items-center justify-center gap-2 w-full sm:w-auto border border-white/20"
                 >
                   <span>APPLY ONLINE NOW</span>
                   <ArrowRight className="w-4 h-4 text-white group-hover:translate-x-1 transition-transform" />
