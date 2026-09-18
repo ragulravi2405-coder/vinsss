@@ -1,0 +1,23 @@
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+
+# Large raw camera files (not needed for web)
+*.DNG
+*.dng
+*.RAW
+*.raw
+*.CR2
+*.cr2
+*.NEF
+*.nef
+
+# Local migration, testing & dump files
+dump.sql
+scratch/
+scripts/

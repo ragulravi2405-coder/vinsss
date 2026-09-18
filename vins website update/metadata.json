@@ -1,0 +1,6 @@
+{
+  "name": "VINS Christian College of Engineering",
+  "description": "Official Website for VINS Christian College of Engineering, Nagercoil. Featuring departments, admissions, placements, IQAC, NAAC, facilities, and campus life.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
