@@ -1,5 +1,5 @@
 {
-  "buildCommand": "npm install --prefix \"vins website update\" && npm --prefix \"vins website update\" run build",
+  "buildCommand": "bash build.sh",
   "outputDirectory": "vins website update/dist",
   "installCommand": "npm install",
   "rewrites": [
