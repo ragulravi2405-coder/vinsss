@@ -143,7 +143,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentTab, onTabChange }) => {
                 </div>
                 {/* CODE 4982 */}
                 <div 
-                  className="px-3.5 py-1 rounded-xl bg-gradient-to-br from-[#FF6B00] to-[#E05E00] text-white font-black shadow-[0_4px_12px_rgba(255,107,0,0.35)] border-2 border-white/40 hover:-translate-y-0.5 hover:shadow-[0_6px_16px_rgba(255,107,0,0.45)] transition-all duration-200 cursor-pointer select-none flex flex-col items-center justify-center shrink-0 min-w-[72px]"
+                  className="px-3.5 py-1 rounded-xl bg-gradient-to-br from-[#8B0000] to-[#4A0000] text-white font-black shadow-[0_4px_12px_rgba(139,0,0,0.4)] border-2 border-white/30 hover:-translate-y-0.5 hover:shadow-[0_6px_16px_rgba(139,0,0,0.55)] transition-all duration-200 cursor-pointer select-none flex flex-col items-center justify-center shrink-0 min-w-[72px]"
                   title="Anna University Counselling Code: 4982"
                 >
                   <span className="text-[7px] font-black uppercase tracking-wider text-white/95 leading-tight">CODE</span>
@@ -180,7 +180,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentTab, onTabChange }) => {
               <div className="p-1 bg-white rounded border border-gray-200 shrink-0">
                 <img src="/images/logo/naac.png" alt="NAAC" className="h-6 sm:h-7 object-contain" />
               </div>
-              <div className="px-2.5 py-0.5 rounded-lg bg-gradient-to-r from-[#FF6B00] to-[#E05E00] text-white font-black border border-white/20 shrink-0 flex flex-col items-center justify-center">
+              <div className="px-2.5 py-0.5 rounded-lg bg-gradient-to-r from-[#8B0000] to-[#4A0000] text-white font-black border border-white/25 shrink-0 flex flex-col items-center justify-center shadow-[0_2px_8px_rgba(139,0,0,0.35)]">
                 <span className="text-[6px] font-black uppercase text-white/90 leading-tight">CODE</span>
                 <span className="text-[10px] font-black leading-none text-white">{siteTheme?.tneaCode || '4982'}</span>
               </div>
@@ -217,7 +217,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentTab, onTabChange }) => {
                   onClick={() => handleNavClick('home')}
                   className={`nav-3d-link px-3.5 py-1.5 rounded-lg text-xs 2xl:text-[13px] font-bold uppercase tracking-wider cursor-pointer whitespace-nowrap relative ${
                     currentTab === 'home'
-                      ? 'text-white bg-gradient-to-r from-[#FF6B00] to-[#FF8533] shadow-[0_4px_14px_rgba(255,107,0,0.45)] border border-amber-300/30'
+                      ? 'text-white bg-gradient-to-r from-[#8B0000] to-[#A51D1D] shadow-[0_4px_14px_rgba(139, 0, 0,0.45)] border border-amber-300/30'
                       : 'text-white/90 hover:text-white hover:bg-white/12 hover:shadow-[0_4px_12px_rgba(0,0,0,0.25)] border border-transparent'
                   }`}
                   style={{
@@ -232,7 +232,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentTab, onTabChange }) => {
                   onClick={() => handleNavClick('about')}
                   className={`nav-3d-link px-3.5 py-1.5 rounded-lg text-xs 2xl:text-[13px] font-bold uppercase tracking-wider cursor-pointer whitespace-nowrap relative ${
                     currentTab === 'about'
-                      ? 'text-white bg-gradient-to-r from-[#FF6B00] to-[#FF8533] shadow-[0_4px_14px_rgba(255,107,0,0.45)] border border-amber-300/30'
+                      ? 'text-white bg-gradient-to-r from-[#8B0000] to-[#A51D1D] shadow-[0_4px_14px_rgba(139, 0, 0,0.45)] border border-amber-300/30'
                       : 'text-white/90 hover:text-white hover:bg-white/12 hover:shadow-[0_4px_12px_rgba(0,0,0,0.25)] border border-transparent'
                   }`}
                   style={{
@@ -247,7 +247,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentTab, onTabChange }) => {
                   onClick={() => handleNavClick('department')}
                   className={`nav-3d-link px-3.5 py-1.5 rounded-lg text-xs 2xl:text-[13px] font-bold uppercase tracking-wider cursor-pointer whitespace-nowrap relative ${
                     currentTab === 'department' && !activeDropdown
-                      ? 'text-white bg-gradient-to-r from-[#FF6B00] to-[#FF8533] shadow-[0_4px_14px_rgba(255,107,0,0.45)] border border-amber-300/30'
+                      ? 'text-white bg-gradient-to-r from-[#8B0000] to-[#A51D1D] shadow-[0_4px_14px_rgba(139, 0, 0,0.45)] border border-amber-300/30'
                       : 'text-white/90 hover:text-white hover:bg-white/12 hover:shadow-[0_4px_12px_rgba(0,0,0,0.25)] border border-transparent'
                   }`}
                   style={{
@@ -262,7 +262,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentTab, onTabChange }) => {
                   onClick={() => handleNavClick('admissions')}
                   className={`nav-3d-link px-3.5 py-1.5 rounded-lg text-xs 2xl:text-[13px] font-bold uppercase tracking-wider cursor-pointer whitespace-nowrap relative ${
                     currentTab === 'admissions'
-                      ? 'text-white bg-gradient-to-r from-[#FF6B00] to-[#FF8533] shadow-[0_4px_14px_rgba(255,107,0,0.45)] border border-amber-300/30'
+                      ? 'text-white bg-gradient-to-r from-[#8B0000] to-[#A51D1D] shadow-[0_4px_14px_rgba(139, 0, 0,0.45)] border border-amber-300/30'
                       : 'text-white/90 hover:text-white hover:bg-white/12 hover:shadow-[0_4px_12px_rgba(0,0,0,0.25)] border border-transparent'
                   }`}
                   style={{
@@ -282,7 +282,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentTab, onTabChange }) => {
                     onClick={() => handleNavClick('department')}
                     className={`nav-3d-link px-3.5 py-1.5 rounded-lg text-xs 2xl:text-[13px] font-bold uppercase tracking-wider flex items-center gap-1.5 cursor-pointer whitespace-nowrap relative ${
                       activeDropdown === 'courses' || (currentTab === 'department')
-                        ? 'text-white bg-gradient-to-r from-[#FF6B00] to-[#FF8533] shadow-[0_4px_14px_rgba(255,107,0,0.45)] border border-amber-300/30'
+                        ? 'text-white bg-gradient-to-r from-[#8B0000] to-[#A51D1D] shadow-[0_4px_14px_rgba(139, 0, 0,0.45)] border border-amber-300/30'
                         : 'text-white/90 hover:text-white hover:bg-white/12 hover:shadow-[0_4px_12px_rgba(0,0,0,0.25)] border border-transparent'
                     }`}
                     style={{
@@ -297,7 +297,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentTab, onTabChange }) => {
                   {activeDropdown === 'courses' && (
                     <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[540px] max-w-[calc(100vw-2rem)] bg-white/95 backdrop-blur-xl text-[#0A2540] rounded-2xl shadow-[0_20px_40px_rgba(10,37,64,0.3)] border border-[#0A2540]/15 p-4 grid grid-cols-2 gap-2.5 animate-fade-in z-50">
                       <div className="col-span-2 pb-2 mb-1 border-b border-gray-100 flex items-center justify-between">
-                        <span className="text-[11px] font-extrabold text-[#FF6B00] uppercase tracking-widest flex items-center gap-1.5">
+                        <span className="text-[11px] font-extrabold text-[#8B0000] uppercase tracking-widest flex items-center gap-1.5">
                           <GraduationCap className="w-3.5 h-3.5" />
                           Engineering &amp; Management Programs
                         </span>
@@ -322,7 +322,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentTab, onTabChange }) => {
                   onClick={() => handleNavClick('placement')}
                   className={`nav-3d-link px-3.5 py-1.5 rounded-lg text-xs 2xl:text-[13px] font-bold uppercase tracking-wider cursor-pointer whitespace-nowrap relative ${
                     currentTab === 'placement'
-                      ? 'text-white bg-gradient-to-r from-[#FF6B00] to-[#FF8533] shadow-[0_4px_14px_rgba(255,107,0,0.45)] border border-amber-300/30'
+                      ? 'text-white bg-gradient-to-r from-[#8B0000] to-[#A51D1D] shadow-[0_4px_14px_rgba(139, 0, 0,0.45)] border border-amber-300/30'
                       : 'text-white/90 hover:text-white hover:bg-white/12 hover:shadow-[0_4px_12px_rgba(0,0,0,0.25)] border border-transparent'
                   }`}
                   style={{
@@ -337,7 +337,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentTab, onTabChange }) => {
                   onClick={() => handleNavClick('naac')}
                   className={`nav-3d-link px-3.5 py-1.5 rounded-lg text-xs 2xl:text-[13px] font-bold uppercase tracking-wider cursor-pointer whitespace-nowrap relative ${
                     currentTab === 'naac'
-                      ? 'text-white bg-gradient-to-r from-[#FF6B00] to-[#FF8533] shadow-[0_4px_14px_rgba(255,107,0,0.45)] border border-amber-300/30'
+                      ? 'text-white bg-gradient-to-r from-[#8B0000] to-[#A51D1D] shadow-[0_4px_14px_rgba(139, 0, 0,0.45)] border border-amber-300/30'
                       : 'text-white/90 hover:text-white hover:bg-white/12 hover:shadow-[0_4px_12px_rgba(0,0,0,0.25)] border border-transparent'
                   }`}
                   style={{
@@ -352,7 +352,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentTab, onTabChange }) => {
                   onClick={() => handleNavClick('contact')}
                   className={`nav-3d-link px-3.5 py-1.5 rounded-lg text-xs 2xl:text-[13px] font-bold uppercase tracking-wider cursor-pointer whitespace-nowrap relative ${
                     currentTab === 'contact'
-                      ? 'text-white bg-gradient-to-r from-[#FF6B00] to-[#FF8533] shadow-[0_4px_14px_rgba(255,107,0,0.45)] border border-amber-300/30'
+                      ? 'text-white bg-gradient-to-r from-[#8B0000] to-[#A51D1D] shadow-[0_4px_14px_rgba(139, 0, 0,0.45)] border border-amber-300/30'
                       : 'text-white/90 hover:text-white hover:bg-white/12 hover:shadow-[0_4px_12px_rgba(0,0,0,0.25)] border border-transparent'
                   }`}
                   style={{
@@ -367,7 +367,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentTab, onTabChange }) => {
               {/* APPLY ONLINE NOW - Premium Floating 3D CTA */}
               <button
                 onClick={() => handleNavClick('admissions', 'online-form')}
-                className="cta-3d-floating absolute right-0 top-1/2 -translate-y-1/2 bg-gradient-to-r from-[#FF6B00] via-[#FF7A1A] to-[#E05E00] text-white font-bold text-xs uppercase tracking-wider px-5 py-2.5 rounded-full shadow-[0_6px_20px_rgba(255,107,0,0.45)] flex items-center gap-2 cursor-pointer shrink-0 border border-white/30 group select-none"
+                className="cta-3d-floating absolute right-0 top-1/2 -translate-y-1/2 bg-gradient-to-r from-[#8B0000] via-[#941818] to-[#5B0000] text-white font-bold text-xs uppercase tracking-wider px-5 py-2.5 rounded-full shadow-[0_6px_20px_rgba(139, 0, 0,0.45)] flex items-center gap-2 cursor-pointer shrink-0 border border-white/30 group select-none"
                 style={{ transform: 'translateZ(8px)' }}
                 title="Apply Online for Admissions 2026-2027"
               >
@@ -384,7 +384,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentTab, onTabChange }) => {
           <div className="xl:hidden bg-[#0A2540]/98 backdrop-blur-xl border-t border-white/20 px-4 py-6 space-y-3 max-h-[calc(100vh-5rem)] overflow-y-auto animate-fade-in shadow-2xl text-white mobile-dropdown-menu">
             <button
               onClick={() => handleNavClick('admissions', 'online-form')}
-              className="w-full bg-gradient-to-r from-[#FF6B00] to-[#E05E00] text-white font-bold text-xs uppercase tracking-wider py-3 px-4 rounded-full shadow-[0_4px_16px_rgba(255,107,0,0.4)] flex items-center justify-center gap-2 active:scale-95 cursor-pointer border border-white/30"
+              className="w-full bg-gradient-to-r from-[#8B0000] to-[#5B0000] text-white font-bold text-xs uppercase tracking-wider py-3 px-4 rounded-full shadow-[0_4px_16px_rgba(139, 0, 0,0.4)] flex items-center justify-center gap-2 active:scale-95 cursor-pointer border border-white/30"
             >
               <span>Apply Online Now</span>
               <ArrowRight className="w-4 h-4" />
@@ -408,7 +408,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentTab, onTabChange }) => {
 
             <button
               onClick={() => handleNavClick('home')}
-              className="w-full text-left py-2.5 font-bold text-sm text-white hover:text-[#FF6B00] border-b border-white/15 px-2 hover:bg-white/5 rounded transition-all duration-200"
+              className="w-full text-left py-2.5 font-bold text-sm text-white hover:text-[#8B0000] border-b border-white/15 px-2 hover:bg-white/5 rounded transition-all duration-200"
             >
               Home
             </button>
@@ -416,13 +416,13 @@ export const Navbar: React.FC<NavbarProps> = ({ currentTab, onTabChange }) => {
             {/* Placement & NAAC Top-Level */}
             <button
               onClick={() => handleNavClick('placement')}
-              className="w-full text-left py-2.5 font-bold text-sm text-white hover:text-[#FF6B00] border-b border-white/15 px-2 hover:bg-white/5 rounded transition-all duration-200"
+              className="w-full text-left py-2.5 font-bold text-sm text-white hover:text-[#8B0000] border-b border-white/15 px-2 hover:bg-white/5 rounded transition-all duration-200"
             >
               Placement
             </button>
             <button
               onClick={() => handleNavClick('naac')}
-              className="w-full text-left py-2.5 font-bold text-sm text-white hover:text-[#FF6B00] border-b border-white/15 px-2 hover:bg-white/5 rounded transition-all duration-200"
+              className="w-full text-left py-2.5 font-bold text-sm text-white hover:text-[#8B0000] border-b border-white/15 px-2 hover:bg-white/5 rounded transition-all duration-200"
             >
               NAAC
             </button>
@@ -438,11 +438,11 @@ export const Navbar: React.FC<NavbarProps> = ({ currentTab, onTabChange }) => {
               </button>
               {expandedMobileSection === 'pages' && (
                 <div className="pl-4 pt-2 space-y-1.5 text-xs text-white/90">
-                  <button onClick={() => handleNavClick('about', 'vision')} className="block py-1.5 hover:text-[#FF6B00] font-medium w-full text-left px-2 rounded hover:bg-white/5 transition-all duration-200">Vision &amp; Mission</button>
-                  <button onClick={() => handleNavClick('about', 'profile')} className="block py-1.5 hover:text-[#FF6B00] font-medium w-full text-left px-2 rounded hover:bg-white/5 transition-all duration-200">College Profile &amp; Legacy</button>
-                  <button onClick={() => handleNavClick('about', 'chairman')} className="block py-1.5 hover:text-[#FF6B00] font-medium w-full text-left px-2 rounded hover:bg-white/5 transition-all duration-200">Founder Chairman</button>
-                  <button onClick={() => handleNavClick('facilities')} className="block py-1.5 hover:text-[#FF6B00] font-medium w-full text-left px-2 rounded hover:bg-white/5 transition-all duration-200">Campus Facilities &amp; Labs</button>
-                  <button onClick={() => handleNavClick('committees')} className="block py-1.5 hover:text-[#FF6B00] font-medium w-full text-left px-2 rounded hover:bg-white/5 transition-all duration-200">Statutory Committees</button>
+                  <button onClick={() => handleNavClick('about', 'vision')} className="block py-1.5 hover:text-[#8B0000] font-medium w-full text-left px-2 rounded hover:bg-white/5 transition-all duration-200">Vision &amp; Mission</button>
+                  <button onClick={() => handleNavClick('about', 'profile')} className="block py-1.5 hover:text-[#8B0000] font-medium w-full text-left px-2 rounded hover:bg-white/5 transition-all duration-200">College Profile &amp; Legacy</button>
+                  <button onClick={() => handleNavClick('about', 'chairman')} className="block py-1.5 hover:text-[#8B0000] font-medium w-full text-left px-2 rounded hover:bg-white/5 transition-all duration-200">Founder Chairman</button>
+                  <button onClick={() => handleNavClick('facilities')} className="block py-1.5 hover:text-[#8B0000] font-medium w-full text-left px-2 rounded hover:bg-white/5 transition-all duration-200">Campus Facilities &amp; Labs</button>
+                  <button onClick={() => handleNavClick('committees')} className="block py-1.5 hover:text-[#8B0000] font-medium w-full text-left px-2 rounded hover:bg-white/5 transition-all duration-200">Statutory Committees</button>
                 </div>
               )}
             </div>
@@ -458,12 +458,12 @@ export const Navbar: React.FC<NavbarProps> = ({ currentTab, onTabChange }) => {
               </button>
               {expandedMobileSection === 'courses' && (
                 <div className="pl-4 pt-2 space-y-1 text-xs text-white/90 max-h-48 overflow-y-auto">
-                  <button onClick={() => handleNavClick('department')} className="block py-1.5 font-bold text-[#FF6B00] w-full text-left px-2 rounded hover:bg-white/5">View All Degree Programs</button>
+                  <button onClick={() => handleNavClick('department')} className="block py-1.5 font-bold text-[#8B0000] w-full text-left px-2 rounded hover:bg-white/5">View All Degree Programs</button>
                   {DEPARTMENTS_DATA.map((dept) => (
                     <button
                       key={dept.id}
                       onClick={() => handleNavClick('department', undefined, dept.id)}
-                      className="block py-1.5 hover:text-[#FF6B00] font-medium w-full text-left px-2 rounded hover:bg-white/5 w-full truncate"
+                      className="block py-1.5 hover:text-[#8B0000] font-medium w-full text-left px-2 rounded hover:bg-white/5 w-full truncate"
                     >
                       {dept.shortName ? `${dept.shortName} - ` : ''}{dept.name}
                     </button>
@@ -474,10 +474,10 @@ export const Navbar: React.FC<NavbarProps> = ({ currentTab, onTabChange }) => {
 
             <button onClick={() => handleNavClick('notifications')} className="w-full text-left py-2.5 font-bold text-sm text-white bg-white/10 px-3 rounded-xl flex items-center justify-between hover:bg-white/15 transition-all border border-white/15">
               <span className="flex items-center gap-2 min-w-0">
-                <Bell className="w-4 h-4 text-[#FF6B00] shrink-0" />
+                <Bell className="w-4 h-4 text-[#8B0000] shrink-0" />
                 <span className="truncate">Live Notifications & News</span>
               </span>
-              <span className="text-[10px] bg-[#FF6B00] text-white font-bold px-2 py-0.5 rounded-full animate-live-breathing shrink-0">LIVE</span>
+              <span className="text-[10px] bg-[#8B0000] text-white font-bold px-2 py-0.5 rounded-full animate-live-breathing shrink-0">LIVE</span>
             </button>
 
             <button onClick={() => handleNavClick('campus')} className="w-full text-left py-2.5 font-bold text-sm text-white border-b border-white/15 px-2 hover:bg-white/5 rounded">Events & Campus Life</button>
@@ -486,10 +486,10 @@ export const Navbar: React.FC<NavbarProps> = ({ currentTab, onTabChange }) => {
 
             <button onClick={() => handleNavClick('admin')} className="w-full text-left py-3 font-bold text-sm text-white bg-white/10 px-3 rounded-xl flex items-center justify-between hover:bg-white/15 transition-all duration-200 border border-white/15">
               <span className="flex items-center gap-2">
-                <ShieldCheck className="w-4 h-4 text-[#FF6B00]" />
+                <ShieldCheck className="w-4 h-4 text-[#8B0000]" />
                 <span>Admin Management Console</span>
               </span>
-              <span className="text-[10px] bg-[#FF6B00] text-white font-bold px-2 py-0.5 rounded">PORTAL</span>
+              <span className="text-[10px] bg-[#8B0000] text-white font-bold px-2 py-0.5 rounded">PORTAL</span>
             </button>
 
             <button

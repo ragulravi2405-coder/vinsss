@@ -209,8 +209,8 @@ html {
   --primary-color: #0A2540;      /* Deep Navy Blue */
   --primary-hover: #1E40AF;      /* Royal Indigo */
   --primary-dark: #061727;       /* Darkest Navy */
-  --accent-orange: #FF6B00;      /* Vibrant Amber Orange */
-  --accent-orange-hover: #E05E00;
+  --accent-orange: #8B0000;      /* Rich Crimson Red */
+  --accent-orange-hover: #5B0000;
   
   --status-blue: #1E40AF;        /* Live Announcements Blue */
   --status-blue-light: #eff6ff;
@@ -232,7 +232,7 @@ html {
   --glass-border-light: #E2E8F0;
   --glass-border-cement: #E2E8F0;
   --glass-border-dark: rgba(255, 255, 255, 0.2);
-  --glass-border-gold: #FF6B00;
+  --glass-border-gold: #8B0000;
 
   /* Glass Shadows & Elevation */
   --glass-shadow-sm: 0 4px 16px -2px rgba(37, 36, 40, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.85);
@@ -382,17 +382,17 @@ button:active {
 .bg-valer-dark      { background-color: #0A2540; }
 .bg-valer-deep      { background-color: #061727; }
 .bg-valer-card      { background-color: #1E40AF; }
-.bg-valer-green     { background-color: #FF6B00; }
-.text-valer-green   { color: #FF6B00; }
+.bg-valer-green     { background-color: #8B0000; }
+.text-valer-green   { color: #8B0000; }
 .text-valer-dark    { color: #0A2540; }
-.border-valer-green { border-color: #FF6B00; }
+.border-valer-green { border-color: #8B0000; }
 .border-valer-dark  { border-color: #0A2540; }
 
-/* ── PRIMARY CTA & HIGHLIGHT PILL BUTTONS (Vibrant Amber Orange #FF6B00) ── */
+/* ── PRIMARY CTA & HIGHLIGHT PILL BUTTONS (Rich Crimson Red #8B0000) ── */
 .btn-valer-green,
 .btn-hero-crimson,
 .btn-cta-orange {
-  background: linear-gradient(135deg, #FF6B00 0%, #EA580C 100%);
+  background: linear-gradient(135deg, #8B0000 0%, #700000 100%);
   color: #ffffff;
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
@@ -404,7 +404,7 @@ button:active {
   align-items: center;
   gap: 0.5rem;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 4px 14px rgba(255, 107, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 14px rgba(139, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.2);
   position: relative;
   overflow: hidden;
 }
@@ -413,26 +413,26 @@ button:active {
 .btn-valer-green:hover,
 .btn-hero-crimson:hover,
 .btn-cta-orange:hover {
-  background: linear-gradient(135deg, #FF8533 0%, #FF6B00 50%, #EA580C 100%);
+  background: linear-gradient(135deg, #A51D1D 0%, #8B0000 50%, #700000 100%);
   color: #ffffff;
   border-color: rgba(255, 255, 255, 0.4);
-  box-shadow: 0 8px 24px rgba(255, 107, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 24px rgba(139, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.3);
   transform: translateY(-2px) scale(1.01);
 }
 
 .btn-valer-green:active,
 .btn-hero-crimson:active,
 .btn-cta-orange:active {
-  background: linear-gradient(135deg, #C2410C 0%, #EA580C 100%);
+  background: linear-gradient(135deg, #4A0000 0%, #700000 100%);
   color: #FFFFFF;
   transform: translateY(0) scale(0.98);
-  box-shadow: 0 3px 10px rgba(255, 107, 0, 0.3);
+  box-shadow: 0 3px 10px rgba(139, 0, 0, 0.3);
 }
 
 .btn-valer-green:focus-visible,
 .btn-hero-crimson:focus-visible,
 .btn-cta-orange:focus-visible {
-  outline: 2px solid #FF6B00;
+  outline: 2px solid #8B0000;
   outline-offset: 3px;
 }
 
@@ -495,29 +495,29 @@ button:active {
 }
 
 .btn-hero-outline:hover {
-  border-color: #FF6B00;
+  border-color: #8B0000;
   color: #FFFFFF;
-  background: #FF6B00;
-  box-shadow: 0 8px 24px rgba(255, 107, 0, 0.35);
+  background: #8B0000;
+  box-shadow: 0 8px 24px rgba(139, 0, 0, 0.35);
   transform: translateY(-2px);
 }
 
 .btn-hero-outline:active {
   transform: translateY(0) scale(0.98);
-  background: #EA580C;
+  background: #700000;
   color: #FFFFFF;
 }
 
 .btn-hero-outline:focus-visible {
-  outline: 2px solid #FF6B00;
+  outline: 2px solid #8B0000;
   outline-offset: 3px;
 }
 
 /* ═══════════════════════════════════════════════════════════
-   PRIMARY INTERACTION SYSTEM — Navy & Orange Theme
+   PRIMARY INTERACTION SYSTEM — Navy & Crimson Red Theme
    ═══════════════════════════════════════════════════════════ */
 
-/* Standard secondary button — white with Deep Navy text & Orange hover */
+/* Standard secondary button — white with Deep Navy text & Red hover */
 .btn-gold {
   background: #FFFFFF;
   color: #0A2540;
@@ -534,21 +534,21 @@ button:active {
 }
 
 .btn-gold:hover {
-  background: #FF6B00;
+  background: #8B0000;
   color: #FFFFFF;
-  border-color: #FF6B00;
-  box-shadow: 0 8px 24px rgba(255, 107, 0, 0.35);
+  border-color: #8B0000;
+  box-shadow: 0 8px 24px rgba(139, 0, 0, 0.35);
   transform: translateY(-2px) scale(1.01);
 }
 
 .btn-gold:active {
-  background: #E05E00;
+  background: #5B0000;
   color: #FFFFFF;
   transform: translateY(0) scale(0.97);
 }
 
 .btn-gold:focus-visible {
-  outline: 2px solid #FF6B00;
+  outline: 2px solid #8B0000;
   outline-offset: 3px;
 }
 
@@ -1361,7 +1361,7 @@ html, body, #root {
 }
 
 /* ==========================================================================
-   NAVY BLUE (#0A2540) + ROYAL INDIGO (#1E40AF) + AMBER ORANGE (#FF6B00) + WHITE THEME UTILITIES
+   NAVY BLUE (#0A2540) + ROYAL INDIGO (#1E40AF) + CRIMSON RED (#8B0000) + WHITE THEME UTILITIES
    ========================================================================== */
 
 /* Sparkle & Floating Particle Glow Keyframes */
@@ -1369,12 +1369,12 @@ html, body, #root {
   0%, 100% {
     opacity: 0.35;
     transform: scale(0.95) translateY(0);
-    filter: drop-shadow(0 0 6px rgba(255, 107, 0, 0.4));
+    filter: drop-shadow(0 0 6px rgba(139, 0, 0, 0.4));
   }
   50% {
     opacity: 1;
     transform: scale(1.1) translateY(-4px);
-    filter: drop-shadow(0 0 14px rgba(255, 107, 0, 0.8));
+    filter: drop-shadow(0 0 14px rgba(139, 0, 0, 0.8));
   }
 }
 
@@ -1411,14 +1411,14 @@ html, body, #root {
 }
 
 .card-white:hover {
-  border-color: #FF6B00 !important;
-  box-shadow: 0 14px 34px rgba(255, 107, 0, 0.2) !important;
+  border-color: #8B0000 !important;
+  box-shadow: 0 14px 34px rgba(139, 0, 0, 0.2) !important;
   transform: translateY(-2px);
 }
 
 /* Theme Buttons */
 .btn-orange-solid {
-  background-color: #FF6B00 !important;
+  background-color: #8B0000 !important;
   color: #FFFFFF !important;
   border: 1.5px solid #FFFFFF !important;
   font-weight: 700 !important;
@@ -1428,14 +1428,14 @@ html, body, #root {
   align-items: center !important;
   gap: 0.5rem !important;
   transition: all 0.25s ease !important;
-  box-shadow: 0 4px 14px rgba(255, 107, 0, 0.35) !important;
+  box-shadow: 0 4px 14px rgba(139, 0, 0, 0.35) !important;
 }
 
 .btn-orange-solid:hover {
-  background-color: #E05E00 !important;
+  background-color: #5B0000 !important;
   color: #FFFFFF !important;
   transform: translateY(-2px);
-  box-shadow: 0 8px 22px rgba(255, 107, 0, 0.45) !important;
+  box-shadow: 0 8px 22px rgba(139, 0, 0, 0.45) !important;
 }
 
 .btn-white-solid {
@@ -1453,9 +1453,9 @@ html, body, #root {
 }
 
 .btn-white-solid:hover {
-  background-color: #FF6B00 !important;
+  background-color: #8B0000 !important;
   color: #FFFFFF !important;
-  border-color: #FF6B00 !important;
+  border-color: #8B0000 !important;
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(255, 107, 0, 0.35) !important;
+  box-shadow: 0 8px 24px rgba(139, 0, 0, 0.35) !important;
 }

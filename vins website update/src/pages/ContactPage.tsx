@@ -40,7 +40,7 @@ export const ContactPage: React.FC = () => {
         <ScrollReveal direction="up" distance={20}>
           <div className="bg-[#0A2540] text-white p-8 sm:p-12 rounded-3xl border border-white/20 shadow-3d-deep space-y-4 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-96 h-96 bg-white/8 rounded-full blur-3xl pointer-events-none" />
-            <div className="absolute -bottom-16 -left-16 w-64 h-64 bg-[#FF6B00]/10 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute -bottom-16 -left-16 w-64 h-64 bg-[#8B0000]/10 rounded-full blur-3xl pointer-events-none" />
 
             <div className="badge-academic bg-white/15 text-white border border-white/30 relative z-10">
               <Sparkles className="w-4 h-4 text-amber-300" />

@@ -160,7 +160,7 @@ export default function App() {
 
   return (
     <AdminDataProvider>
-      <div className="min-h-screen bg-[#FFFFFF] text-[#0A2540] font-sans selection:bg-[#FF6B00] selection:text-white flex flex-col justify-between">
+      <div className="min-h-screen bg-[#FFFFFF] text-[#0A2540] font-sans selection:bg-[#8B0000] selection:text-white flex flex-col justify-between">
         <div>
           {/* Top Contact & Utility Bar */}
           <TopBar onNavigate={handleTabChange} currentTab={currentTab} />

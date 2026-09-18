@@ -100,10 +100,10 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({ initialAnchor = 
           <div className="bg-[#0A2540] text-white p-8 sm:p-14 lg:p-16 rounded-3xl border border-white/20 shadow-3d-deep relative overflow-hidden space-y-6">
             {/* Decorative depth orbs */}
             <div className="absolute top-0 right-0 w-96 h-96 bg-[#1E40AF]/25 rounded-full blur-3xl pointer-events-none" />
-            <div className="absolute -bottom-10 -left-10 w-72 h-72 bg-[#FF6B00]/15 rounded-full blur-2xl pointer-events-none" />
+            <div className="absolute -bottom-10 -left-10 w-72 h-72 bg-[#8B0000]/15 rounded-full blur-2xl pointer-events-none" />
 
           {/* Badge Label: ADMISSIONS OPEN 2026-2027 */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FF6B00] text-white font-bold text-xs tracking-wider uppercase shadow-md">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#8B0000] text-white font-bold text-xs tracking-wider uppercase shadow-md">
             <Sparkles className="w-4 h-4 text-white" />
             <span>ADMISSIONS OPEN 2026-2027</span>
           </div>
@@ -122,7 +122,7 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({ initialAnchor = 
           <div className="pt-4 flex flex-wrap items-center gap-4">
             <button
               onClick={() => scrollTo('online-form')}
-              className="px-6 sm:px-8 py-3.5 rounded-full bg-[#FF6B00] hover:bg-[#E05E00] text-white font-bold text-xs sm:text-sm tracking-wider uppercase hover:scale-105 active:scale-95 transition-all shadow-xl cursor-pointer border border-white/20"
+              className="px-6 sm:px-8 py-3.5 rounded-full bg-[#8B0000] hover:bg-[#5B0000] text-white font-bold text-xs sm:text-sm tracking-wider uppercase hover:scale-105 active:scale-95 transition-all shadow-xl cursor-pointer border border-white/20"
             >
               APPLY ONLINE NOW
             </button>
@@ -138,12 +138,12 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({ initialAnchor = 
           {/* Quick Helpline Strip */}
           <div className="pt-2 flex flex-wrap items-center gap-3 text-xs text-white border-t border-white/20">
             <div className="flex items-center gap-2 text-white font-semibold">
-              <Phone className="w-4 h-4 text-[#FF6B00] shrink-0" />
-              <span>Counseling Code: <strong className="text-[#FF6B00]">4982</strong> | Admission Hotline: <strong>+91 9787747072 / +91 9787747071</strong></span>
+              <Phone className="w-4 h-4 text-[#8B0000] shrink-0" />
+              <span>Counseling Code: <strong className="text-[#8B0000]">4982</strong> | Admission Hotline: <strong>+91 9787747072 / +91 9787747071</strong></span>
             </div>
             <span className="hidden sm:inline text-white/40">•</span>
             <div className="flex items-center gap-2 text-white font-semibold">
-              <Mail className="w-4 h-4 text-[#FF6B00] shrink-0" />
+              <Mail className="w-4 h-4 text-[#8B0000] shrink-0" />
               <span>vinsengg@gmail.com</span>
             </div>
           </div>
@@ -155,7 +155,7 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({ initialAnchor = 
           
           {/* Left Sub-Nav Sidebar */}
           <div className="lg:col-span-3 sticky top-24 bg-white rounded-3xl border-2 border-[#0A2540]/15 p-4 shadow-md space-y-1.5">
-            <span className="text-xs font-bold text-[#FF6B00] uppercase tracking-wider block px-3 py-1">
+            <span className="text-xs font-bold text-[#8B0000] uppercase tracking-wider block px-3 py-1">
               Admissions Directory
             </span>
 
@@ -188,7 +188,7 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({ initialAnchor = 
             {/* Section 1: UG Eligibility Criteria */}
             <div id="eligibility-ug" className="bg-white rounded-3xl p-6 sm:p-8 border-2 border-[#0A2540]/15 shadow-md space-y-6 scroll-mt-28">
               <div className="border-b-2 border-[#0A2540]/15 pb-4">
-                <span className="text-xs font-bold text-[#FF6B00] uppercase tracking-wider">As per Government Norms</span>
+                <span className="text-xs font-bold text-[#8B0000] uppercase tracking-wider">As per Government Norms</span>
                 <h2 className="text-2xl sm:text-3xl font-bold text-[#0A2540] font-poppins">UG Courses — Eligibility Criteria</h2>
                 <p className="text-xs text-[#0A2540]/80 mt-1 font-medium">Qualified Examinations and Minimum Marks for Admission to B.E. Degree Courses</p>
               </div>
@@ -196,7 +196,7 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({ initialAnchor = 
               {/* HSC Criteria Table */}
               <div className="space-y-3">
                 <h3 className="text-sm font-bold text-[#0A2540] flex items-center gap-2">
-                  <GraduationCap className="w-5 h-5 text-[#FF6B00]" />
+                  <GraduationCap className="w-5 h-5 text-[#8B0000]" />
                   <span>1. HSC (10+2) Eligibility</span>
                 </h3>
                 <p className="text-xs sm:text-sm text-[#0A2540]/90 leading-relaxed font-medium">
@@ -228,7 +228,7 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({ initialAnchor = 
               {/* Diploma Criteria Table */}
               <div className="space-y-3 pt-2">
                 <h3 className="text-sm font-bold text-[#0A2540] flex items-center gap-2">
-                  <Award className="w-5 h-5 text-[#FF6B00]" />
+                  <Award className="w-5 h-5 text-[#8B0000]" />
                   <span>2. Diploma Candidates (Direct 2nd Year Lateral Entry)</span>
                 </h3>
                 <p className="text-xs sm:text-sm text-[#0A2540]/90 leading-relaxed font-medium">
@@ -259,7 +259,7 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({ initialAnchor = 
             {/* Section 2: PG Eligibility Criteria */}
             <div id="eligibility-pg" className="bg-white rounded-3xl p-6 sm:p-8 border-2 border-[#0A2540]/15 shadow-md space-y-6 scroll-mt-28">
               <div className="border-b-2 border-[#0A2540]/15 pb-4">
-                <span className="text-xs font-bold text-[#FF6B00] uppercase tracking-wider">As per Government Norms</span>
+                <span className="text-xs font-bold text-[#8B0000] uppercase tracking-wider">As per Government Norms</span>
                 <h2 className="text-2xl sm:text-3xl font-bold text-[#0A2540] font-poppins">PG Courses — Eligibility Criteria</h2>
                 <p className="text-xs text-[#0A2540]/80 mt-1 font-medium">Eligibility Qualifications for admission to M.B.A. / M.E. degree programmes</p>
               </div>
@@ -269,7 +269,7 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({ initialAnchor = 
 
                 {/* Header strip — Deep Navy */}
                 <div className="bg-[#0A2540] px-6 py-4 flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-xl bg-[#FF6B00] flex items-center justify-center shadow-md shrink-0">
+                  <div className="w-9 h-9 rounded-xl bg-[#8B0000] flex items-center justify-center shadow-md shrink-0">
                     <GraduationCap className="w-5 h-5 text-white" />
                   </div>
                   <div>
@@ -286,12 +286,12 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({ initialAnchor = 
                   {/* Description with highlighted percentages */}
                   <div className="bg-blue-50 border border-[#1E40AF]/20 rounded-2xl px-4 py-3.5 text-xs sm:text-sm text-[#0A2540] leading-relaxed font-medium">
                     A pass in a recognized Bachelor&apos;s degree of minimum 3 years duration with at least&nbsp;
-                    <span className="inline-flex items-center gap-1 font-black text-[#FF6B00]">
+                    <span className="inline-flex items-center gap-1 font-black text-[#8B0000]">
                       50% marks
                     </span>
                     &nbsp;
                     <span className="text-[#0A2540]/80">(</span>
-                    <span className="font-black text-[#FF6B00]">45%</span>
+                    <span className="font-black text-[#8B0000]">45%</span>
                     <span className="text-[#0A2540]/80"> for reserved categories)</span>
                     &nbsp;in the qualifying degree examination:
                   </div>
@@ -301,9 +301,9 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({ initialAnchor = 
                     {ELIGIBILITY_CRITERIA_DATA.mbaPatterns.map((pat, idx) => (
                       <div
                         key={idx}
-                        className="group flex items-center gap-3 bg-white border-2 border-[#1E40AF]/15 hover:border-[#FF6B00]/60 hover:bg-orange-50/40 rounded-2xl px-4 py-3 transition-all duration-200 shadow-xs"
+                        className="group flex items-center gap-3 bg-white border-2 border-[#1E40AF]/15 hover:border-[#8B0000]/60 hover:bg-red-50/40 rounded-2xl px-4 py-3 transition-all duration-200 shadow-xs"
                       >
-                        <span className="w-6 h-6 rounded-full bg-[#FF6B00] flex items-center justify-center shrink-0 shadow-sm group-hover:scale-110 transition-transform duration-200">
+                        <span className="w-6 h-6 rounded-full bg-[#8B0000] flex items-center justify-center shrink-0 shadow-sm group-hover:scale-110 transition-transform duration-200">
                           <CheckCircle2 className="w-3.5 h-3.5 text-white" />
                         </span>
                         <span className="text-xs font-semibold text-[#0A2540] leading-snug">{pat}</span>
@@ -340,7 +340,7 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({ initialAnchor = 
             {/* Section 3: Programs Offered (Intake & Est Year) */}
             <div id="programs" className="bg-white rounded-3xl p-6 sm:p-8 border-2 border-[#0A2540]/15 shadow-md space-y-6 scroll-mt-28">
               <div className="border-b-2 border-[#0A2540]/15 pb-4">
-                <span className="text-xs font-bold text-[#FF6B00] uppercase tracking-wider">Sanctioned Intake &amp; Details</span>
+                <span className="text-xs font-bold text-[#8B0000] uppercase tracking-wider">Sanctioned Intake &amp; Details</span>
                 <h2 className="text-2xl sm:text-3xl font-bold text-[#0A2540] font-poppins">Courses Offered</h2>
               </div>
 
@@ -407,17 +407,17 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({ initialAnchor = 
             <div id="prospectus" className="bg-white rounded-3xl p-6 sm:p-8 border-2 border-[#0A2540]/15 shadow-md space-y-6 scroll-mt-28">
               <div className="border-b-2 border-[#0A2540]/15 pb-4 flex items-center justify-between">
                 <div>
-                  <span className="text-xs font-bold text-[#FF6B00] uppercase tracking-wider">Official Downloads</span>
+                  <span className="text-xs font-bold text-[#8B0000] uppercase tracking-wider">Official Downloads</span>
                   <h2 className="text-2xl sm:text-3xl font-bold text-[#0A2540] font-poppins">College Prospectus &amp; Application Forms</h2>
                 </div>
-                <span className="px-3.5 py-1 bg-[#FF6B00] text-white font-bold text-xs rounded-full">PDF Download</span>
+                <span className="px-3.5 py-1 bg-[#8B0000] text-white font-bold text-xs rounded-full">PDF Download</span>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="bg-white p-6 rounded-3xl border-2 border-[#0A2540]/20 space-y-4 flex flex-col justify-between shadow-xs">
                   <div className="space-y-2">
                     <div className="w-12 h-12 rounded-2xl bg-[#0A2540] text-white flex items-center justify-center font-bold shadow-md">
-                      <BookOpen className="w-6 h-6 text-[#FF6B00]" />
+                      <BookOpen className="w-6 h-6 text-[#8B0000]" />
                     </div>
                     <h3 className="font-bold text-[#0A2540] text-lg font-poppins">College Official Prospectus</h3>
                     <p className="text-xs text-[#0A2540]/80 font-medium">
@@ -428,7 +428,7 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({ initialAnchor = 
                     onClick={() => setSelectedDoc(prospectusDoc)}
                     className="w-full py-3.5 bg-[#0A2540] hover:bg-[#1E40AF] text-white font-bold rounded-full text-xs transition-all flex items-center justify-center gap-2 shadow-md cursor-pointer"
                   >
-                    <Download className="w-4 h-4 text-[#FF6B00]" />
+                    <Download className="w-4 h-4 text-[#8B0000]" />
                     View &amp; Download Prospectus (PDF)
                   </button>
                 </div>
@@ -436,7 +436,7 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({ initialAnchor = 
                 <div className="bg-[#0A2540] text-white p-6 rounded-3xl border border-white/20 space-y-4 flex flex-col justify-between shadow-xl">
                   <div className="space-y-2">
                     <div className="w-12 h-12 rounded-2xl bg-white text-[#0A2540] flex items-center justify-center font-bold shadow-md">
-                      <FileText className="w-6 h-6 text-[#FF6B00]" />
+                      <FileText className="w-6 h-6 text-[#8B0000]" />
                     </div>
                     <h3 className="font-bold text-white text-lg font-poppins">Printable Application Form</h3>
                     <p className="text-xs text-white/90 font-medium">
@@ -445,7 +445,7 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({ initialAnchor = 
                   </div>
                   <button
                     onClick={() => setSelectedDoc(applicationDoc)}
-                    className="w-full py-3.5 bg-[#FF6B00] hover:bg-[#E05E00] text-white font-bold rounded-full text-xs transition-all flex items-center justify-center gap-2 shadow-lg cursor-pointer border border-white/20"
+                    className="w-full py-3.5 bg-[#8B0000] hover:bg-[#5B0000] text-white font-bold rounded-full text-xs transition-all flex items-center justify-center gap-2 shadow-lg cursor-pointer border border-white/20"
                   >
                     <Download className="w-4 h-4 text-white" />
                     Download Application Form (PDF)
@@ -458,7 +458,7 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({ initialAnchor = 
             <div id="online-form" className="bg-[#0A2540] text-white rounded-3xl p-6 sm:p-10 border border-white/20 shadow-2xl space-y-6 scroll-mt-28">
               <div className="flex flex-wrap items-center justify-between border-b border-white/15 pb-4 gap-4">
                 <div>
-                  <span className="text-xs font-bold text-[#FF6B00] uppercase tracking-widest">Instant Seat Reservation</span>
+                  <span className="text-xs font-bold text-[#8B0000] uppercase tracking-widest">Instant Seat Reservation</span>
                   <h2 className="text-2xl sm:text-3xl font-bold text-white font-poppins">Online Application Form</h2>
                 </div>
 
@@ -467,7 +467,7 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({ initialAnchor = 
                   <button
                     onClick={() => setFormCategory('UG')}
                     className={`px-5 py-2 rounded-full text-xs font-bold transition-all cursor-pointer ${
-                      formCategory === 'UG' ? 'bg-[#FF6B00] text-white shadow-md' : 'text-white hover:bg-white/10'
+                      formCategory === 'UG' ? 'bg-[#8B0000] text-white shadow-md' : 'text-white hover:bg-white/10'
                     }`}
                   >
                     B.E. Online Form
@@ -475,7 +475,7 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({ initialAnchor = 
                   <button
                     onClick={() => setFormCategory('PG')}
                     className={`px-5 py-2 rounded-full text-xs font-bold transition-all cursor-pointer ${
-                      formCategory === 'PG' ? 'bg-[#FF6B00] text-white shadow-md' : 'text-white hover:bg-white/10'
+                      formCategory === 'PG' ? 'bg-[#8B0000] text-white shadow-md' : 'text-white hover:bg-white/10'
                     }`}
                   >
                     M.E. &amp; MBA Form
@@ -485,7 +485,7 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({ initialAnchor = 
 
               {formSubmitted ? (
                 <div className="bg-white text-[#0A2540] rounded-3xl p-8 text-center space-y-4 shadow-xl">
-                  <div className="w-16 h-16 bg-[#FF6B00] text-white rounded-full flex items-center justify-center mx-auto shadow-md">
+                  <div className="w-16 h-16 bg-[#8B0000] text-white rounded-full flex items-center justify-center mx-auto shadow-md">
                     <CheckCircle2 className="w-10 h-10 text-white" />
                   </div>
                   <h3 className="text-2xl font-bold text-[#0A2540] font-poppins">Application Received Successfully!</h3>
@@ -494,7 +494,7 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({ initialAnchor = 
                   </p>
                   <button
                     onClick={() => { setFormSubmitted(false); setSubmitError(null); }}
-                    className="px-6 py-2.5 bg-[#FF6B00] hover:bg-[#E05E00] text-white font-bold rounded-full text-xs transition-all cursor-pointer shadow-md"
+                    className="px-6 py-2.5 bg-[#8B0000] hover:bg-[#5B0000] text-white font-bold rounded-full text-xs transition-all cursor-pointer shadow-md"
                   >
                     Submit Another Registration
                   </button>
@@ -506,7 +506,7 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({ initialAnchor = 
                     <select
                       value={formData.academicYear}
                       onChange={(e) => setFormData({ ...formData, academicYear: e.target.value })}
-                      className="w-full px-4 py-3 bg-white text-[#0A2540] rounded-2xl font-bold focus:outline-none focus:ring-2 focus:ring-[#FF6B00]"
+                      className="w-full px-4 py-3 bg-white text-[#0A2540] rounded-2xl font-bold focus:outline-none focus:ring-2 focus:ring-[#8B0000]"
                     >
                       <option value="2027 - 2028">Academic Year 2027 - 2028</option>
                       <option value="2026 - 2027">Academic Year 2026 - 2027</option>
@@ -521,7 +521,7 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({ initialAnchor = 
                       value={formData.fullName}
                       onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                       placeholder="Enter full student name"
-                      className="w-full px-4 py-3 bg-white text-[#0A2540] placeholder-slate-400 font-bold rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#FF6B00]"
+                      className="w-full px-4 py-3 bg-white text-[#0A2540] placeholder-slate-400 font-bold rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#8B0000]"
                     />
                   </div>
 
@@ -532,7 +532,7 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({ initialAnchor = 
                       required
                       value={formData.dob}
                       onChange={(e) => setFormData({ ...formData, dob: e.target.value })}
-                      className="w-full px-4 py-3 bg-white text-[#0A2540] font-bold rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#FF6B00]"
+                      className="w-full px-4 py-3 bg-white text-[#0A2540] font-bold rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#8B0000]"
                     />
                   </div>
 
@@ -544,7 +544,7 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({ initialAnchor = 
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       placeholder="10 digit mobile phone number"
-                      className="w-full px-4 py-3 bg-white text-[#0A2540] placeholder-slate-400 font-bold rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#FF6B00]"
+                      className="w-full px-4 py-3 bg-white text-[#0A2540] placeholder-slate-400 font-bold rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#8B0000]"
                     />
                   </div>
 
@@ -555,7 +555,7 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({ initialAnchor = 
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       placeholder="student@example.com"
-                      className="w-full px-4 py-3 bg-white text-[#0A2540] placeholder-slate-400 font-bold rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#FF6B00]"
+                      className="w-full px-4 py-3 bg-white text-[#0A2540] placeholder-slate-400 font-bold rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#8B0000]"
                     />
                   </div>
 
@@ -566,7 +566,7 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({ initialAnchor = 
                     <select
                       value={formData.preferredCourse}
                       onChange={(e) => setFormData({ ...formData, preferredCourse: e.target.value })}
-                      className="w-full px-4 py-3 bg-white text-[#0A2540] font-bold rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#FF6B00]"
+                      className="w-full px-4 py-3 bg-white text-[#0A2540] font-bold rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#8B0000]"
                     >
                       {formCategory === 'UG' ? (
                         UG_COURSES_LIST.map((course) => (
@@ -591,7 +591,7 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({ initialAnchor = 
                       value={formData.percentage}
                       onChange={(e) => setFormData({ ...formData, percentage: e.target.value })}
                       placeholder="e.g. 85.5% or Cutoff 165"
-                      className="w-full px-4 py-3 bg-white text-[#0A2540] placeholder-slate-400 font-bold rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#FF6B00]"
+                      className="w-full px-4 py-3 bg-white text-[#0A2540] placeholder-slate-400 font-bold rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#8B0000]"
                     />
                   </div>
 
@@ -602,7 +602,7 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({ initialAnchor = 
                       value={formData.city}
                       onChange={(e) => setFormData({ ...formData, city: e.target.value })}
                       placeholder="e.g. Nagercoil / Kanyakumari"
-                      className="w-full px-4 py-3 bg-white text-[#0A2540] placeholder-slate-400 font-bold rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#FF6B00]"
+                      className="w-full px-4 py-3 bg-white text-[#0A2540] placeholder-slate-400 font-bold rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#8B0000]"
                     />
                   </div>
 
@@ -616,7 +616,7 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({ initialAnchor = 
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full py-4 bg-[#FF6B00] hover:bg-[#E05E00] disabled:opacity-60 disabled:cursor-not-allowed text-white font-bold rounded-full text-sm uppercase tracking-wider shadow-xl transition-all flex items-center justify-center gap-2 active:scale-95 cursor-pointer border border-white/20"
+                      className="w-full py-4 bg-[#8B0000] hover:bg-[#5B0000] disabled:opacity-60 disabled:cursor-not-allowed text-white font-bold rounded-full text-sm uppercase tracking-wider shadow-xl transition-all flex items-center justify-center gap-2 active:scale-95 cursor-pointer border border-white/20"
                     >
                       {isSubmitting ? (
                         <>
@@ -641,14 +641,14 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({ initialAnchor = 
             {/* Section 6: Admission Helpline & Contact Details */}
             <div id="helpline" className="bg-white rounded-3xl p-6 sm:p-8 border-2 border-[#0A2540]/15 shadow-md space-y-6 scroll-mt-28">
               <div className="border-b-2 border-[#0A2540]/15 pb-4">
-                <span className="text-xs font-bold text-[#FF6B00] uppercase tracking-wider">Direct Campus Contact</span>
+                <span className="text-xs font-bold text-[#8B0000] uppercase tracking-wider">Direct Campus Contact</span>
                 <h2 className="text-2xl sm:text-3xl font-bold text-[#0A2540] font-poppins">Admission Helpline &amp; Office Hours</h2>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
                 <div className="bg-white p-5 rounded-2xl border-2 border-[#0A2540]/15 space-y-3 shadow-xs">
                   <div className="flex items-center gap-3 text-[#0A2540]">
-                    <Phone className="w-5 h-5 text-[#FF6B00] shrink-0" />
+                    <Phone className="w-5 h-5 text-[#8B0000] shrink-0" />
                     <p className="font-bold text-[#0A2540] text-sm">Admission Hotline Numbers</p>
                   </div>
                   <div className="space-y-1 text-[#0A2540]/80 pl-8 font-medium">
@@ -660,7 +660,7 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({ initialAnchor = 
 
                 <div className="bg-white p-5 rounded-2xl border-2 border-[#0A2540]/15 space-y-3 shadow-xs">
                   <div className="flex items-center gap-3 text-[#0A2540]">
-                    <Mail className="w-5 h-5 text-[#FF6B00] shrink-0" />
+                    <Mail className="w-5 h-5 text-[#8B0000] shrink-0" />
                     <p className="font-bold text-[#0A2540] text-sm">Email Admissions &amp; Queries</p>
                   </div>
                   <div className="space-y-1 text-[#0A2540]/80 pl-8 font-medium">
@@ -672,7 +672,7 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({ initialAnchor = 
 
                 <div className="bg-white p-5 rounded-2xl border-2 border-[#0A2540]/15 space-y-3 shadow-xs">
                   <div className="flex items-center gap-3 text-[#0A2540]">
-                    <Building className="w-5 h-5 text-[#FF6B00] shrink-0" />
+                    <Building className="w-5 h-5 text-[#8B0000] shrink-0" />
                     <p className="font-bold text-[#0A2540] text-sm">Campus Address</p>
                   </div>
                   <p className="text-[#0A2540]/80 leading-relaxed pl-8 font-medium">
@@ -685,7 +685,7 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({ initialAnchor = 
 
                 <div className="bg-white p-5 rounded-2xl border-2 border-[#0A2540]/15 space-y-3 shadow-xs">
                   <div className="flex items-center gap-3 text-[#0A2540]">
-                    <Clock className="w-5 h-5 text-[#FF6B00] shrink-0" />
+                    <Clock className="w-5 h-5 text-[#8B0000] shrink-0" />
                     <p className="font-bold text-[#0A2540] text-sm">Admission Cell Working Hours</p>
                   </div>
                   <div className="space-y-1 text-[#0A2540]/80 pl-8 font-medium">
@@ -701,7 +701,7 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({ initialAnchor = 
             <div id="scholarships" className="bg-white rounded-3xl p-6 sm:p-8 border-2 border-[#0A2540]/15 shadow-md space-y-4 scroll-mt-28">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b-2 border-[#0A2540]/15 pb-3 gap-2">
                 <h2 className="text-xl sm:text-2xl font-bold text-[#0A2540] font-poppins">Scholarships &amp; Fee Waivers</h2>
-                <span className="px-3.5 py-1 bg-[#FF6B00] text-white font-bold text-xs rounded-full">Merit Aids</span>
+                <span className="px-3.5 py-1 bg-[#8B0000] text-white font-bold text-xs rounded-full">Merit Aids</span>
               </div>
 
               <p className="text-xs sm:text-sm text-[#0A2540]/80 leading-relaxed font-medium">
@@ -712,7 +712,7 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({ initialAnchor = 
                 onClick={() => setSelectedDoc(scholarshipDoc)}
                 className="px-6 py-3 bg-[#0A2540] hover:bg-[#1E40AF] text-white text-xs font-bold rounded-full transition-all flex items-center gap-2 w-full sm:w-auto justify-center cursor-pointer shadow-md"
               >
-                <Download className="w-4 h-4 text-[#FF6B00]" />
+                <Download className="w-4 h-4 text-[#8B0000]" />
                 Download Scholarship Application Form (DOCX)
               </button>
             </div>

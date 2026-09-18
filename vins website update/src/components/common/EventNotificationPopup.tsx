@@ -82,12 +82,12 @@ export const EventNotificationPopup: React.FC<EventNotificationPopupProps> = ({
         >
           <div className="relative overflow-hidden rounded-2xl bg-white/95 backdrop-blur-xl border border-amber-300/60 shadow-2xl elevation-3d-3 text-[#252528] p-4 sm:p-5">
             {/* Top Accent Gradient Bar */}
-            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#0A2540] via-[#FF6B00] to-[#0A2540]" />
+            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#0A2540] via-[#8B0000] to-[#0A2540]" />
 
             {/* Header / Dismiss Row */}
             <div className="flex items-center justify-between gap-2 mb-3">
               <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-amber-100 text-[#7A4B00] text-[10px] font-extrabold uppercase tracking-wider border border-amber-300/70">
-                <Sparkles className="w-3 h-3 text-[#FF6B00] animate-sparkle" />
+                <Sparkles className="w-3 h-3 text-[#8B0000] animate-sparkle" />
                 <span>Spotlight Event</span>
               </div>
 
@@ -117,7 +117,7 @@ export const EventNotificationPopup: React.FC<EventNotificationPopupProps> = ({
               )}
 
               <div className="flex-1 min-w-0 space-y-1">
-                <div className="flex items-center gap-1.5 text-[11px] font-bold text-[#FF6B00]">
+                <div className="flex items-center gap-1.5 text-[11px] font-bold text-[#8B0000]">
                   <Calendar className="w-3.5 h-3.5 shrink-0" />
                   <span>{featuredEvent.date}</span>
                   {featuredEvent.category && (
@@ -152,7 +152,7 @@ export const EventNotificationPopup: React.FC<EventNotificationPopupProps> = ({
                 </button>
                 <button
                   onClick={handleClickDetails}
-                  className="inline-flex items-center gap-1.5 text-xs font-bold text-white bg-[#0A2540] hover:bg-[#FF6B00] px-3.5 py-1.5 rounded-xl transition-all duration-200 shadow-sm cursor-pointer"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold text-white bg-[#0A2540] hover:bg-[#8B0000] px-3.5 py-1.5 rounded-xl transition-all duration-200 shadow-sm cursor-pointer"
                 >
                   <span>Details</span>
                   <ArrowRight className="w-3.5 h-3.5" />

@@ -31,7 +31,7 @@ export const DepartmentListPage: React.FC<DepartmentListPageProps> = ({ onSelect
         <ScrollReveal direction="up" distance={20}>
           <div className="bg-[#0A2540] text-white p-8 sm:p-12 rounded-3xl border border-white/20 shadow-3d-deep space-y-4 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-96 h-96 bg-white/8 rounded-full blur-3xl pointer-events-none" />
-            <div className="absolute -bottom-16 -left-16 w-64 h-64 bg-[#FF6B00]/10 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute -bottom-16 -left-16 w-64 h-64 bg-[#8B0000]/10 rounded-full blur-3xl pointer-events-none" />
             
             <div className="badge-academic bg-white/15 text-white border border-white/30 relative z-10">
               <Sparkles className="w-4 h-4 text-amber-300" />
@@ -125,7 +125,7 @@ export const DepartmentListPage: React.FC<DepartmentListPageProps> = ({ onSelect
                   </div>
 
                   <div className="p-5 sm:p-6 space-y-3 flex-1">
-                    <h3 className="text-base sm:text-lg font-bold font-playfair text-[#0A2540] group-hover:text-[#FF6B00] transition-colors leading-snug">
+                    <h3 className="text-base sm:text-lg font-bold font-playfair text-[#0A2540] group-hover:text-[#8B0000] transition-colors leading-snug">
                       {dept.name}
                     </h3>
 
@@ -143,7 +143,7 @@ export const DepartmentListPage: React.FC<DepartmentListPageProps> = ({ onSelect
                       <CheckCircle2 className="w-4 h-4 text-emerald-500" />
                       {dept.placementPercentage}% Placed
                     </span>
-                    <span className="text-xs font-black text-[#FF6B00] group-hover:translate-x-1 transition-transform flex items-center gap-1">
+                    <span className="text-xs font-black text-[#8B0000] group-hover:translate-x-1 transition-transform flex items-center gap-1">
                       View Course
                       <ArrowRight className="w-3.5 h-3.5" />
                     </span>
