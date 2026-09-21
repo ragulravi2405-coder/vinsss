@@ -26,7 +26,7 @@ import { AdminPortalPage } from './pages/AdminPortalPage';
 import { AdminDataProvider } from './context/AdminDataContext';
 import { FloatingHomeButton } from './components/common/FloatingHomeButton';
 import { ExplodedWebsiteView } from './components/common/ExplodedWebsiteView';
-import { VisianAiBot } from './components/common/VisianAiBot';
+import { VinsianAiBot } from './components/common/VinsianAiBot';
 
 export default function App() {
   const [currentTab, setCurrentTab] = useState<NavigationTab>('home');
@@ -193,8 +193,8 @@ export default function App() {
         {/* Global Layout Footer */}
         <Footer onTabChange={handleTabChange} />
 
-        {/* Cute Visian AI Campus Assistant Bot - Floating across entire website */}
-        <VisianAiBot onNavigate={handleTabChange} />
+        {/* Cute Vinsian AI Campus Assistant Bot - Floating across entire website */}
+        <VinsianAiBot onNavigate={handleTabChange} />
 
         {/* Global Persistent Floating Home Button - Always visible across all pages */}
         <FloatingHomeButton

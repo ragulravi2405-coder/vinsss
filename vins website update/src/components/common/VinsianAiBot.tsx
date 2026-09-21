@@ -19,7 +19,7 @@ interface Message {
   };
 }
 
-interface VisianAiBotProps {
+interface VinsianAiBotProps {
   onNavigate?: (tab: NavigationTab, anchorId?: string, departmentId?: string) => void;
 }
 
@@ -33,7 +33,7 @@ const QUICK_PROMPTS = [
   { icon: '📞', label: 'Contact Help', query: 'Where is VINS located and how to contact?' },
 ];
 
-export const VisianAiBot: React.FC<VisianAiBotProps> = ({ onNavigate }) => {
+export const VinsianAiBot: React.FC<VinsianAiBotProps> = ({ onNavigate }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [inputValue, setInputValue] = useState('');
   const [isTyping, setIsTyping] = useState(false);
@@ -45,7 +45,7 @@ export const VisianAiBot: React.FC<VisianAiBotProps> = ({ onNavigate }) => {
     {
       id: 'welcome-1',
       sender: 'bot',
-      text: "Vanakkam! I'm Visian 🤖, your official AI assistant for VINS Christian College of Engineering, Nagercoil. How can I help you today? You can ask me anything about admissions, courses, fees, placements, hostel, or bus routes!",
+      text: "Vanakkam! I'm Vinsian 🤖, your official AI assistant for VINS Christian College of Engineering, Nagercoil. How can I help you today? You can ask me anything about admissions, courses, fees, placements, hostel, or bus routes!",
       timestamp: 'Just now',
     },
   ]);
@@ -207,7 +207,7 @@ export const VisianAiBot: React.FC<VisianAiBotProps> = ({ onNavigate }) => {
     // 11. Greetings & Pleasantries
     if (q.includes('hi') || q.includes('hello') || q.includes('hey') || q.includes('vanakkam') || q.includes('good morning') || q.includes('good afternoon') || q.includes('good evening') || q.includes('who are you') || q.includes('name')) {
       return {
-        text: "Hello! Vanakkam! 😊 I am **Visian**, the AI assistant for VINS Christian College of Engineering. I can assist you with courses, counselling code 4982, online admissions, campus facilities, placements, and hostel details. What would you like to explore today?",
+        text: "Hello! Vanakkam! 😊 I am **Vinsian**, the AI assistant for VINS Christian College of Engineering. I can assist you with courses, counselling code 4982, online admissions, campus facilities, placements, and hostel details. What would you like to explore today?",
       };
     }
 
@@ -283,7 +283,7 @@ export const VisianAiBot: React.FC<VisianAiBotProps> = ({ onNavigate }) => {
 
   return (
     <>
-      {/* ── 1. FLOATING CUTE VISIAN BOT BUTTON (BOTTOM-RIGHT) ── */}
+      {/* ── 1. FLOATING CUTE VINSIAN BOT BUTTON (BOTTOM-RIGHT) ── */}
       <div 
         className="fixed z-40 pointer-events-auto transition-all duration-300 right-3 bottom-20 sm:right-6 sm:bottom-24"
         style={{ bottom: 'max(5.5rem, calc(env(safe-area-inset-bottom, 1rem) + 4.5rem))' }}
@@ -303,7 +303,7 @@ export const VisianAiBot: React.FC<VisianAiBotProps> = ({ onNavigate }) => {
               >
                 <div className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
                 <span className="text-xs font-bold text-[#0A2540]">
-                  Hi! I'm <strong className="text-[#FF6B00]">Visian 🤖</strong> Got questions?
+                  Hi! I'm <strong className="text-[#FF6B00]">Vinsian 🤖</strong> Got questions?
                 </span>
                 <button
                   onClick={(e) => {
@@ -325,8 +325,8 @@ export const VisianAiBot: React.FC<VisianAiBotProps> = ({ onNavigate }) => {
           {/* Cute Robot Mascot Button */}
           <motion.button
             onClick={isOpen ? handleClose : handleOpen}
-            aria-label={isOpen ? "Close Visian AI" : "Open Visian AI Chat"}
-            title="Chat with Visian AI"
+            aria-label={isOpen ? "Close Vinsian AI" : "Open Vinsian AI Chat"}
+            title="Chat with Vinsian AI"
             initial={{ opacity: 0, scale: 0.85, y: 15 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             whileHover={{ scale: 1.08, y: -2 }}
@@ -339,8 +339,8 @@ export const VisianAiBot: React.FC<VisianAiBotProps> = ({ onNavigate }) => {
             {/* Inner Avatar Container */}
             <div className="relative z-10 w-full h-full rounded-full overflow-hidden bg-white shadow-inner flex items-center justify-center">
               <img
-                src="/images/bot/visian.png"
-                alt="Visian AI Robot"
+                src="/images/bot/vinsian.png"
+                alt="Vinsian AI Robot"
                 className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-300"
                 onError={(e) => {
                   // Fallback to bot icon if image fails
@@ -357,14 +357,14 @@ export const VisianAiBot: React.FC<VisianAiBotProps> = ({ onNavigate }) => {
 
             {/* Bot Mini Tag Label */}
             <div className="absolute -bottom-1.5 z-20 px-2 py-0.5 rounded-full bg-[#0A2540] text-amber-300 border border-amber-400/60 text-[9px] font-black tracking-wider uppercase shadow-md leading-none">
-              VISIAN
+              VINSIAN
             </div>
           </motion.button>
 
         </div>
       </div>
 
-      {/* ── 2. VISIAN AI INTERACTIVE CHAT WINDOW MODAL ── */}
+      {/* ── 2. VINSIAN AI INTERACTIVE CHAT WINDOW MODAL ── */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -388,8 +388,8 @@ export const VisianAiBot: React.FC<VisianAiBotProps> = ({ onNavigate }) => {
                 <div className="relative w-11 h-11 rounded-2xl p-0.5 bg-gradient-to-br from-amber-400 to-[#FF6B00] shadow-md shrink-0">
                   <div className="w-full h-full rounded-[14px] overflow-hidden bg-white flex items-center justify-center">
                     <img
-                      src="/images/bot/visian.png"
-                      alt="Visian"
+                      src="/images/bot/vinsian.png"
+                      alt="Vinsian"
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -399,7 +399,7 @@ export const VisianAiBot: React.FC<VisianAiBotProps> = ({ onNavigate }) => {
                 <div className="min-w-0">
                   <div className="flex items-center gap-1.5">
                     <h3 className="font-playfair font-black text-sm sm:text-base text-white tracking-wide truncate">
-                      Visian AI
+                      Vinsian AI
                     </h3>
                     <span className="px-1.5 py-0.2 rounded-md bg-[#FF6B00] text-[9px] font-black uppercase text-white tracking-wider">
                       BOT
@@ -465,7 +465,7 @@ export const VisianAiBot: React.FC<VisianAiBotProps> = ({ onNavigate }) => {
                     {msg.sender === 'bot' && (
                       <div className="flex items-center gap-1.5 mb-1.5 pb-1 border-b border-amber-200/60 text-[11px] font-bold text-[#FF6B00]">
                         <Bot className="w-3.5 h-3.5 text-[#FF6B00]" />
-                        <span>Visian</span>
+                        <span>VINSIAN</span>
                       </div>
                     )}
 
@@ -499,7 +499,7 @@ export const VisianAiBot: React.FC<VisianAiBotProps> = ({ onNavigate }) => {
                 <div className="flex items-start gap-2">
                   <div className="bg-white border border-amber-300 rounded-2xl rounded-tl-none px-3.5 py-2.5 shadow-sm flex items-center gap-1.5">
                     <Bot className="w-3.5 h-3.5 text-[#FF6B00] animate-bounce" />
-                    <span className="text-xs text-slate-500 font-medium">Visian is typing</span>
+                    <span className="text-xs text-slate-500 font-medium">Vinsian is typing</span>
                     <span className="w-1.5 h-1.5 bg-[#FF6B00] rounded-full animate-ping" />
                   </div>
                 </div>
