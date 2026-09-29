@@ -50,22 +50,19 @@ export const PlacementPage: React.FC = () => {
     <div className="bg-[#FFFFFF] text-slate-900 min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-12">
         
-        {/* Header Banner - Premium Academic */}
+        {/* Header Banner - Clean White with Orange Accents */}
         <ScrollReveal direction="up" distance={20}>
-          <div className="bg-gradient-to-r from-[#FF6B00] via-[#FF7A1A] to-[#E05E00] text-white p-8 sm:p-12 rounded-3xl border border-orange-400 shadow-xl space-y-4 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-96 h-96 bg-white/8 rounded-full blur-3xl pointer-events-none" />
-            <div className="absolute bottom-0 left-0 w-72 h-72 bg-[#FF6B00]/10 rounded-full blur-3xl pointer-events-none" />
-
-            <div className="badge-academic bg-white/15 text-white border border-white/30 relative z-10">
-              <Sparkles className="w-4 h-4 text-amber-300" />
+          <div className="bg-white text-slate-900 p-8 sm:p-12 rounded-3xl border-2 border-orange-200 shadow-md space-y-4 relative overflow-hidden">
+            <div className="badge-academic bg-orange-50 text-[#FF6B00] border border-orange-200 font-bold inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs shadow-xs relative z-10">
+              <Sparkles className="w-4 h-4 text-[#FF6B00]" />
               <span>TRAINING &amp; PLACEMENT CELL</span>
             </div>
 
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-playfair text-white tracking-tight leading-tight relative z-10">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-playfair text-slate-900 tracking-tight leading-tight relative z-10">
               Campus Placements &amp; Career Development
             </h1>
 
-            <p className="text-sm sm:text-base text-white/90 max-w-3xl leading-relaxed relative z-10">
+            <p className="text-sm sm:text-base text-slate-600 max-w-3xl leading-relaxed relative z-10 font-medium">
               Our dedicated Training &amp; Placement Cell bridges the gap between academic knowledge and industry requirements, ensuring every student achieves their career goals.
             </p>
           </div>
@@ -285,28 +282,28 @@ export const PlacementPage: React.FC = () => {
               </ResponsiveContainer>
             </div>
 
-            <div className="lg:col-span-4 h-80 bg-[#FF6B00] text-white p-6 rounded-2xl border border-white/30 space-y-4 flex flex-col justify-between shadow-xl">
+            <div className="lg:col-span-4 h-80 bg-white text-slate-900 p-6 rounded-2xl border-2 border-orange-200 space-y-4 flex flex-col justify-between shadow-xs">
               <div>
-                <h3 className="font-bold text-base text-white flex items-center gap-2">
-                  <TrendingUp className="w-5 h-5 text-white" />
+                <h3 className="font-bold text-base text-slate-900 flex items-center gap-2">
+                  <TrendingUp className="w-5 h-5 text-[#FF6B00]" />
                   Salary Packages Trend
                 </h3>
-                <p className="text-xs text-white/80 mt-1 font-medium">Highest CTC salary package offered over past academic years.</p>
+                <p className="text-xs text-slate-600 mt-1 font-medium">Highest CTC salary package offered over past academic years.</p>
               </div>
 
               <div className="h-40">
                 <ResponsiveContainer width="100%" height="100%">
                   <LineChart data={PLACEMENT_STATS}>
-                    <XAxis dataKey="year" stroke="#FFFFFF" fontSize={10} />
-                    <YAxis stroke="#FFFFFF" fontSize={10} />
-                    <Tooltip contentStyle={{ backgroundColor: '#FFFFFF', color: '#FF6B00', fontSize: '11px', borderRadius: '8px', fontWeight: 'bold' }} />
-                    <Line type="monotone" dataKey="highestCTC" name="Highest CTC (LPA)" stroke="#FFFFFF" strokeWidth={3} dot={{ r: 5, fill: '#FFFFFF' }} />
+                    <XAxis dataKey="year" stroke="#FF6B00" fontSize={10} />
+                    <YAxis stroke="#FF6B00" fontSize={10} />
+                    <Tooltip contentStyle={{ backgroundColor: '#FFFFFF', borderColor: '#FF6B00', color: '#FF6B00', fontSize: '11px', borderRadius: '8px', fontWeight: 'bold' }} />
+                    <Line type="monotone" dataKey="highestCTC" name="Highest CTC (LPA)" stroke="#FF6B00" strokeWidth={3} dot={{ r: 5, fill: '#FF6B00' }} />
                   </LineChart>
                 </ResponsiveContainer>
               </div>
 
-              <div className="p-3 bg-white text-slate-900 rounded-xl font-bold text-xs text-center shadow-md">
-                Highest salary package touched <strong>12.0 LPA</strong> in campus drives.
+              <div className="p-3 bg-orange-50 text-slate-900 border border-orange-200 rounded-xl font-bold text-xs text-center shadow-xs">
+                Highest salary package touched <strong className="text-[#FF6B00]">12.0 LPA</strong> in campus drives.
               </div>
             </div>
 

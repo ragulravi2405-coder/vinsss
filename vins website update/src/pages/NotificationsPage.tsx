@@ -33,21 +33,20 @@ export const NotificationsPage: React.FC<NotificationsPageProps> = ({ onNavigate
   return (
     <div className="bg-[#FFFFFF] text-slate-900 min-h-screen pb-20 font-sans">
       
-      {/* Top Header Banner - Strict Magenta Pink + White */}
-      <div className="bg-gradient-to-r from-[#FF6B00] via-[#FF7A1A] to-[#E05E00] text-white py-12 border-b border-orange-400 shadow-xl relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl pointer-events-none animate-pulse" />
+      {/* Top Header Banner - Clean White with Orange Accents */}
+      <div className="bg-white text-slate-900 py-12 border-b-2 border-orange-100 shadow-sm relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4 relative z-10">
           
           <div className="flex flex-wrap items-center justify-between gap-4">
             <div className="space-y-2">
-              <div className="inline-flex items-center gap-2 bg-white/20 text-white text-xs font-bold px-3.5 py-1.5 rounded-full border border-white/30 tracking-widest font-cinzel">
-                <Bell className="w-4 h-4 text-white animate-bounce" />
+              <div className="inline-flex items-center gap-2 bg-orange-50 text-[#FF6B00] text-xs font-bold px-3.5 py-1.5 rounded-full border border-orange-200 tracking-widest font-cinzel shadow-xs">
+                <Bell className="w-4 h-4 text-[#FF6B00] animate-bounce" />
                 <span>OFFICIAL INFORMATION HUB</span>
               </div>
-              <h1 className="text-3xl sm:text-5xl font-playfair font-bold text-white tracking-tight">
+              <h1 className="text-3xl sm:text-5xl font-playfair font-bold text-slate-900 tracking-tight">
                 College Circulars &amp; Notifications
               </h1>
-              <p className="text-xs sm:text-base text-white/95 max-w-2xl leading-relaxed font-medium">
+              <p className="text-xs sm:text-base text-slate-600 max-w-2xl leading-relaxed font-medium">
                 Stay updated with the latest live announcements, Anna University exam schedules, campus placement drives, admission notices, and downloadable official PDF circulars.
               </p>
             </div>
@@ -55,9 +54,9 @@ export const NotificationsPage: React.FC<NotificationsPageProps> = ({ onNavigate
             {onNavigateAdmission && (
               <button
                 onClick={() => onNavigateAdmission('admissions')}
-                className="bg-white hover:bg-white/90 text-slate-900 text-xs font-black uppercase tracking-wider px-6 py-3.5 rounded-full shadow-lg active:scale-95 shrink-0 cursor-pointer flex items-center gap-2"
+                className="bg-[#FF6B00] hover:bg-[#E05E00] text-white text-xs font-black uppercase tracking-wider px-6 py-3.5 rounded-full shadow-md active:scale-95 shrink-0 cursor-pointer flex items-center gap-2"
               >
-                <Sparkles className="w-4 h-4 text-slate-900" />
+                <Sparkles className="w-4 h-4 text-white" />
                 <span>Apply Online 2026-27</span>
               </button>
             )}

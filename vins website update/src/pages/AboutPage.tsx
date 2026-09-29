@@ -38,24 +38,18 @@ export const AboutPage: React.FC<AboutPageProps> = ({ initialAnchor = 'vision' }
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8 font-sans">
       
-      {/* Header Banner — Deep Navy Blue with Cinematic 3D Parallax Depth */}
+      {/* Header Banner — Clean White with Orange Accents */}
       <ScrollReveal direction="up" distance={20}>
-        <div className="bg-gradient-to-r from-[#FF6B00] via-[#FF7A1A] to-[#E05E00] text-white p-8 sm:p-12 rounded-3xl border border-orange-400 shadow-xl space-y-4 relative overflow-hidden">
-          <img
-            src="/images/college events and news galeery/h9.jpg"
-            alt="VINS College Campus"
-            className="absolute inset-0 w-full h-full object-cover opacity-25 filter brightness-90 pointer-events-none scale-105"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B00] via-[#E05E00]/85 to-transparent pointer-events-none" />
+        <div className="bg-white text-slate-900 p-8 sm:p-12 rounded-3xl border-2 border-orange-200 shadow-md space-y-4 relative overflow-hidden">
           <div className="relative z-10 space-y-3">
-            <div className="badge-academic bg-gradient-to-r from-[#FF6B00] to-[#E05E00] text-white border border-white/25 shadow-md">
-              <Sparkles className="w-3.5 h-3.5 text-white" />
+            <div className="badge-academic bg-orange-50 text-[#FF6B00] border border-orange-200 font-bold inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs shadow-xs">
+              <Sparkles className="w-3.5 h-3.5 text-[#FF6B00]" />
               <span>Established 2004 · Chunkankadai, Nagercoil</span>
             </div>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-playfair text-white tracking-tight leading-tight">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-playfair text-slate-900 tracking-tight leading-tight">
               About VINS Group of Engineering Colleges
             </h1>
-            <p className="text-sm sm:text-base text-white/90 max-w-3xl leading-relaxed font-normal">
+            <p className="text-sm sm:text-base text-slate-600 max-w-3xl leading-relaxed font-normal">
               Founded by Shri Nanjil M. Vincent in Chunkankadai, Nagercoil, Kanyakumari District. Approved by AICTE, New Delhi &amp; Affiliated to Anna University, Chennai.
             </p>
           </div>
@@ -171,12 +165,12 @@ export const AboutPage: React.FC<AboutPageProps> = ({ initialAnchor = 'vision' }
               </div>
 
               {/* Official AICTE / Anna University Affiliation Notice */}
-              <div className="bg-[#FF6B00] rounded-2xl p-5 border border-white/15 flex items-center gap-4 mt-4 shadow-md">
+              <div className="bg-orange-50/80 rounded-2xl p-5 border-2 border-orange-200 flex items-center gap-4 mt-4 shadow-xs">
                 <Landmark className="w-8 h-8 text-[#FF6B00] shrink-0" />
                 <div className="space-y-1">
-                  <h4 className="font-bold text-sm text-white">Statutory Approval &amp; Affiliation Status</h4>
-                  <p className="text-[11px] text-white/85">
-                    VINS Christian College of Engineering is permanently approved by AICTE, New Delhi and affiliated with Anna University, Chennai. Anna University Counselling TNEA Code: <strong className="text-[#FF6B00]">{COLLEGE_INFO.code}</strong>.
+                  <h4 className="font-bold text-sm text-slate-900">Statutory Approval &amp; Affiliation Status</h4>
+                  <p className="text-[11px] text-slate-700">
+                    VINS Christian College of Engineering is permanently approved by AICTE, New Delhi and affiliated with Anna University, Chennai. Anna University Counselling TNEA Code: <strong className="text-[#FF6B00] font-bold">{COLLEGE_INFO.code}</strong>.
                   </p>
                 </div>
               </div>
@@ -205,10 +199,10 @@ export const AboutPage: React.FC<AboutPageProps> = ({ initialAnchor = 'vision' }
                     className="w-full h-full object-cover object-top"
                   />
                 </div>
-                <div className="bg-[#FF6B00] text-white p-4 sm:p-5 rounded-2xl border border-white/10 text-xs space-y-2 shadow-3d-soft">
-                  <p className="font-bold text-base font-playfair text-white">{FOUNDER_CHAIRMAN_DATA.name}</p>
-                  <p className="text-white/80 font-medium">{FOUNDER_CHAIRMAN_DATA.designation}</p>
-                  <div className="pt-2 border-t border-white/15 text-[11px] text-white/70 space-y-1">
+                <div className="bg-white text-slate-900 p-4 sm:p-5 rounded-2xl border-2 border-orange-200 text-xs space-y-2 shadow-sm">
+                  <p className="font-bold text-base font-playfair text-slate-900">{FOUNDER_CHAIRMAN_DATA.name}</p>
+                  <p className="text-[#FF6B00] font-bold">{FOUNDER_CHAIRMAN_DATA.designation}</p>
+                  <div className="pt-2 border-t border-slate-100 text-[11px] text-slate-600 space-y-1">
                     <p>📍 {COLLEGE_INFO.location}</p>
                     <p>🎓 Founder: VINS Group of Engineering Colleges</p>
                   </div>
@@ -305,12 +299,12 @@ export const AboutPage: React.FC<AboutPageProps> = ({ initialAnchor = 'vision' }
 
             <div className="bg-orange-50 border border-orange-200 rounded-2xl p-6 flex flex-col items-center space-y-4">
               {/* Top box */}
-              <div className="bg-[#FF6B00] text-white font-bold text-xs rounded-2xl shadow-md text-center w-64 px-4 py-3 border border-white/15">
+              <div className="bg-white text-slate-900 font-bold text-xs rounded-2xl shadow-sm text-center w-64 px-4 py-3 border-2 border-[#FF6B00]">
                 Board of Management / Founder Chairman
               </div>
               <div className="w-0.5 h-6 bg-orange-200" />
               {/* Middle box */}
-              <div className="bg-[#FF6B00] text-white font-bold rounded-2xl shadow-md text-center w-64 px-4 py-3 text-sm border border-white/20">
+              <div className="bg-white text-slate-900 font-bold rounded-2xl shadow-sm text-center w-64 px-4 py-3 text-sm border-2 border-[#FF6B00]">
                 Principal &amp; Academic Council
               </div>
               <div className="w-0.5 h-6 bg-orange-200" />

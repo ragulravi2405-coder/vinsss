@@ -35,22 +35,19 @@ export const CampusPage: React.FC = () => {
     <div className="bg-[#FFFFFF] text-slate-900 min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-12">
         
-        {/* Header Banner - Premium */}
+        {/* Header Banner - Clean White with Orange Accents */}
         <ScrollReveal direction="up" distance={20}>
-          <div className="bg-gradient-to-r from-[#FF6B00] via-[#FF7A1A] to-[#E05E00] text-white p-8 sm:p-12 rounded-3xl border border-orange-400 shadow-xl space-y-4 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-96 h-96 bg-white/8 rounded-full blur-3xl pointer-events-none" />
-            <div className="absolute -bottom-16 -left-16 w-64 h-64 bg-[#FF6B00]/10 rounded-full blur-3xl pointer-events-none" />
-
-            <div className="badge-academic bg-white/15 text-white border border-white/30 relative z-10">
-              <Sparkles className="w-4 h-4 text-amber-300" />
+          <div className="bg-white text-slate-900 p-8 sm:p-12 rounded-3xl border-2 border-orange-200 shadow-md space-y-4 relative overflow-hidden">
+            <div className="badge-academic bg-orange-50 text-[#FF6B00] border border-orange-200 font-bold inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs shadow-xs relative z-10">
+              <Sparkles className="w-4 h-4 text-[#FF6B00]" />
               <span>CAMPUS LIFE &amp; CULTURAL FESTS</span>
             </div>
 
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-playfair text-white tracking-tight leading-tight relative z-10">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-playfair text-slate-900 tracking-tight leading-tight relative z-10">
               Campus Events &amp; Student Life
             </h1>
 
-            <p className="text-sm sm:text-base text-white/90 max-w-3xl leading-relaxed relative z-10">
+            <p className="text-sm sm:text-base text-slate-600 max-w-3xl leading-relaxed relative z-10 font-medium">
               Extracurricular student development through NSS, YRC, EDC, Innovation Center, Nature Club, and our Annual College Day Stage Extravaganza.
             </p>
           </div>

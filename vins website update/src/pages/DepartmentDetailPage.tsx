@@ -37,13 +37,13 @@ export const DepartmentDetailPage: React.FC<DepartmentDetailPageProps> = ({
 
         {/* 1. Wide Banner Header */}
         <ScrollReveal direction="up" distance={16}>
-          <div className="relative aspect-[21/9] rounded-3xl overflow-hidden shadow-3d-deep bg-[#FF6B00] border border-white/20">
+          <div className="relative aspect-[21/9] rounded-3xl overflow-hidden shadow-md bg-slate-900 border border-slate-200">
             <img
               src={dept.courseImage || dept.bannerPath}
               alt={dept.name}
-              className="w-full h-full object-cover opacity-75"
+              className="w-full h-full object-cover opacity-85"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#FF6B00] via-[#E05E00]/60 to-transparent p-6 sm:p-10 flex flex-col justify-end text-white">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-6 sm:p-10 flex flex-col justify-end text-white">
               <div className="flex flex-wrap items-center justify-between gap-4">
                 <div className="space-y-2">
                   <span className="px-3.5 py-1.5 rounded-full bg-white text-slate-900 font-black text-xs uppercase tracking-wider shadow-md">

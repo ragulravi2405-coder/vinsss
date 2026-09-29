@@ -95,59 +95,55 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({ initialAnchor = 
     <div className="bg-[#FFFFFF] text-slate-900 min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8">
         
-        {/* Admissions Hero Section */}
+        {/* Admissions Hero Section - Clean White with Orange Accents */}
         <ScrollReveal direction="up" distance={24}>
-          <div className="bg-[#FF6B00] text-white p-8 sm:p-14 lg:p-16 rounded-3xl border border-white/20 shadow-3d-deep relative overflow-hidden space-y-6">
-            {/* Decorative depth orbs */}
-            <div className="absolute top-0 right-0 w-96 h-96 bg-white/20 rounded-full blur-3xl pointer-events-none" />
-            <div className="absolute -bottom-10 -left-10 w-72 h-72 bg-[#FF7A1A]/30 rounded-full blur-2xl pointer-events-none" />
-
-          {/* Badge Label: ADMISSIONS OPEN 2026-2027 */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FF6B00] text-white font-bold text-xs tracking-wider uppercase shadow-md">
-            <Sparkles className="w-4 h-4 text-white" />
-            <span>ADMISSIONS OPEN 2026-2027</span>
-          </div>
-
-          {/* Main Heading */}
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold font-poppins text-white tracking-tight leading-tight max-w-4xl">
-            Begin Your Engineering Journey at VINS
-          </h1>
-
-          {/* Description Subtext */}
-          <p className="text-sm sm:text-base lg:text-lg text-white/90 max-w-3xl leading-relaxed font-normal">
-            Join a distinguished community where curious minds are empowered with cutting-edge skills, global recruitment access, and leadership values.
-          </p>
-
-          {/* Action Buttons & Helplines */}
-          <div className="pt-4 flex flex-wrap items-center gap-4">
-            <button
-              onClick={() => scrollTo('online-form')}
-              className="px-6 sm:px-8 py-3.5 rounded-full bg-[#FF6B00] hover:bg-[#E05E00] text-white font-bold text-xs sm:text-sm tracking-wider uppercase hover:scale-105 active:scale-95 transition-all shadow-xl cursor-pointer border border-white/20"
-            >
-              APPLY ONLINE NOW
-            </button>
-
-            <button
-              onClick={() => scrollTo('scholarships')}
-              className="px-6 sm:px-8 py-3.5 rounded-full bg-transparent border-2 border-white text-white font-bold text-xs sm:text-sm tracking-wider uppercase hover:bg-white hover:text-[#FF6B00] hover:scale-105 active:scale-95 transition-all shadow-lg cursor-pointer"
-            >
-              SCHOLARSHIPS &amp; AID
-            </button>
-          </div>
-
-          {/* Quick Helpline Strip */}
-          <div className="pt-2 flex flex-wrap items-center gap-3 text-xs text-white border-t border-white/20">
-            <div className="flex items-center gap-2 text-white font-semibold">
-              <Phone className="w-4 h-4 text-[#FF6B00] shrink-0" />
-              <span>Counseling Code: <strong className="text-[#FF6B00]">4982</strong> | Admission Hotline: <strong>+91 9787747072 / +91 9787747071</strong></span>
+          <div className="bg-white text-slate-900 p-8 sm:p-14 lg:p-16 rounded-3xl border-2 border-orange-200 shadow-md relative overflow-hidden space-y-6">
+            {/* Badge Label: ADMISSIONS OPEN 2026-2027 */}
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-50 text-[#FF6B00] font-bold text-xs tracking-wider uppercase border border-orange-200 shadow-xs">
+              <Sparkles className="w-4 h-4 text-[#FF6B00]" />
+              <span>ADMISSIONS OPEN 2026-2027</span>
             </div>
-            <span className="hidden sm:inline text-white/40">•</span>
-            <div className="flex items-center gap-2 text-white font-semibold">
-              <Mail className="w-4 h-4 text-[#FF6B00] shrink-0" />
-              <span>vinsengg@gmail.com</span>
+
+            {/* Main Heading */}
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold font-poppins text-slate-900 tracking-tight leading-tight max-w-4xl">
+              Begin Your Engineering Journey at VINS
+            </h1>
+
+            {/* Description Subtext */}
+            <p className="text-sm sm:text-base lg:text-lg text-slate-600 max-w-3xl leading-relaxed font-normal">
+              Join a distinguished community where curious minds are empowered with cutting-edge skills, global recruitment access, and leadership values.
+            </p>
+
+            {/* Action Buttons & Helplines */}
+            <div className="pt-4 flex flex-wrap items-center gap-4">
+              <button
+                onClick={() => scrollTo('online-form')}
+                className="px-6 sm:px-8 py-3.5 rounded-full bg-[#FF6B00] hover:bg-[#E05E00] text-white font-bold text-xs sm:text-sm tracking-wider uppercase hover:scale-105 active:scale-95 transition-all shadow-md cursor-pointer border border-transparent"
+              >
+                APPLY ONLINE NOW
+              </button>
+
+              <button
+                onClick={() => scrollTo('scholarships')}
+                className="px-6 sm:px-8 py-3.5 rounded-full bg-white border-2 border-[#FF6B00] text-[#FF6B00] font-bold text-xs sm:text-sm tracking-wider uppercase hover:bg-[#FF6B00] hover:text-white hover:scale-105 active:scale-95 transition-all shadow-xs cursor-pointer"
+              >
+                SCHOLARSHIPS &amp; AID
+              </button>
+            </div>
+
+            {/* Quick Helpline Strip */}
+            <div className="pt-2 flex flex-wrap items-center gap-3 text-xs text-slate-700 border-t-2 border-orange-100">
+              <div className="flex items-center gap-2 font-semibold">
+                <Phone className="w-4 h-4 text-[#FF6B00] shrink-0" />
+                <span>Counseling Code: <strong className="text-[#FF6B00]">4982</strong> | Admission Hotline: <strong>+91 9787747072 / +91 9787747071</strong></span>
+              </div>
+              <span className="hidden sm:inline text-slate-400">•</span>
+              <div className="flex items-center gap-2 font-semibold">
+                <Mail className="w-4 h-4 text-[#FF6B00] shrink-0" />
+                <span>vinsengg@gmail.com</span>
+              </div>
             </div>
           </div>
-        </div>
         </ScrollReveal>
 
         {/* Main Layout Grid */}

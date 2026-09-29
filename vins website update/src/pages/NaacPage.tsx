@@ -31,67 +31,64 @@ export const NaacPage: React.FC<NaacPageProps> = ({ initialView = 'naac' }) => {
     <div className="bg-[#FFFFFF] text-slate-900 min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-10">
         
-        {/* Header Banner - Premium */}
+        {/* Header Banner - Clean White with Orange Accents */}
         <ScrollReveal direction="up" distance={20}>
-          <div className="bg-gradient-to-r from-[#FF6B00] via-[#FF7A1A] to-[#E05E00] text-white p-8 sm:p-12 rounded-3xl border border-orange-400 shadow-xl space-y-4 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-96 h-96 bg-white/8 rounded-full blur-3xl pointer-events-none" />
-            <div className="absolute -bottom-16 -left-16 w-64 h-64 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
-
-            <div className="badge-academic bg-white/15 text-white border border-white/30 relative z-10">
-              <Sparkles className="w-4 h-4 text-amber-300" />
+          <div className="bg-white text-slate-900 p-8 sm:p-12 rounded-3xl border-2 border-orange-200 shadow-md space-y-4 relative overflow-hidden">
+            <div className="badge-academic bg-orange-50 text-[#FF6B00] border border-orange-200 font-bold inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs shadow-xs relative z-10">
+              <Sparkles className="w-4 h-4 text-[#FF6B00]" />
               <span>INTERNAL QUALITY ASSURANCE CELL (IQAC)</span>
             </div>
 
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-playfair text-white tracking-tight leading-tight relative z-10">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-playfair text-slate-900 tracking-tight leading-tight relative z-10">
               NAAC Accreditation &amp; Quality Cell (IQAC)
             </h1>
 
-            <p className="text-sm sm:text-base text-white/90 max-w-3xl leading-relaxed relative z-10">
+            <p className="text-sm sm:text-base text-slate-600 max-w-3xl leading-relaxed relative z-10 font-medium">
               Developing a conscious, consistent, and catalytic system for academic excellence, statutory audits, and quality culture at VINS Christian College of Engineering.
             </p>
 
-          {/* Action Buttons: Official NAAC SSR Portal Link & Tabs */}
-          <div className="flex flex-wrap items-center gap-3 pt-2">
-            <a
-              href="https://www.vinsengineeringcollege.org/naac/index.php"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-white hover:bg-white/90 text-slate-900 font-black text-xs uppercase tracking-wider px-5 py-3 rounded-full shadow-lg flex items-center gap-2 transition-all cursor-pointer"
-            >
-              <ExternalLink className="w-4 h-4 text-slate-900" />
-              Official NAAC Portal &amp; SSR (Click Here)
-            </a>
-
-            <div className="flex items-center gap-2 bg-white/15 p-1 rounded-full border border-white/25">
-              <button
-                onClick={() => setActiveTab('naac')}
-                className={`px-4 py-2 rounded-full font-bold text-xs transition-all cursor-pointer ${
-                  activeTab === 'naac' ? 'bg-white text-slate-900 shadow-md' : 'text-white hover:bg-white/10'
-                }`}
+            {/* Action Buttons: Official NAAC SSR Portal Link & Tabs */}
+            <div className="flex flex-wrap items-center gap-3 pt-2 relative z-10">
+              <a
+                href="https://www.vinsengineeringcollege.org/naac/index.php"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#FF6B00] hover:bg-[#E05E00] text-white font-bold text-xs uppercase tracking-wider px-5 py-3 rounded-full shadow-md flex items-center gap-2 transition-all cursor-pointer active:scale-95"
               >
-                NAAC Criteria &amp; SSR
-              </button>
+                <ExternalLink className="w-4 h-4 text-white" />
+                Official NAAC Portal &amp; SSR (Click Here)
+              </a>
 
-              <button
-                onClick={() => setActiveTab('iqac')}
-                className={`px-4 py-2 rounded-full font-bold text-xs transition-all cursor-pointer ${
-                  activeTab === 'iqac' ? 'bg-white text-slate-900 shadow-md' : 'text-white hover:bg-white/10'
-                }`}
-              >
-                IQAC Composition
-              </button>
+              <div className="flex items-center gap-1.5 bg-slate-100 p-1.5 rounded-full border border-slate-200">
+                <button
+                  onClick={() => setActiveTab('naac')}
+                  className={`px-4 py-2 rounded-full font-bold text-xs transition-all cursor-pointer ${
+                    activeTab === 'naac' ? 'bg-[#FF6B00] text-white shadow-sm' : 'text-slate-700 hover:text-[#FF6B00] hover:bg-white'
+                  }`}
+                >
+                  NAAC Criteria &amp; SSR
+                </button>
 
-              <button
-                onClick={() => setActiveTab('rti')}
-                className={`px-4 py-2 rounded-full font-bold text-xs transition-all cursor-pointer ${
-                  activeTab === 'rti' ? 'bg-white text-slate-900 shadow-md' : 'text-white hover:bg-white/10'
-                }`}
-              >
-                RTI Committee
-              </button>
+                <button
+                  onClick={() => setActiveTab('iqac')}
+                  className={`px-4 py-2 rounded-full font-bold text-xs transition-all cursor-pointer ${
+                    activeTab === 'iqac' ? 'bg-[#FF6B00] text-white shadow-sm' : 'text-slate-700 hover:text-[#FF6B00] hover:bg-white'
+                  }`}
+                >
+                  IQAC Composition
+                </button>
+
+                <button
+                  onClick={() => setActiveTab('rti')}
+                  className={`px-4 py-2 rounded-full font-bold text-xs transition-all cursor-pointer ${
+                    activeTab === 'rti' ? 'bg-[#FF6B00] text-white shadow-sm' : 'text-slate-700 hover:text-[#FF6B00] hover:bg-white'
+                  }`}
+                >
+                  RTI Committee
+                </button>
+              </div>
             </div>
           </div>
-        </div>
         </ScrollReveal>
 
         {/* Video Embed Section */}
@@ -299,28 +296,28 @@ export const NaacPage: React.FC<NaacPageProps> = ({ initialView = 'naac' }) => {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
-              <div className="bg-[#FF6B00] text-white p-5 rounded-2xl space-y-1 shadow-md">
-                <span className="text-[10px] text-white/80 font-bold uppercase tracking-wider">Chairperson</span>
-                <p className="font-bold text-base text-white">{RTI_MEMBERS.chairperson.name}</p>
-                <p className="text-white/90">{RTI_MEMBERS.chairperson.role}</p>
+              <div className="bg-white text-slate-900 p-5 rounded-2xl border-2 border-orange-200 space-y-1 shadow-sm">
+                <span className="text-[10px] text-[#FF6B00] font-black uppercase tracking-wider">Chairperson</span>
+                <p className="font-bold text-base text-slate-900">{RTI_MEMBERS.chairperson.name}</p>
+                <p className="text-slate-600">{RTI_MEMBERS.chairperson.role}</p>
               </div>
 
-              <div className="bg-[#FF6B00] text-white p-5 rounded-2xl space-y-1 shadow-md">
-                <span className="text-[10px] text-white/80 font-bold uppercase tracking-wider">Management Rep</span>
-                <p className="font-bold text-base text-white">{RTI_MEMBERS.managementRep.name}</p>
-                <p className="text-white/90">{RTI_MEMBERS.managementRep.role}</p>
+              <div className="bg-white text-slate-900 p-5 rounded-2xl border-2 border-orange-200 space-y-1 shadow-sm">
+                <span className="text-[10px] text-[#FF6B00] font-black uppercase tracking-wider">Management Rep</span>
+                <p className="font-bold text-base text-slate-900">{RTI_MEMBERS.managementRep.name}</p>
+                <p className="text-slate-600">{RTI_MEMBERS.managementRep.role}</p>
               </div>
 
-              <div className="bg-[#FF6B00] text-white p-5 rounded-2xl space-y-1 shadow-md">
-                <span className="text-[10px] text-white/80 font-bold uppercase tracking-wider">Co-ordinator</span>
-                <p className="font-bold text-base text-white">{RTI_MEMBERS.coordinator.name}</p>
-                <p className="text-white/90">{RTI_MEMBERS.coordinator.role}</p>
+              <div className="bg-white text-slate-900 p-5 rounded-2xl border-2 border-orange-200 space-y-1 shadow-sm">
+                <span className="text-[10px] text-[#FF6B00] font-black uppercase tracking-wider">Co-ordinator</span>
+                <p className="font-bold text-base text-slate-900">{RTI_MEMBERS.coordinator.name}</p>
+                <p className="text-slate-600">{RTI_MEMBERS.coordinator.role}</p>
               </div>
 
-              <div className="bg-[#FF6B00] text-white p-5 rounded-2xl space-y-1 shadow-md">
-                <span className="text-[10px] text-white/80 font-bold uppercase tracking-wider">Secretary</span>
-                <p className="font-bold text-base text-white">{RTI_MEMBERS.secretary.name}</p>
-                <p className="text-white/90">{RTI_MEMBERS.secretary.role}</p>
+              <div className="bg-white text-slate-900 p-5 rounded-2xl border-2 border-orange-200 space-y-1 shadow-sm">
+                <span className="text-[10px] text-[#FF6B00] font-black uppercase tracking-wider">Secretary</span>
+                <p className="font-bold text-base text-slate-900">{RTI_MEMBERS.secretary.name}</p>
+                <p className="text-slate-600">{RTI_MEMBERS.secretary.role}</p>
               </div>
             </div>
 

@@ -36,22 +36,19 @@ export const ContactPage: React.FC = () => {
     <div className="bg-[#FFFFFF] text-slate-900 min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-10">
         
-        {/* Header Banner - Premium */}
+        {/* Header Banner - White with Orange Accents */}
         <ScrollReveal direction="up" distance={20}>
-          <div className="bg-gradient-to-r from-[#FF6B00] via-[#FF7A1A] to-[#E05E00] text-white p-8 sm:p-12 rounded-3xl border border-orange-400 shadow-xl space-y-4 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-96 h-96 bg-white/8 rounded-full blur-3xl pointer-events-none" />
-            <div className="absolute -bottom-16 -left-16 w-64 h-64 bg-[#FF6B00]/10 rounded-full blur-3xl pointer-events-none" />
-
-            <div className="badge-academic bg-white/15 text-white border border-white/30 relative z-10">
-              <Sparkles className="w-4 h-4 text-amber-300" />
+          <div className="bg-white text-slate-900 p-8 sm:p-12 rounded-3xl border-2 border-orange-200 shadow-md space-y-4 relative overflow-hidden">
+            <div className="badge-academic bg-orange-50 text-[#FF6B00] border border-orange-200 relative z-10 font-bold inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs">
+              <Sparkles className="w-4 h-4 text-[#FF6B00]" />
               <span>GET IN TOUCH</span>
             </div>
 
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-playfair text-white tracking-tight leading-tight relative z-10">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-playfair text-slate-900 tracking-tight leading-tight relative z-10">
               Contact VINS Christian College
             </h1>
 
-            <p className="text-sm sm:text-base text-white/90 max-w-2xl leading-relaxed relative z-10">
+            <p className="text-sm sm:text-base text-slate-600 max-w-2xl leading-relaxed relative z-10 font-medium">
               Reach our admission desk, principal&apos;s office, or campus administration located at Chunkankadai, Nagercoil, Kanyakumari District, Tamil Nadu.
             </p>
           </div>
@@ -112,12 +109,12 @@ export const ContactPage: React.FC = () => {
             </div>
 
             {/* Transportation & Landmark Info */}
-            <div className="bg-[#FF6B00] text-white rounded-3xl p-6 sm:p-7 border border-white/25 space-y-2 text-xs shadow-xl">
-              <h3 className="font-bold text-white text-sm flex items-center gap-2">
-                <Building2 className="w-4 h-4 text-white" />
+            <div className="bg-orange-50/70 text-slate-900 rounded-3xl p-6 sm:p-7 border-2 border-orange-200 space-y-2 text-xs shadow-sm">
+              <h3 className="font-bold text-slate-900 text-sm flex items-center gap-2">
+                <Building2 className="w-4 h-4 text-[#FF6B00]" />
                 Nearest Directions Landmark
               </h3>
-              <p className="text-white/95 leading-relaxed font-medium">
+              <p className="text-slate-700 leading-relaxed font-medium">
                 Situated on the Nagercoil - Trivandrum National Highway (NH 66) at Chunkankadai, 6 km from Nagercoil Junction Railway Station.
               </p>
             </div>
