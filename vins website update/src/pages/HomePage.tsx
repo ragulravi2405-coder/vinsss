@@ -860,19 +860,19 @@ export const HomePage: React.FC<HomePageProps> = ({ onTabChange, onOpenExplodedV
 
         </section>
 
-        {/* DEDICATED FEATURED YOUTUBE VIDEOS SECTION - WITH GLASSMORPHISM BACKDROP */}
+        {/* DEDICATED FEATURED YOUTUBE VIDEOS SECTION - WHITE BACKGROUND WITH ORANGE ACCENTS */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" style={{ perspective: '1200px' }}>
-          <div className="bg-slate-900/80 backdrop-blur-2xl rounded-3xl p-6 sm:p-10 shadow-[0_16px_48px_rgba(0,0,0,0.4)] border border-white/25 space-y-8 relative overflow-hidden">
+          <div className="bg-white rounded-3xl p-6 sm:p-10 shadow-lg border-2 border-orange-200 space-y-8 relative overflow-hidden">
             
             <div className="text-center max-w-3xl mx-auto space-y-3">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FF6B00] text-white text-xs font-bold tracking-widest uppercase border border-white/30 shadow-md">
-                <Video className="w-3.5 h-3.5 text-white" />
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-50 text-[#FF6B00] text-xs font-bold tracking-widest uppercase border border-orange-200 shadow-xs">
+                <Video className="w-3.5 h-3.5 text-[#FF6B00]" />
                 <span>OFFICIAL VIDEO BROADCASTS</span>
               </div>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-poppins text-white leading-tight">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-poppins text-slate-900 leading-tight">
                 Experience VINS in Motion
               </h2>
-              <p className="text-xs sm:text-sm text-white/80 leading-relaxed max-w-2xl mx-auto font-normal">
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-2xl mx-auto font-medium">
                 Watch our official institutional documentaries, state-of-the-art laboratory infrastructure, student innovations, and campus celebrations directly below.
               </p>
             </div>
@@ -881,18 +881,18 @@ export const HomePage: React.FC<HomePageProps> = ({ onTabChange, onOpenExplodedV
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-stretch">
             
             {/* Video 1: Official Campus & Academic Tour */}
-            <div className="organic-video-card-left flex flex-col justify-between video-card-3d transform-gpu transition-transform duration-300 hover:scale-105">
-              <div className="p-3 sm:p-5 flex flex-col h-full space-y-4">
+            <div className="bg-white rounded-3xl border-2 border-orange-200/80 shadow-md hover:border-[#FF6B00] flex flex-col justify-between transform-gpu transition-all duration-300 hover:shadow-xl">
+              <div className="p-4 sm:p-6 flex flex-col h-full space-y-4">
                 
                 {/* Header bar of Video Card 1 */}
-                <div className="flex items-center justify-between gap-3 border-b border-[#dedcd7]/60 pb-3">
+                <div className="flex items-center justify-between gap-3 border-b-2 border-orange-100 pb-3">
                   <div className="flex items-center gap-2.5 min-w-0">
-                    <span className="w-8 h-8 rounded-full bg-[#363538] text-white flex items-center justify-center shrink-0 shadow-xs text-xs font-bold">
+                    <span className="w-8 h-8 rounded-full bg-[#FF6B00] text-white flex items-center justify-center shrink-0 shadow-xs text-xs font-black">
                       01
                     </span>
                     <div className="truncate">
-                      <span className="text-[10px] font-extrabold uppercase tracking-wider text-[#54524e] block">CAMPUS DOCUMENTARY</span>
-                      <h3 className="font-playfair font-bold text-sm sm:text-base text-[#252528] truncate">
+                      <span className="text-[10px] font-black uppercase tracking-wider text-[#FF6B00] block">CAMPUS DOCUMENTARY</span>
+                      <h3 className="font-playfair font-bold text-sm sm:text-base text-slate-900 truncate">
                         VINS Christian College Institutional Tour
                       </h3>
                     </div>
@@ -902,17 +902,17 @@ export const HomePage: React.FC<HomePageProps> = ({ onTabChange, onOpenExplodedV
                     href="https://youtu.be/LtP5bsUIWew?si=_WX5lBdkREoxqx1B"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-3 py-1.5 rounded-full bg-[#363538] hover:bg-[#48474b] text-white text-[11px] font-bold flex items-center gap-1.5 shrink-0 transition-colors shadow-xs"
+                    className="px-3.5 py-1.5 rounded-full bg-[#FF6B00] hover:bg-[#E05E00] text-white text-[11px] font-bold flex items-center gap-1.5 shrink-0 transition-colors shadow-xs active:scale-95"
                     title="Open on YouTube"
                   >
                     <Play className="w-3 h-3 fill-current text-white" />
                     <span>YouTube</span>
-                    <ExternalLink className="w-3 h-3 text-[#d3d1cc]" />
+                    <ExternalLink className="w-3 h-3 text-white/80" />
                   </a>
                 </div>
 
                 {/* Embedded Video Player 1 */}
-                <div className="organic-video-screen-left aspect-video w-full shadow-inner">
+                <div className="rounded-2xl overflow-hidden aspect-video w-full shadow-inner border border-slate-200 bg-slate-900">
                   <iframe
                     src="https://www.youtube-nocookie.com/embed/LtP5bsUIWew?rel=0&modestbranding=1"
                     title="VINS Christian College of Engineering Official Campus Documentary"
@@ -923,8 +923,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onTabChange, onOpenExplodedV
                 </div>
 
                 {/* Caption / Description for Video 1 */}
-                <div className="bg-white/60 backdrop-blur-xs p-3.5 rounded-2xl border border-amber-400/40/60 text-xs text-[#3a3936] leading-relaxed flex items-start gap-2">
-                  <Sparkles className="w-4 h-4 text-[#54524e] shrink-0 mt-0.5" />
+                <div className="bg-orange-50/70 p-3.5 rounded-2xl border border-orange-200 text-xs text-slate-700 leading-relaxed flex items-start gap-2 font-medium">
+                  <Sparkles className="w-4 h-4 text-[#FF6B00] shrink-0 mt-0.5" />
                   <p>
                     Discover our high-tech computing centres, robotics labs, smart lecture halls, mechanical engineering workshops, and lush green Chunkankadai campus.
                   </p>
@@ -934,18 +934,18 @@ export const HomePage: React.FC<HomePageProps> = ({ onTabChange, onOpenExplodedV
             </div>
 
             {/* Video 2: Campus Life, Culture & Student Excellence */}
-            <div className="organic-video-card-right flex flex-col justify-between transform-gpu transition-transform duration-300 hover:scale-105">
-              <div className="p-3 sm:p-5 flex flex-col h-full space-y-4">
+            <div className="bg-white rounded-3xl border-2 border-orange-200/80 shadow-md hover:border-[#FF6B00] flex flex-col justify-between transform-gpu transition-all duration-300 hover:shadow-xl">
+              <div className="p-4 sm:p-6 flex flex-col h-full space-y-4">
                 
                 {/* Header bar of Video Card 2 */}
-                <div className="flex items-center justify-between gap-3 border-b border-[#dedcd7]/60 pb-3">
+                <div className="flex items-center justify-between gap-3 border-b-2 border-orange-100 pb-3">
                   <div className="flex items-center gap-2.5 min-w-0">
-                    <span className="w-8 h-8 rounded-full bg-[#363538] text-white flex items-center justify-center shrink-0 shadow-xs text-xs font-bold">
+                    <span className="w-8 h-8 rounded-full bg-[#FF6B00] text-white flex items-center justify-center shrink-0 shadow-xs text-xs font-black">
                       02
                     </span>
                     <div className="truncate">
-                      <span className="text-[10px] font-extrabold uppercase tracking-wider text-[#54524e] block">CAMPUS LIFE &amp; CELEBRATION</span>
-                      <h3 className="font-playfair font-bold text-sm sm:text-base text-[#252528] truncate">
+                      <span className="text-[10px] font-black uppercase tracking-wider text-[#FF6B00] block">CAMPUS LIFE &amp; CELEBRATION</span>
+                      <h3 className="font-playfair font-bold text-sm sm:text-base text-slate-900 truncate">
                         Annual Day, Cultural Fest &amp; Student Events
                       </h3>
                     </div>
@@ -955,17 +955,17 @@ export const HomePage: React.FC<HomePageProps> = ({ onTabChange, onOpenExplodedV
                     href="https://youtu.be/yg6Qb6HH60o?si=tIYDgG6-BiQHenr0"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-3 py-1.5 rounded-full bg-[#363538] hover:bg-[#48474b] text-white text-[11px] font-bold flex items-center gap-1.5 shrink-0 transition-colors shadow-xs"
+                    className="px-3.5 py-1.5 rounded-full bg-[#FF6B00] hover:bg-[#E05E00] text-white text-[11px] font-bold flex items-center gap-1.5 shrink-0 transition-colors shadow-xs active:scale-95"
                     title="Open on YouTube"
                   >
                     <Play className="w-3 h-3 fill-current text-white" />
                     <span>YouTube</span>
-                    <ExternalLink className="w-3 h-3 text-[#d3d1cc]" />
+                    <ExternalLink className="w-3 h-3 text-white/80" />
                   </a>
                 </div>
 
                 {/* Embedded Video Player 2 */}
-                <div className="organic-video-screen-right aspect-video w-full shadow-inner">
+                <div className="rounded-2xl overflow-hidden aspect-video w-full shadow-inner border border-slate-200 bg-slate-900">
                   <iframe
                     src="https://www.youtube-nocookie.com/embed/yg6Qb6HH60o?rel=0&modestbranding=1"
                     title="VINS Engineering Annual Day & Student Life Highlights"
@@ -976,8 +976,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onTabChange, onOpenExplodedV
                 </div>
 
                 {/* Caption / Description for Video 2 */}
-                <div className="bg-white/60 backdrop-blur-xs p-3.5 rounded-2xl border border-amber-400/40/60 text-xs text-[#3a3936] leading-relaxed flex items-start gap-2">
-                  <Sparkles className="w-4 h-4 text-[#54524e] shrink-0 mt-0.5" />
+                <div className="bg-orange-50/70 p-3.5 rounded-2xl border border-orange-200 text-xs text-slate-700 leading-relaxed flex items-start gap-2 font-medium">
+                  <Sparkles className="w-4 h-4 text-[#FF6B00] shrink-0 mt-0.5" />
                   <p>
                     Experience the dynamic pulse of student extracurriculars, technical symposiums, hackathon competitions, campus placement drives, and cultural celebrations.
                   </p>
@@ -1068,32 +1068,28 @@ export const HomePage: React.FC<HomePageProps> = ({ onTabChange, onOpenExplodedV
 
         </section>
 
-        {/* SECTION G: ADMISSIONS CTA BANNER - Glassmorphism Theme */}
+        {/* SECTION G: ADMISSIONS CTA BANNER - WHITE BACKGROUND WITH ORANGE ACCENTS & BLACK TEXT */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-slate-900/80 backdrop-blur-2xl text-white rounded-3xl p-6 sm:p-12 lg:p-14 shadow-[0_16px_48px_rgba(0,0,0,0.4)] border border-white/25 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center relative overflow-hidden">
-            
-            {/* Subtle Orange lighting accents */}
-            <div className="absolute top-0 right-0 w-80 h-80 bg-[#FF6B00]/30 rounded-full blur-3xl pointer-events-none" />
-            <div className="absolute -bottom-10 -left-10 w-60 h-60 bg-[#FF7A1A]/20 rounded-full blur-2xl pointer-events-none" />
+          <div className="bg-white text-slate-900 rounded-3xl p-6 sm:p-12 lg:p-14 shadow-lg border-2 border-orange-200 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center relative overflow-hidden">
 
             <div className="lg:col-span-7 space-y-4 relative z-10">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#FF6B00] text-white text-xs font-bold tracking-wider uppercase shadow-md">
-                <Sparkles className="w-3.5 h-3.5 text-white" />
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-50 text-[#FF6B00] text-xs font-bold tracking-wider uppercase border border-orange-200 shadow-xs">
+                <Sparkles className="w-3.5 h-3.5 text-[#FF6B00]" />
                 <span>ADMISSIONS OPEN 2026-2027</span>
               </div>
 
-              <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold font-poppins text-white leading-tight">
+              <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold font-poppins text-slate-900 leading-tight">
                 Begin Your Engineering Journey at VINS
               </h2>
 
-              <p className="text-xs sm:text-sm lg:text-base text-white/90 leading-relaxed max-w-xl font-normal">
+              <p className="text-xs sm:text-sm lg:text-base text-slate-600 leading-relaxed max-w-xl font-medium">
                 Join a distinguished community where curious minds are empowered with cutting-edge skills, global recruitment access, and leadership values.
               </p>
 
               <div className="flex flex-wrap items-center gap-3 sm:gap-4 pt-2">
                 <button
                   onClick={() => onTabChange('admissions', 'online-form')}
-                  className="bg-[#FF6B00] hover:bg-[#E05E00] btn-micro text-white text-xs font-bold uppercase tracking-widest px-6 sm:px-8 py-3.5 rounded-full cursor-pointer shadow-xl transition-all flex items-center justify-center gap-2 w-full sm:w-auto border border-white/20"
+                  className="bg-[#FF6B00] hover:bg-[#E05E00] active:scale-95 text-white text-xs font-bold uppercase tracking-widest px-6 sm:px-8 py-3.5 rounded-full cursor-pointer shadow-md transition-all flex items-center justify-center gap-2 w-full sm:w-auto border border-transparent"
                 >
                   <span>APPLY ONLINE NOW</span>
                   <ArrowRight className="w-4 h-4 text-white group-hover:translate-x-1 transition-transform" />
@@ -1101,7 +1097,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onTabChange, onOpenExplodedV
 
                 <button
                   onClick={() => onTabChange('admissions', 'scholarships')}
-                  className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-[#FF6B00] btn-micro text-xs font-bold uppercase tracking-widest px-5 sm:px-6 py-3.5 rounded-full cursor-pointer shadow-lg transition-all flex items-center justify-center gap-2 w-full sm:w-auto"
+                  className="bg-white border-2 border-[#FF6B00] text-[#FF6B00] hover:bg-[#FF6B00] hover:text-white active:scale-95 text-xs font-bold uppercase tracking-widest px-5 sm:px-6 py-3.5 rounded-full cursor-pointer shadow-xs transition-all flex items-center justify-center gap-2 w-full sm:w-auto"
                 >
                   <span>SCHOLARSHIPS &amp; AID</span>
                 </button>
@@ -1110,8 +1106,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onTabChange, onOpenExplodedV
 
             <div className="lg:col-span-5 relative z-10">
               <FloatingElement duration={7.2} distance={6} floatType="gentle" className="w-full">
-                <div className="rounded-2xl sm:rounded-3xl overflow-hidden border-2 border-white/30 shadow-2xl p-1.5 bg-white/10 backdrop-blur-xs">
-                  <div className="w-full aspect-[4/3] rounded-xl sm:rounded-2xl overflow-hidden bg-gradient-to-br from-[#E05E00] to-[#B34700]">
+                <div className="rounded-2xl sm:rounded-3xl overflow-hidden border-2 border-orange-200 shadow-xl p-2 bg-orange-50/50">
+                  <div className="w-full aspect-[4/3] rounded-xl sm:rounded-2xl overflow-hidden bg-slate-100">
                     <img 
                       src="/images/college events and news galeery/5 (1).jpg" 
                       alt="VINS College Students" 
