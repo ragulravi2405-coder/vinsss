@@ -166,16 +166,16 @@ export default function App() {
           {/* Top Contact & Utility Bar */}
           <TopBar onNavigate={handleTabChange} currentTab={currentTab} />
 
-          {/* Global Sticky Main Navigation Bar - Always visible at top of viewport across all pages */}
+          {/* Global Sticky Main Navigation Bar - Permanently visible at top of viewport across all pages */}
           <header 
-            className="sticky top-0 z-[999] w-full bg-transparent transition-all duration-300"
-            style={{ position: 'sticky', top: 0, zIndex: 999 }}
+            className="sticky top-0 z-[9999] w-full bg-white transition-all duration-300 shadow-sm"
+            style={{ position: 'sticky', top: 0, zIndex: 9999 }}
           >
             <Navbar currentTab={currentTab} onTabChange={handleTabChange} />
           </header>
 
           {/* Main View Page with Seamless Motion Transition */}
-          <main className="transition-all duration-200 overflow-x-hidden">
+          <main className="transition-all duration-200 overflow-x-clip">
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentTab + (selectedDepartmentId || '')}

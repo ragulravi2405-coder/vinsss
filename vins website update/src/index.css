@@ -11,7 +11,7 @@ html {
     color: #252528;
     background: #fafaf9;
     background-attachment: fixed;
-    overflow-x: hidden;
+    overflow-x: clip;
     max-width: 100vw;
     font-size: 1rem;
     line-height: 1.72;
@@ -1256,9 +1256,9 @@ button:active {
    MOBILE COMPREHENSIVE RESPONSIVE ENHANCEMENTS (320px – 640px)
    ═════════════════════════════════════════════════════════════════════ */
 
-/* Global horizontal overflow prevention */
+/* Global horizontal overflow prevention without breaking position: sticky */
 html, body, #root {
-  overflow-x: hidden !important;
+  overflow-x: clip !important;
   width: 100%;
   max-width: 100vw;
   box-sizing: border-box;

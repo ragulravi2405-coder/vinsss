@@ -96,12 +96,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentTab, onTabChange }) => {
 
   return (
     <>
-      <motion.div 
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.3 }}
-        className="w-full transition-all"
-      >
+      <div className="w-full bg-white">
         {/* MAIN BRAND HEADER ROW — Pure White Background */}
         <div 
           className="w-full transition-all duration-300 relative z-30 bg-white border-b border-slate-200/80 shadow-xs"
@@ -201,7 +196,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentTab, onTabChange }) => {
 
         {/* BOTTOM ROW: DESKTOP NAVIGATION MENU — Pure White Background with Black Text */}
         <div 
-          className="w-full transition-all duration-300 relative z-20 bg-white border-b border-slate-200 shadow-sm"
+          className={`w-full transition-all duration-300 relative z-20 bg-white border-b border-slate-200 ${isScrolled ? 'shadow-md' : 'shadow-xs'}`}
         >
           <div className={`w-full transition-all duration-300 ${isScrolled ? 'py-1.5' : 'py-2'}`}>
             <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
@@ -510,7 +505,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentTab, onTabChange }) => {
           </div>
         </div>
       )}
-    </motion.div>
+      </div>
 
       {/* Document Modal */}
       <DocumentViewerModal document={selectedDoc} onClose={() => setSelectedDoc(null)} />
