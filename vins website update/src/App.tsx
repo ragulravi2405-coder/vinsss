@@ -168,7 +168,7 @@ export default function App() {
 
           {/* Global Sticky Main Navigation Bar - Always visible at top of viewport across all pages */}
           <header 
-            className="sticky top-0 z-[999] w-full bg-white shadow-md transition-shadow duration-300"
+            className="sticky top-0 z-[999] w-full bg-transparent transition-all duration-300"
             style={{ position: 'sticky', top: 0, zIndex: 999 }}
           >
             <Navbar currentTab={currentTab} onTabChange={handleTabChange} />

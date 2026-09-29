@@ -108,66 +108,66 @@ export const TopBar: React.FC<TopBarProps> = ({ onNavigate, currentTab }) => {
 
   return (
     <>
-      {/* Top Bar - Layer 2: Glassmorphic Deep Navy Blue (#0A2540) with 3D Depth */}
-      <div className="bg-[#0A2540] text-white text-[11px] sm:text-[13px] border-b border-white/15 select-none">
+      {/* Top Bar - Pure White Theme with Black Text */}
+      <div className="bg-white text-slate-900 text-[11px] sm:text-[13px] border-b border-slate-200 select-none shadow-xs">
         <div className="max-w-[1600px] mx-auto px-2.5 sm:px-6 lg:px-8 py-1.5 sm:py-2 flex items-center justify-between gap-2">
           
-          {/* Left: Email & Phone Number with Interactive 3D Lift */}
-          <div className="flex items-center gap-2 sm:gap-3 text-[11px] sm:text-[13px] font-medium text-white/95 min-w-0">
+          {/* Left: Email & Phone Number with Black Text */}
+          <div className="flex items-center gap-2 sm:gap-3 text-[11px] sm:text-[13px] font-medium text-slate-900 min-w-0">
             <a 
               href="tel:+914651255000" 
-              className="group flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/5 hover:bg-white/12 border border-white/10 hover:border-amber-400/40 hover:shadow-sm transition-all duration-200 transform hover:-translate-y-0.5 whitespace-nowrap shrink-0 cursor-pointer"
+              className="group flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-50 hover:bg-slate-100 border border-slate-200 hover:border-[#FF6B00]/40 hover:shadow-xs transition-all duration-200 transform hover:-translate-y-0.5 whitespace-nowrap shrink-0 cursor-pointer"
             >
               <Phone className="w-3 sm:w-3.5 h-3 sm:h-3.5 text-[#FF6B00] group-hover:scale-110 transition-transform shrink-0" />
-              <span className="font-semibold group-hover:text-amber-200 transition-colors">+91 4651 255 000</span>
+              <span className="font-semibold text-slate-900 group-hover:text-[#FF6B00] transition-colors">+91 4651 255 000</span>
             </a>
 
-            <span className="hidden min-[480px]:inline text-white/30">|</span>
+            <span className="hidden min-[480px]:inline text-slate-300">|</span>
 
             <a 
               href="mailto:info@vinschristiancollege.in" 
-              className="hidden min-[420px]:flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/5 hover:bg-white/12 border border-white/10 hover:border-amber-400/40 hover:shadow-sm transition-all duration-200 transform hover:-translate-y-0.5 whitespace-nowrap truncate max-w-[170px] sm:max-w-none cursor-pointer"
+              className="hidden min-[420px]:flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-50 hover:bg-slate-100 border border-slate-200 hover:border-[#FF6B00]/40 hover:shadow-xs transition-all duration-200 transform hover:-translate-y-0.5 whitespace-nowrap truncate max-w-[170px] sm:max-w-none cursor-pointer"
             >
               <Mail className="w-3 sm:w-3.5 h-3 sm:h-3.5 text-[#FF6B00] group-hover:scale-110 transition-transform shrink-0" />
-              <span className="truncate group-hover:text-amber-200 transition-colors">info@vinschristiancollege.in</span>
+              <span className="truncate font-semibold text-slate-900 group-hover:text-[#FF6B00] transition-colors">info@vinschristiancollege.in</span>
             </a>
           </div>
 
-          {/* Right: Social Icons & 3D Admin Portal Button */}
-          <div className="flex items-center gap-2 sm:gap-3 text-white font-medium text-[11px] sm:text-[13px] shrink-0">
+          {/* Right: Social Icons & Admin Portal Button */}
+          <div className="flex items-center gap-2 sm:gap-3 text-slate-900 font-medium text-[11px] sm:text-[13px] shrink-0">
             {/* Social Icons with Smooth Hover Lift */}
-            <div className="hidden min-[640px]:flex items-center gap-1.5 text-white">
+            <div className="hidden min-[640px]:flex items-center gap-1.5 text-slate-700">
               <a 
                 href="#" 
-                className="w-6 h-6 rounded-full bg-white/10 hover:bg-[#FF6B00] flex items-center justify-center transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md cursor-pointer" 
+                className="w-6 h-6 rounded-full bg-slate-100 hover:bg-[#FF6B00] text-slate-700 hover:text-white border border-slate-200 flex items-center justify-center transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xs cursor-pointer" 
                 title="Facebook"
               >
                 <span className="font-bold text-[11px]">f</span>
               </a>
               <a 
                 href="#" 
-                className="w-6 h-6 rounded-full bg-white/10 hover:bg-[#FF6B00] flex items-center justify-center transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md cursor-pointer" 
+                className="w-6 h-6 rounded-full bg-slate-100 hover:bg-[#FF6B00] text-slate-700 hover:text-white border border-slate-200 flex items-center justify-center transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xs cursor-pointer" 
                 title="Instagram"
               >
                 <span className="font-bold text-[10px]">📷</span>
               </a>
               <a 
                 href="#" 
-                className="w-6 h-6 rounded-full bg-white/10 hover:bg-[#FF6B00] flex items-center justify-center transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md cursor-pointer" 
+                className="w-6 h-6 rounded-full bg-slate-100 hover:bg-[#FF6B00] text-slate-700 hover:text-white border border-slate-200 flex items-center justify-center transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xs cursor-pointer" 
                 title="YouTube"
               >
                 <span className="font-bold text-[10px]">▶</span>
               </a>
-              <span className="text-white/30 ml-1">|</span>
+              <span className="text-slate-300 ml-1">|</span>
             </div>
 
-            {/* Admin Portal Button with Tactile 3D Click */}
+            {/* Admin Portal Button with White Background & Black Text */}
             <button 
               onClick={() => onNavigate?.('admin')}
-              className="bg-[#FF6B00] hover:bg-[#E05E00] text-white px-3 py-1.5 rounded-lg font-bold flex items-center gap-1.5 transition-all whitespace-nowrap text-[10px] sm:text-xs"
+              className="bg-white hover:bg-slate-50 text-slate-900 hover:text-[#FF6B00] border-2 border-slate-300 hover:border-[#FF6B00] px-3 py-1.5 rounded-lg font-bold flex items-center gap-1.5 transition-all whitespace-nowrap text-[10px] sm:text-xs shadow-xs cursor-pointer"
               title="Open Admin Content Portal"
             >
-              <Lock className="w-3 h-3 text-white shrink-0" />
+              <Lock className="w-3 h-3 text-[#FF6B00] shrink-0" />
               <span>Admin Portal</span>
             </button>
           </div>

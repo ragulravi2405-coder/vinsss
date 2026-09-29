@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { 
   ArrowRight, Play, Award, Users, GraduationCap, 
@@ -21,6 +21,69 @@ import { ScrollReveal } from '../components/common/ScrollReveal';
 import { EventNotificationPopup } from '../components/common/EventNotificationPopup';
 import { FloatingEventsButton } from '../components/common/FloatingEventsButton';
 
+interface HeroBgSlide {
+  id: string;
+  webp: string;
+  fallback: string;
+  alt: string;
+}
+
+// Dedicated Desktop / Window Background Slides (min-width: 768px)
+const DESKTOP_HERO_BG_SLIDES: HeroBgSlide[] = [
+  {
+    id: 'desk-bg-1',
+    webp: '/images/clg%20photo/vins_colleg_bg_windows.webp',
+    fallback: '/images/clg%20photo/vins%20colleg%20bg%20windows%20%20img.png',
+    alt: 'VINS Christian College Campus - Main Campus Panorama'
+  },
+  {
+    id: 'desk-bg-2',
+    webp: '/images/clg%20photo/bg7_window_view.webp',
+    fallback: '/images/clg%20photo/bg7%20window%20view.png',
+    alt: 'VINS Christian College Campus - Academic Complex Panorama'
+  },
+  {
+    id: 'desk-bg-3',
+    webp: '/images/clg%20photo/wind_view.webp',
+    fallback: '/images/clg%20photo/wind%20view.png',
+    alt: 'VINS Christian College Campus - Architectural Panorama'
+  },
+  {
+    id: 'desk-bg-4',
+    webp: '/images/clg%20photo/window_view.webp',
+    fallback: '/images/clg%20photo/window%20view.png',
+    alt: 'VINS Christian College Campus - Aerial Landscape'
+  }
+];
+
+// Dedicated Mobile / Portrait Background Slides (max-width: 767px)
+const MOBILE_HERO_BG_SLIDES: HeroBgSlide[] = [
+  {
+    id: 'mob-bg-1',
+    webp: '/images/clg%20photo/vins_clg_bg_mobile_view.webp',
+    fallback: '/images/clg%20photo/vins%20clg%20bg%20mobile%20view%20img.png',
+    alt: 'VINS Christian College Campus - Mobile Portrait View'
+  },
+  {
+    id: 'mob-bg-2',
+    webp: '/images/clg%20photo/bg8_mobile_view.webp',
+    fallback: '/images/clg%20photo/bg8%20mobile%20view.png',
+    alt: 'VINS Christian College Campus - Mobile Campus View'
+  },
+  {
+    id: 'mob-bg-3',
+    webp: '/images/clg%20photo/mobile_view_sp.webp',
+    fallback: '/images/clg%20photo/mobile%20view%20sp.png',
+    alt: 'VINS Christian College Campus - Mobile Campus Panorama'
+  },
+  {
+    id: 'mob-bg-4',
+    webp: '/images/clg%20photo/mobile_viww.webp',
+    fallback: '/images/clg%20photo/mobile%20viww.png',
+    alt: 'VINS Christian College Campus - Campus View'
+  }
+];
+
 interface HomePageProps {
   onTabChange: (tab: NavigationTab, anchorId?: string, departmentId?: string) => void;
   onOpenExplodedView?: () => void;
@@ -41,6 +104,79 @@ export const HomePage: React.FC<HomePageProps> = ({ onTabChange, onOpenExplodedV
   const [selectedPdfDoc, setSelectedPdfDoc] = useState<DocumentItem | null>(null);
   const [marqueeHovered, setMarqueeHovered] = useState(false);
 
+  // Responsive Viewport Detection (768px Breakpoint)
+  // Ensures strictly desktop images on desktop, and strictly mobile images on mobile.
+  const [isDesktop, setIsDesktop] = useState<boolean>(() => {
+    if (typeof window !== 'undefined') {
+      return window.innerWidth >= 768;
+    }
+    return true;
+  });
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const mediaQuery = window.matchMedia('(min-width: 768px)');
+    const handleMediaChange = (e: MediaQueryListEvent | MediaQueryList) => {
+      setIsDesktop(e.matches);
+    };
+    setIsDesktop(mediaQuery.matches);
+
+    if (mediaQuery.addEventListener) {
+      mediaQuery.addEventListener('change', handleMediaChange);
+      return () => mediaQuery.removeEventListener('change', handleMediaChange);
+    } else {
+      mediaQuery.addListener(handleMediaChange);
+      return () => mediaQuery.removeListener(handleMediaChange);
+    }
+  }, []);
+
+  const activeBgSlides = isDesktop ? DESKTOP_HERO_BG_SLIDES : MOBILE_HERO_BG_SLIDES;
+  const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
+
+  // Single Hero Carousel Auto-advance Timer (6 seconds per slide)
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlideIndex((prev) => (prev + 1) % activeBgSlides.length);
+    }, 6000);
+    return () => clearInterval(timer);
+  }, [activeBgSlides.length]);
+
+  // Preload next image in active collection for instant switching
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const nextIdx = (currentSlideIndex + 1) % activeBgSlides.length;
+    const nextImg = new Image();
+    nextImg.src = activeBgSlides[nextIdx].webp;
+  }, [currentSlideIndex, activeBgSlides]);
+
+  // Hero Section 3D Parallax Tracking
+  const heroRef = useRef<HTMLElement>(null);
+  const heroRafId = useRef<number | null>(null);
+  const [heroMouse, setHeroMouse] = useState({ x: 0, y: 0 });
+
+  const handleHeroMouseMove = useCallback((e: React.MouseEvent<HTMLElement>) => {
+    if (!heroRef.current || typeof window === 'undefined' || window.innerWidth < 768) return;
+    const rect = heroRef.current.getBoundingClientRect();
+    const nx = ((e.clientX - rect.left) / rect.width - 0.5) * 2;
+    const ny = ((e.clientY - rect.top) / rect.height - 0.5) * 2;
+
+    if (heroRafId.current) cancelAnimationFrame(heroRafId.current);
+    heroRafId.current = requestAnimationFrame(() => {
+      setHeroMouse({ x: nx, y: ny });
+    });
+  }, []);
+
+  const handleHeroMouseLeave = useCallback(() => {
+    if (heroRafId.current) cancelAnimationFrame(heroRafId.current);
+    setHeroMouse({ x: 0, y: 0 });
+  }, []);
+
+  useEffect(() => {
+    return () => {
+      if (heroRafId.current) cancelAnimationFrame(heroRafId.current);
+    };
+  }, []);
+
   // Filter gallery images
   const filteredGallery = galleryFilter === 'All' 
     ? activeGallery 
@@ -48,36 +184,57 @@ export const HomePage: React.FC<HomePageProps> = ({ onTabChange, onOpenExplodedV
 
   return (
     <div className="space-y-0 pb-0 bg-transparent text-[#252528] font-sans">
-      {/* RUNNING LIVE CIRCULARS MARQUEE TICKER BAR */}
-      <div className="m-0 p-0 mb-0">
-        <RunningTickerBar onNavigateNotifications={() => onTabChange('notifications')} />
-      </div>
-
-
-      {/* 1. HERO SECTION - FULL COVER CLEAR VINS COLLEGE CAMPUS PHOTO (BETWEEN NAVBAR & SLIDER) */}
+      {/* 1. HERO SECTION - RESPONSIVE CINEMATIC BACKGROUND SLIDER */}
       <section 
-        className="w-full relative overflow-hidden mt-0 mb-4 sm:mb-8"
+        ref={heroRef}
+        onMouseMove={handleHeroMouseMove}
+        onMouseLeave={handleHeroMouseLeave}
+        className="w-full relative overflow-hidden mt-0 pt-0 h-[68vh] sm:h-[80vh] lg:h-[88vh] min-h-[460px] sm:min-h-[580px]"
         aria-label="VINS Christian College of Engineering Campus"
       >
-        <picture className="w-full block">
-          {/* Mobile Screen: Full cover portrait mobile campus photo */}
-          <source 
-            media="(max-width: 639px)" 
-            srcSet="/images/clg%20photo/vins%20clg%20bg%20mobile%20view%20img.png" 
-          />
-          {/* Desktop Screen: Full cover wide landscape campus photo */}
-          <source 
-            media="(min-width: 640px)" 
-            srcSet="/images/clg%20photo/vins%20colleg%20bg%20windows%20%20img.png" 
-          />
-          <img
-            src="/images/clg%20photo/vins%20colleg%20bg%20windows%20%20img.png"
-            alt="VINS Christian College of Engineering Campus"
-            className="w-full h-[68vh] sm:h-[78vh] lg:h-[85vh] min-h-[420px] object-cover object-center block"
-            loading="eager"
-          />
-        </picture>
+        {/* Responsive Cinematic Ken Burns Background Image Slider */}
+        <div className="absolute inset-0 z-0 overflow-hidden bg-transparent">
+          {activeBgSlides.map((slide, idx) => {
+            const isActive = idx === (currentSlideIndex % activeBgSlides.length);
+            return (
+              <div
+                key={`${isDesktop ? 'desktop' : 'mobile'}-${slide.id}`}
+                className={`absolute inset-0 w-full h-full will-change-transform ${
+                  isActive ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
+                }`}
+                style={{
+                  transform: isDesktop
+                    ? `translate3d(${-heroMouse.x * 10}px, ${-heroMouse.y * 8}px, 0px) scale(${isActive ? 1.05 : 1})`
+                    : 'none',
+                  transition: 'opacity 1.2s ease-in-out, transform 6.8s cubic-bezier(0.25, 0.1, 0.25, 1)',
+                }}
+              >
+                <img
+                  src={slide.webp}
+                  onError={(e) => {
+                    const target = e.currentTarget as HTMLImageElement;
+                    if (target.src !== slide.fallback) {
+                      target.src = slide.fallback;
+                    }
+                  }}
+                  alt={slide.alt}
+                  className="w-full h-full object-cover select-none block"
+                  style={{
+                    objectPosition: isDesktop ? 'center 22%' : 'center center',
+                  }}
+                  loading={idx === 0 ? 'eager' : 'lazy'}
+                  decoding="async"
+                />
+              </div>
+            );
+          })}
+        </div>
       </section>
+
+      {/* RUNNING LIVE CIRCULARS MARQUEE TICKER BAR */}
+      <div className="m-0 p-0 mb-0 relative z-20">
+        <RunningTickerBar onNavigateNotifications={() => onTabChange('notifications')} />
+      </div>
 
       {/* 2. INFINITE AUTO-RUNNING MARQUEE IMAGE STRIP */}
       <section className="relative w-full mt-4 sm:mt-8 mb-10 sm:mb-16 z-20 overflow-hidden">
@@ -703,9 +860,9 @@ export const HomePage: React.FC<HomePageProps> = ({ onTabChange, onOpenExplodedV
 
         </section>
 
-        {/* DEDICATED FEATURED YOUTUBE VIDEOS SECTION - WITH SOLID DEEP NAVY BLUE (#0A2540) CANVAS */}
+        {/* DEDICATED FEATURED YOUTUBE VIDEOS SECTION - WITH GLASSMORPHISM BACKDROP */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" style={{ perspective: '1200px' }}>
-          <div className="bg-[#0A2540] rounded-3xl p-6 sm:p-10 shadow-2xl border-2 border-white/20 space-y-8">
+          <div className="bg-slate-900/80 backdrop-blur-2xl rounded-3xl p-6 sm:p-10 shadow-[0_16px_48px_rgba(0,0,0,0.4)] border border-white/25 space-y-8 relative overflow-hidden">
             
             <div className="text-center max-w-3xl mx-auto space-y-3">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FF6B00] text-white text-xs font-bold tracking-widest uppercase border border-white/30 shadow-md">
@@ -911,9 +1068,9 @@ export const HomePage: React.FC<HomePageProps> = ({ onTabChange, onOpenExplodedV
 
         </section>
 
-        {/* SECTION G: ADMISSIONS CTA BANNER - Deep Navy Blue (#0A2540) + Vibrant Amber Orange (#FF6B00) */}
+        {/* SECTION G: ADMISSIONS CTA BANNER - Glassmorphism Theme */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-[#0A2540] text-white rounded-3xl p-6 sm:p-12 lg:p-14 shadow-2xl border-2 border-white/20 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center relative overflow-hidden">
+          <div className="bg-slate-900/80 backdrop-blur-2xl text-white rounded-3xl p-6 sm:p-12 lg:p-14 shadow-[0_16px_48px_rgba(0,0,0,0.4)] border border-white/25 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center relative overflow-hidden">
             
             {/* Subtle Royal Indigo / Orange lighting accents */}
             <div className="absolute top-0 right-0 w-80 h-80 bg-[#1E40AF]/30 rounded-full blur-3xl pointer-events-none" />
