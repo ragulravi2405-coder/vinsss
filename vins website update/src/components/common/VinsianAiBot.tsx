@@ -299,10 +299,10 @@ export const VinsianAiBot: React.FC<VinsianAiBotProps> = ({ onNavigate }) => {
                 exit={{ opacity: 0, x: 10, scale: 0.85 }}
                 transition={{ duration: 0.35, ease: 'easeOut' }}
                 onClick={handleOpen}
-                className="absolute right-16 sm:right-20 top-1/2 -translate-y-1/2 cursor-pointer bg-white text-[#0A2540] px-3.5 py-2 rounded-2xl shadow-2xl border border-amber-400/50 flex items-center gap-2 whitespace-nowrap group hover:scale-105 transition-transform"
+                className="absolute right-16 sm:right-20 top-1/2 -translate-y-1/2 cursor-pointer bg-white text-slate-900 px-3.5 py-2 rounded-2xl shadow-2xl border border-amber-400/50 flex items-center gap-2 whitespace-nowrap group hover:scale-105 transition-transform"
               >
                 <div className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
-                <span className="text-xs font-bold text-[#0A2540]">
+                <span className="text-xs font-bold text-slate-900">
                   Hi! I'm <strong className="text-[#FF6B00]">Vinsian 🤖</strong> Got questions?
                 </span>
                 <button
@@ -331,7 +331,7 @@ export const VinsianAiBot: React.FC<VinsianAiBotProps> = ({ onNavigate }) => {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             whileHover={{ scale: 1.08, y: -2 }}
             whileTap={{ scale: 0.94 }}
-            className="relative group w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-tr from-[#0A2540] via-[#0F365E] to-[#FF6B00] p-1 shadow-2xl hover:shadow-[0_12px_30px_rgba(255,107,0,0.55)] border-2 border-amber-300 transition-all duration-300 cursor-pointer flex items-center justify-center"
+            className="relative group w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-tr from-[#FF6B00] via-[#FF7A1A] to-[#FF6B00] p-1 shadow-2xl hover:shadow-[0_12px_30px_rgba(255,107,0,0.55)] border-2 border-amber-300 transition-all duration-300 cursor-pointer flex items-center justify-center"
           >
             {/* Ambient Animated Glow Ring */}
             <span className="absolute -inset-1 rounded-full bg-gradient-to-r from-amber-400/50 via-[#FF6B00]/50 to-amber-300/50 blur-sm opacity-70 group-hover:opacity-100 animate-pulse pointer-events-none" />
@@ -356,7 +356,7 @@ export const VinsianAiBot: React.FC<VinsianAiBotProps> = ({ onNavigate }) => {
             </div>
 
             {/* Bot Mini Tag Label */}
-            <div className="absolute -bottom-1.5 z-20 px-2 py-0.5 rounded-full bg-[#0A2540] text-amber-300 border border-amber-400/60 text-[9px] font-black tracking-wider uppercase shadow-md leading-none">
+            <div className="absolute -bottom-1.5 z-20 px-2 py-0.5 rounded-full bg-[#FF6B00] text-amber-300 border border-amber-400/60 text-[9px] font-black tracking-wider uppercase shadow-md leading-none">
               VINSIAN
             </div>
           </motion.button>
@@ -379,7 +379,7 @@ export const VinsianAiBot: React.FC<VinsianAiBotProps> = ({ onNavigate }) => {
             }}
           >
             {/* CHAT HEADER */}
-            <div className="relative bg-gradient-to-r from-[#0A2540] via-[#0F365E] to-[#0A2540] text-white p-3.5 sm:p-4 border-b border-amber-400/30 flex items-center justify-between shadow-md">
+            <div className="relative bg-gradient-to-r from-[#FF6B00] via-[#FF7A1A] to-[#E05E00] text-white p-3.5 sm:p-4 border-b border-amber-400/30 flex items-center justify-between shadow-md">
               {/* Top Accent Gold Bar */}
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-400 via-[#FF6B00] to-amber-400" />
 
@@ -439,7 +439,7 @@ export const VinsianAiBot: React.FC<VinsianAiBotProps> = ({ onNavigate }) => {
                 <button
                   key={idx}
                   onClick={() => handleSendMessage(qp.query)}
-                  className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-white hover:bg-amber-50 text-[#0A2540] hover:text-[#FF6B00] border border-gray-200 hover:border-amber-400/60 text-[11px] font-semibold whitespace-nowrap shadow-2xs transition-all cursor-pointer shrink-0"
+                  className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-white hover:bg-amber-50 text-slate-900 hover:text-[#FF6B00] border border-gray-200 hover:border-amber-400/60 text-[11px] font-semibold whitespace-nowrap shadow-2xs transition-all cursor-pointer shrink-0"
                 >
                   <span>{qp.icon}</span>
                   <span>{qp.label}</span>
@@ -457,7 +457,7 @@ export const VinsianAiBot: React.FC<VinsianAiBotProps> = ({ onNavigate }) => {
                   <div
                     className={`max-w-[88%] rounded-2xl p-3 sm:p-3.5 text-xs sm:text-[13px] leading-relaxed select-text shadow-sm ${
                       msg.sender === 'user'
-                        ? 'bg-gradient-to-r from-[#0A2540] to-[#0F365E] text-white rounded-tr-none'
+                        ? 'bg-gradient-to-r from-[#FF6B00] to-[#E05E00] text-white rounded-tr-none'
                         : 'bg-white text-slate-800 border border-amber-400/30 rounded-tl-none shadow-[0_2px_8px_rgba(0,0,0,0.04)]'
                     }`}
                   >
@@ -526,7 +526,7 @@ export const VinsianAiBot: React.FC<VinsianAiBotProps> = ({ onNavigate }) => {
                   disabled={!inputValue.trim()}
                   className={`w-9 h-9 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center transition-all cursor-pointer shrink-0 shadow-md ${
                     inputValue.trim()
-                      ? 'bg-gradient-to-tr from-[#0A2540] to-[#FF6B00] text-white hover:scale-105 active:scale-95'
+                      ? 'bg-gradient-to-tr from-[#FF6B00] to-[#FF6B00] text-white hover:scale-105 active:scale-95'
                       : 'bg-slate-200 text-slate-400 cursor-not-allowed'
                   }`}
                   aria-label="Send message"

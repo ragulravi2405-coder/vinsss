@@ -47,12 +47,12 @@ export const PlacementPage: React.FC = () => {
   ];
 
   return (
-    <div className="bg-[#FFFFFF] text-[#0A2540] min-h-screen">
+    <div className="bg-[#FFFFFF] text-slate-900 min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-12">
         
         {/* Header Banner - Premium Academic */}
         <ScrollReveal direction="up" distance={20}>
-          <div className="bg-[#0A2540] text-white p-8 sm:p-12 rounded-3xl border border-white/20 shadow-3d-deep space-y-4 relative overflow-hidden">
+          <div className="bg-gradient-to-r from-[#FF6B00] via-[#FF7A1A] to-[#E05E00] text-white p-8 sm:p-12 rounded-3xl border border-orange-400 shadow-xl space-y-4 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-96 h-96 bg-white/8 rounded-full blur-3xl pointer-events-none" />
             <div className="absolute bottom-0 left-0 w-72 h-72 bg-[#FF6B00]/10 rounded-full blur-3xl pointer-events-none" />
 
@@ -77,18 +77,18 @@ export const PlacementPage: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           
           {/* Left 8 Cols: About Department */}
-          <div className="lg:col-span-8 bg-white rounded-3xl p-6 sm:p-8 border-2 border-[#0A2540]/20 shadow-md space-y-6">
-            <div className="flex items-center gap-3 border-b-2 border-[#0A2540]/15 pb-4">
-              <div className="w-12 h-12 rounded-2xl bg-[#0A2540] text-white flex items-center justify-center font-bold shadow-md">
+          <div className="lg:col-span-8 bg-white rounded-3xl p-6 sm:p-8 border-2 border-orange-200 shadow-md space-y-6">
+            <div className="flex items-center gap-3 border-b-2 border-[#FF6B00]/15 pb-4">
+              <div className="w-12 h-12 rounded-2xl bg-[#FF6B00] text-white flex items-center justify-center font-bold shadow-md">
                 <Briefcase className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h2 className="text-2xl font-bold text-[#0A2540] font-playfair">About the Placement Department</h2>
-                <p className="text-xs text-[#0A2540]/80 font-semibold">Guiding Students Towards Successful Engineering Careers</p>
+                <h2 className="text-2xl font-bold text-slate-900 font-playfair">About the Placement Department</h2>
+                <p className="text-xs text-slate-600 font-semibold">Guiding Students Towards Successful Engineering Careers</p>
               </div>
             </div>
 
-            <div className="space-y-4 text-xs sm:text-sm text-[#0A2540]/90 leading-relaxed font-medium">
+            <div className="space-y-4 text-xs sm:text-sm text-slate-700 leading-relaxed font-medium">
               <p>
                 The Placement cell is one of the pivotal departments in VINS. Knowing that you will be guided after your graduation so that you land a job helps you feel secure. This is the reason why we have a dedicated placement cell that helps, guides, and advises students about the future.
               </p>
@@ -98,27 +98,27 @@ export const PlacementPage: React.FC = () => {
             </div>
 
             {/* Functioning Model */}
-            <div className="pt-4 border-t-2 border-[#0A2540]/15 space-y-3">
-              <h3 className="font-bold text-[#0A2540] text-base flex items-center gap-2">
-                <Award className="w-5 h-5 text-[#0A2540]" />
+            <div className="pt-4 border-t-2 border-[#FF6B00]/15 space-y-3">
+              <h3 className="font-bold text-slate-900 text-base flex items-center gap-2">
+                <Award className="w-5 h-5 text-slate-900" />
                 Functioning Model &amp; &apos;One Person One Job&apos; Policy
               </h3>
-              <p className="text-xs sm:text-sm text-[#0A2540]/90 leading-relaxed font-medium">
+              <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-medium">
                 For placement, a large number of prospective employers are contacted throughout the academic year to conduct campus recruitments. The objective of the T&amp;P Cell is <strong>100% employment opportunity</strong> for all eligible students through our transparent <strong>&apos;One Person One Job&apos;</strong> policy.
               </p>
-              <p className="text-xs sm:text-sm text-[#0A2540]/90 leading-relaxed font-medium">
+              <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-medium">
                 The Cell is assisted by student coordinators from various study branches, ensuring top-tier arrangements and hospitality for visiting corporate delegates.
               </p>
             </div>
           </div>
 
           {/* Right 4 Cols: Placement Officer Contact Card */}
-          <div className="lg:col-span-4 bg-[#0A2540] text-white rounded-3xl p-6 sm:p-8 border border-white/30 shadow-xl space-y-5 relative overflow-hidden">
+          <div className="lg:col-span-4 bg-[#FF6B00] text-white rounded-3xl p-6 sm:p-8 border border-white/30 shadow-xl space-y-5 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-40 h-40 bg-white/10 rounded-full blur-2xl pointer-events-none" />
             
             <div className="flex items-center gap-3 border-b border-white/20 pb-3">
-              <div className="w-10 h-10 rounded-xl bg-white text-[#0A2540] flex items-center justify-center font-bold">
-                <User className="w-5 h-5 text-[#0A2540]" />
+              <div className="w-10 h-10 rounded-xl bg-white text-slate-900 flex items-center justify-center font-bold">
+                <User className="w-5 h-5 text-slate-900" />
               </div>
               <div>
                 <h3 className="font-bold text-base text-white">Placement Officer</h3>
@@ -127,17 +127,17 @@ export const PlacementPage: React.FC = () => {
             </div>
 
             <div className="space-y-3 text-xs">
-              <div className="bg-white text-[#0A2540] p-5 rounded-2xl border border-white space-y-1.5 shadow-md">
-                <p className="font-black text-[#0A2540] text-lg leading-tight">{PLACEMENT_OFFICER_INFO.name}</p>
-                <p className="text-[#0A2540] font-bold text-xs">{PLACEMENT_OFFICER_INFO.title}</p>
-                <p className="text-[#0A2540]/80 text-[11px] font-semibold">{PLACEMENT_OFFICER_INFO.designation}</p>
-                <p className="text-[#0A2540]/80 text-[11px] font-semibold">{PLACEMENT_OFFICER_INFO.department}</p>
+              <div className="bg-white text-slate-900 p-5 rounded-2xl border border-white space-y-1.5 shadow-md">
+                <p className="font-black text-slate-900 text-lg leading-tight">{PLACEMENT_OFFICER_INFO.name}</p>
+                <p className="text-slate-900 font-bold text-xs">{PLACEMENT_OFFICER_INFO.title}</p>
+                <p className="text-slate-600 text-[11px] font-semibold">{PLACEMENT_OFFICER_INFO.designation}</p>
+                <p className="text-slate-600 text-[11px] font-semibold">{PLACEMENT_OFFICER_INFO.department}</p>
               </div>
 
               <div className="space-y-2 pt-2">
                 <a 
                   href={`tel:${PLACEMENT_OFFICER_INFO.phone.split('/')[0].trim()}`}
-                  className="flex items-center gap-3 p-3.5 rounded-2xl bg-white/20 hover:bg-white text-white hover:text-[#0A2540] font-bold transition-all border border-white/30 shadow-xs"
+                  className="flex items-center gap-3 p-3.5 rounded-2xl bg-white/20 hover:bg-white text-white hover:text-[#FF6B00] font-bold transition-all border border-white/30 shadow-xs"
                 >
                   <Phone className="w-4 h-4 shrink-0" />
                   <span>{PLACEMENT_OFFICER_INFO.phone}</span>
@@ -145,7 +145,7 @@ export const PlacementPage: React.FC = () => {
 
                 <a 
                   href={`mailto:${PLACEMENT_OFFICER_INFO.email}`}
-                  className="flex items-center gap-3 p-3.5 rounded-2xl bg-white/20 hover:bg-white text-white hover:text-[#0A2540] font-bold transition-all border border-white/30 shadow-xs"
+                  className="flex items-center gap-3 p-3.5 rounded-2xl bg-white/20 hover:bg-white text-white hover:text-[#FF6B00] font-bold transition-all border border-white/30 shadow-xs"
                 >
                   <Mail className="w-4 h-4 shrink-0" />
                   <span>{PLACEMENT_OFFICER_INFO.email}</span>
@@ -164,18 +164,18 @@ export const PlacementPage: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           
           {/* Placement Facilities */}
-          <div className="bg-white rounded-3xl p-6 sm:p-8 border-2 border-[#0A2540]/20 shadow-md space-y-4">
-            <div className="flex items-center gap-3 border-b-2 border-[#0A2540]/15 pb-3">
-              <div className="w-10 h-10 rounded-xl bg-[#0A2540] text-white flex items-center justify-center font-bold">
+          <div className="bg-white rounded-3xl p-6 sm:p-8 border-2 border-orange-200 shadow-md space-y-4">
+            <div className="flex items-center gap-3 border-b-2 border-[#FF6B00]/15 pb-3">
+              <div className="w-10 h-10 rounded-xl bg-[#FF6B00] text-white flex items-center justify-center font-bold">
                 <Building2 className="w-5 h-5 text-white" />
               </div>
-              <h3 className="font-bold text-[#0A2540] text-lg font-playfair">Placement Facilities &amp; Support</h3>
+              <h3 className="font-bold text-slate-900 text-lg font-playfair">Placement Facilities &amp; Support</h3>
             </div>
 
-            <ul className="space-y-2.5 text-xs sm:text-sm text-[#0A2540]/90 font-medium">
+            <ul className="space-y-2.5 text-xs sm:text-sm text-slate-700 font-medium">
               {placementFacilitiesList.map((fac, idx) => (
-                <li key={idx} className="flex items-start gap-3 bg-white p-3.5 rounded-2xl border border-[#0A2540]/20 shadow-xs">
-                  <CheckCircle2 className="w-4 h-4 text-[#0A2540] shrink-0 mt-0.5" />
+                <li key={idx} className="flex items-start gap-3 bg-white p-3.5 rounded-2xl border border-orange-200 shadow-xs">
+                  <CheckCircle2 className="w-4 h-4 text-slate-900 shrink-0 mt-0.5" />
                   <span>{fac}</span>
                 </li>
               ))}
@@ -183,24 +183,24 @@ export const PlacementPage: React.FC = () => {
           </div>
 
           {/* Summer Training & PPT */}
-          <div className="bg-white rounded-3xl p-6 sm:p-8 border-2 border-[#0A2540]/20 shadow-md space-y-4">
-            <div className="flex items-center gap-3 border-b-2 border-[#0A2540]/15 pb-3">
-              <div className="w-10 h-10 rounded-xl bg-[#0A2540] text-white flex items-center justify-center font-bold">
+          <div className="bg-white rounded-3xl p-6 sm:p-8 border-2 border-orange-200 shadow-md space-y-4">
+            <div className="flex items-center gap-3 border-b-2 border-[#FF6B00]/15 pb-3">
+              <div className="w-10 h-10 rounded-xl bg-[#FF6B00] text-white flex items-center justify-center font-bold">
                 <BookOpen className="w-5 h-5 text-white" />
               </div>
-              <h3 className="font-bold text-[#0A2540] text-lg font-playfair">Summer Training &amp; Pre-Placement Talk</h3>
+              <h3 className="font-bold text-slate-900 text-lg font-playfair">Summer Training &amp; Pre-Placement Talk</h3>
             </div>
 
-            <div className="space-y-4 text-xs sm:text-sm text-[#0A2540]/90 leading-relaxed font-medium">
-              <div className="bg-white p-4 sm:p-5 rounded-2xl border-2 border-[#0A2540]/20 space-y-1.5 shadow-xs">
-                <strong className="text-[#0A2540] block font-bold text-sm">Summer Training (6-8 Weeks):</strong>
+            <div className="space-y-4 text-xs sm:text-sm text-slate-700 leading-relaxed font-medium">
+              <div className="bg-white p-4 sm:p-5 rounded-2xl border-2 border-orange-200 space-y-1.5 shadow-xs">
+                <strong className="text-slate-900 block font-bold text-sm">Summer Training (6-8 Weeks):</strong>
                 <p>
                   Each student undertakes structured summer training in reputable MNCs and industrial plants for 6-8 weeks as part of the curriculum, completing live project deliverables.
                 </p>
               </div>
 
-              <div className="bg-white p-4 sm:p-5 rounded-2xl border-2 border-[#0A2540]/20 space-y-1.5 shadow-xs">
-                <strong className="text-[#0A2540] block font-bold text-sm">Pre-Placement Talk (PPT):</strong>
+              <div className="bg-white p-4 sm:p-5 rounded-2xl border-2 border-orange-200 space-y-1.5 shadow-xs">
+                <strong className="text-slate-900 block font-bold text-sm">Pre-Placement Talk (PPT):</strong>
                 <p>
                   Interactive sessions giving recruiters and candidates an open platform to discuss company vision, CTC compensation packages, career trajectories, and project domains.
                 </p>
@@ -211,12 +211,12 @@ export const PlacementPage: React.FC = () => {
         </div>
 
         {/* Objectives & Cell Responsibilities */}
-        <div className="bg-[#0A2540] text-white rounded-3xl p-6 sm:p-10 border border-white/25 shadow-xl space-y-6">
+        <div className="bg-[#FF6B00] text-white rounded-3xl p-6 sm:p-10 border border-white/25 shadow-xl space-y-6">
           <div className="flex items-center justify-between border-b border-white/20 pb-4">
             <h3 className="font-playfair text-xl sm:text-3xl font-bold text-white">
               Training &amp; Placement Cell Mandate
             </h3>
-            <span className="bg-white text-[#0A2540] font-black text-xs px-3 py-1 rounded-full uppercase tracking-wider">
+            <span className="bg-white text-slate-900 font-black text-xs px-3 py-1 rounded-full uppercase tracking-wider">
               Student Career Growth
             </span>
           </div>
@@ -230,7 +230,7 @@ export const PlacementPage: React.FC = () => {
               <ul className="space-y-2.5 text-xs sm:text-sm text-white/90 font-medium">
                 {otherActivitiesList.map((item, idx) => (
                   <li key={idx} className="flex items-start gap-3 bg-white/15 p-3.5 rounded-2xl border border-white/25">
-                    <span className="w-5 h-5 rounded-full bg-white text-[#0A2540] text-[11px] font-black flex items-center justify-center shrink-0 mt-0.5">{idx + 1}</span>
+                    <span className="w-5 h-5 rounded-full bg-white text-slate-900 text-[11px] font-black flex items-center justify-center shrink-0 mt-0.5">{idx + 1}</span>
                     <span>{item}</span>
                   </li>
                 ))}
@@ -255,37 +255,37 @@ export const PlacementPage: React.FC = () => {
         </div>
 
         {/* Placement Record Visualization */}
-        <section className="bg-white rounded-3xl p-6 sm:p-10 border-2 border-[#0A2540]/20 shadow-md space-y-8">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b-2 border-[#0A2540]/15 pb-4">
+        <section className="bg-white rounded-3xl p-6 sm:p-10 border-2 border-orange-200 shadow-md space-y-8">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b-2 border-[#FF6B00]/15 pb-4">
             <div>
-              <span className="text-xs font-bold text-[#0A2540] uppercase tracking-widest">ANNUAL PLACEMENT DATA</span>
-              <h2 className="text-2xl sm:text-3xl font-bold text-[#0A2540] font-playfair">Placement Statistics &amp; Package Trends</h2>
+              <span className="text-xs font-bold text-slate-900 uppercase tracking-widest">ANNUAL PLACEMENT DATA</span>
+              <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 font-playfair">Placement Statistics &amp; Package Trends</h2>
             </div>
-            <div className="flex items-center gap-4 text-xs font-bold text-[#0A2540]">
-              <span className="flex items-center gap-1.5"><span className="w-3.5 h-3.5 bg-[#0A2540] rounded" /> Offers Count</span>
-              <span className="flex items-center gap-1.5"><span className="w-3.5 h-3.5 bg-[#0A2540]/50 rounded" /> Highest CTC (LPA)</span>
+            <div className="flex items-center gap-4 text-xs font-bold text-slate-900">
+              <span className="flex items-center gap-1.5"><span className="w-3.5 h-3.5 bg-[#FF6B00] rounded" /> Offers Count</span>
+              <span className="flex items-center gap-1.5"><span className="w-3.5 h-3.5 bg-orange-50 rounded" /> Highest CTC (LPA)</span>
             </div>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             
-            <div className="lg:col-span-8 h-80 bg-white p-4 rounded-2xl border-2 border-[#0A2540]/20 shadow-xs">
+            <div className="lg:col-span-8 h-80 bg-white p-4 rounded-2xl border-2 border-orange-200 shadow-xs">
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart data={PLACEMENT_STATS}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="#0A2540" strokeOpacity={0.15} />
-                  <XAxis dataKey="year" stroke="#0A2540" fontSize={11} fontWeight={600} />
-                  <YAxis stroke="#0A2540" fontSize={11} fontWeight={600} />
+                  <CartesianGrid strokeDasharray="3 3" stroke="#FF6B00" strokeOpacity={0.15} />
+                  <XAxis dataKey="year" stroke="#FF6B00" fontSize={11} fontWeight={600} />
+                  <YAxis stroke="#FF6B00" fontSize={11} fontWeight={600} />
                   <Tooltip 
-                    contentStyle={{ backgroundColor: '#0A2540', borderColor: '#FFFFFF', borderRadius: '12px', color: '#FFFFFF', fontSize: '12px', fontWeight: 'bold' }}
+                    contentStyle={{ backgroundColor: '#FF6B00', borderColor: '#FFFFFF', borderRadius: '12px', color: '#FFFFFF', fontSize: '12px', fontWeight: 'bold' }}
                   />
                   <Legend />
-                  <Bar dataKey="offersCount" name="Total Offer Letters" fill="#0A2540" radius={[6, 6, 0, 0]} />
-                  <Bar dataKey="placedPercentage" name="Placed Percentage (%)" fill="#0A2540" fillOpacity={0.4} radius={[6, 6, 0, 0]} />
+                  <Bar dataKey="offersCount" name="Total Offer Letters" fill="#FF6B00" radius={[6, 6, 0, 0]} />
+                  <Bar dataKey="placedPercentage" name="Placed Percentage (%)" fill="#FF6B00" fillOpacity={0.4} radius={[6, 6, 0, 0]} />
                 </BarChart>
               </ResponsiveContainer>
             </div>
 
-            <div className="lg:col-span-4 h-80 bg-[#0A2540] text-white p-6 rounded-2xl border border-white/30 space-y-4 flex flex-col justify-between shadow-xl">
+            <div className="lg:col-span-4 h-80 bg-[#FF6B00] text-white p-6 rounded-2xl border border-white/30 space-y-4 flex flex-col justify-between shadow-xl">
               <div>
                 <h3 className="font-bold text-base text-white flex items-center gap-2">
                   <TrendingUp className="w-5 h-5 text-white" />
@@ -299,13 +299,13 @@ export const PlacementPage: React.FC = () => {
                   <LineChart data={PLACEMENT_STATS}>
                     <XAxis dataKey="year" stroke="#FFFFFF" fontSize={10} />
                     <YAxis stroke="#FFFFFF" fontSize={10} />
-                    <Tooltip contentStyle={{ backgroundColor: '#FFFFFF', color: '#0A2540', fontSize: '11px', borderRadius: '8px', fontWeight: 'bold' }} />
+                    <Tooltip contentStyle={{ backgroundColor: '#FFFFFF', color: '#FF6B00', fontSize: '11px', borderRadius: '8px', fontWeight: 'bold' }} />
                     <Line type="monotone" dataKey="highestCTC" name="Highest CTC (LPA)" stroke="#FFFFFF" strokeWidth={3} dot={{ r: 5, fill: '#FFFFFF' }} />
                   </LineChart>
                 </ResponsiveContainer>
               </div>
 
-              <div className="p-3 bg-white text-[#0A2540] rounded-xl font-bold text-xs text-center shadow-md">
+              <div className="p-3 bg-white text-slate-900 rounded-xl font-bold text-xs text-center shadow-md">
                 Highest salary package touched <strong>12.0 LPA</strong> in campus drives.
               </div>
             </div>
@@ -314,14 +314,14 @@ export const PlacementPage: React.FC = () => {
         </section>
 
         {/* Placement Activity Gallery */}
-        <section className="bg-white rounded-3xl p-6 sm:p-10 border-2 border-[#0A2540]/20 shadow-md space-y-6">
-          <div className="flex items-center gap-3 border-b-2 border-[#0A2540]/15 pb-4">
-            <div className="w-12 h-12 rounded-2xl bg-[#0A2540] text-white flex items-center justify-center font-bold shadow-md">
+        <section className="bg-white rounded-3xl p-6 sm:p-10 border-2 border-orange-200 shadow-md space-y-6">
+          <div className="flex items-center gap-3 border-b-2 border-[#FF6B00]/15 pb-4">
+            <div className="w-12 h-12 rounded-2xl bg-[#FF6B00] text-white flex items-center justify-center font-bold shadow-md">
               <ImageIcon className="w-6 h-6 text-white" />
             </div>
             <div>
-              <h2 className="text-2xl font-bold text-[#0A2540] font-playfair">Placement Activity Gallery &amp; Campus Drives</h2>
-              <p className="text-xs text-[#0A2540]/80 font-semibold">On-Campus Recruitment Sessions, Interviews &amp; Letter Distributions</p>
+              <h2 className="text-2xl font-bold text-slate-900 font-playfair">Placement Activity Gallery &amp; Campus Drives</h2>
+              <p className="text-xs text-slate-600 font-semibold">On-Campus Recruitment Sessions, Interviews &amp; Letter Distributions</p>
             </div>
           </div>
 
@@ -344,13 +344,13 @@ export const PlacementPage: React.FC = () => {
               'WhatsApp Image 2026-08-13 at 9.07.45 PM (1).jpeg',
               'WhatsApp Image 2026-08-13 at 9.07.45 PM (2).jpeg'
             ].map((filename, idx) => (
-              <div key={idx} className="bg-white rounded-2xl overflow-hidden aspect-video relative group border-2 border-[#0A2540]/20 shadow-xs hover:shadow-xl hover:border-[#0A2540] transition-all duration-300 cursor-pointer">
+              <div key={idx} className="bg-white rounded-2xl overflow-hidden aspect-video relative group border-2 border-orange-200 shadow-xs hover:shadow-xl hover:border-[#FF6B00] transition-all duration-300 cursor-pointer">
                 <img
                   src={`/images/placement imgaes/${filename}`}
                   alt={`Placement Drive Photo ${idx + 1}`}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-[#0A2540]/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-3 flex flex-col justify-end text-white">
+                <div className="absolute inset-0 bg-[#FF6B00]/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-3 flex flex-col justify-end text-white">
                   <p className="text-xs font-black text-white">Campus Placement Drive</p>
                   <p className="text-[10px] text-white/90 font-medium">VINS Training &amp; Placement Cell</p>
                 </div>
@@ -360,14 +360,14 @@ export const PlacementPage: React.FC = () => {
         </section>
 
         {/* Top Recruiting Companies Grid */}
-        <section className="bg-white rounded-3xl p-6 sm:p-10 border-2 border-[#0A2540]/20 shadow-md space-y-6">
-          <div className="flex items-center gap-3 border-b-2 border-[#0A2540]/15 pb-4">
-            <div className="w-12 h-12 rounded-2xl bg-[#0A2540] text-white flex items-center justify-center font-bold shadow-md">
+        <section className="bg-white rounded-3xl p-6 sm:p-10 border-2 border-orange-200 shadow-md space-y-6">
+          <div className="flex items-center gap-3 border-b-2 border-[#FF6B00]/15 pb-4">
+            <div className="w-12 h-12 rounded-2xl bg-[#FF6B00] text-white flex items-center justify-center font-bold shadow-md">
               <Building2 className="w-6 h-6 text-white" />
             </div>
             <div>
-              <h2 className="text-2xl font-bold text-[#0A2540] font-playfair">Major Visiting Recruiters</h2>
-              <p className="text-xs text-[#0A2540]/80 font-semibold">Corporate Partners Hiring VINS Engineering Graduates</p>
+              <h2 className="text-2xl font-bold text-slate-900 font-playfair">Major Visiting Recruiters</h2>
+              <p className="text-xs text-slate-600 font-semibold">Corporate Partners Hiring VINS Engineering Graduates</p>
             </div>
           </div>
 
@@ -375,7 +375,7 @@ export const PlacementPage: React.FC = () => {
             {topRecruitersList.map((company, idx) => (
               <div
                 key={idx}
-                className="p-4 rounded-2xl bg-white border-2 border-[#0A2540]/20 hover:border-[#0A2540] hover:bg-[#0A2540] hover:text-white text-center font-bold text-[#0A2540] text-xs shadow-xs hover:shadow-md transition-all flex items-center justify-center min-h-[64px] cursor-pointer"
+                className="p-4 rounded-2xl bg-white border-2 border-orange-200 hover:border-[#FF6B00] hover:bg-[#FF6B00] hover:text-white text-center font-bold text-slate-900 text-xs shadow-xs hover:shadow-md transition-all flex items-center justify-center min-h-[64px] cursor-pointer"
               >
                 {company}
               </div>

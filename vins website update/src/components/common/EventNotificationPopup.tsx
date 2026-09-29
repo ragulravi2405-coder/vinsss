@@ -82,7 +82,7 @@ export const EventNotificationPopup: React.FC<EventNotificationPopupProps> = ({
         >
           <div className="relative overflow-hidden rounded-2xl bg-white/95 backdrop-blur-xl border border-amber-300/60 shadow-2xl elevation-3d-3 text-[#252528] p-4 sm:p-5">
             {/* Top Accent Gradient Bar */}
-            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#0A2540] via-[#FF6B00] to-[#0A2540]" />
+            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#FF6B00] via-[#FF6B00] to-[#E05E00]" />
 
             {/* Header / Dismiss Row */}
             <div className="flex items-center justify-between gap-2 mb-3">
@@ -94,7 +94,7 @@ export const EventNotificationPopup: React.FC<EventNotificationPopupProps> = ({
               <button
                 onClick={handleClose}
                 aria-label="Close notification"
-                className="text-[#64748B] hover:text-[#0A2540] hover:bg-black/5 p-1 rounded-full transition-colors cursor-pointer"
+                className="text-[#64748B] hover:text-[#FF6B00] hover:bg-black/5 p-1 rounded-full transition-colors cursor-pointer"
               >
                 <X className="w-4 h-4" />
               </button>
@@ -125,7 +125,7 @@ export const EventNotificationPopup: React.FC<EventNotificationPopupProps> = ({
                   )}
                 </div>
 
-                <h4 className="text-sm font-bold font-playfair text-[#0A2540] leading-snug line-clamp-2">
+                <h4 className="text-sm font-bold font-playfair text-slate-900 leading-snug line-clamp-2">
                   {featuredEvent.title}
                 </h4>
 
@@ -152,7 +152,7 @@ export const EventNotificationPopup: React.FC<EventNotificationPopupProps> = ({
                 </button>
                 <button
                   onClick={handleClickDetails}
-                  className="inline-flex items-center gap-1.5 text-xs font-bold text-white bg-[#0A2540] hover:bg-[#FF6B00] px-3.5 py-1.5 rounded-xl transition-all duration-200 shadow-sm cursor-pointer"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold text-white bg-[#FF6B00] hover:bg-[#FF6B00] px-3.5 py-1.5 rounded-xl transition-all duration-200 shadow-sm cursor-pointer"
                 >
                   <span>Details</span>
                   <ArrowRight className="w-3.5 h-3.5" />

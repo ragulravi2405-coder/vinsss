@@ -177,9 +177,9 @@ export const TopBar: React.FC<TopBarProps> = ({ onNavigate, currentTab }) => {
 
       {/* QUICK SEARCH MODAL - Mobile Responsive */}
       {isSearchOpen && (
-        <div className="fixed inset-0 z-50 bg-[#0A2540]/80 backdrop-blur-sm flex items-start justify-center pt-8 sm:pt-20 p-3 sm:p-4 animate-fade-in">
-          <div className="bg-white border-2 border-[#0A2540] w-full max-w-sm sm:max-w-2xl rounded-3xl shadow-2xl overflow-hidden text-[#0A2540] font-sans">
-            <div className="p-3.5 sm:p-4 border-b-2 border-[#0A2540]/15 flex items-center gap-2 sm:gap-3 bg-[#0A2540]">
+        <div className="fixed inset-0 z-50 bg-[#FF6B00]/90 backdrop-blur-sm flex items-start justify-center pt-8 sm:pt-20 p-3 sm:p-4 animate-fade-in">
+          <div className="bg-white border-2 border-[#FF6B00] w-full max-w-sm sm:max-w-2xl rounded-3xl shadow-2xl overflow-hidden text-slate-900 font-sans">
+            <div className="p-3.5 sm:p-4 border-b-2 border-[#FF6B00]/15 flex items-center gap-2 sm:gap-3 bg-[#FF6B00]">
               <Search className="w-4 sm:w-5 h-4 sm:h-5 text-white shrink-0" />
               <input
                 type="text"
@@ -199,14 +199,14 @@ export const TopBar: React.FC<TopBarProps> = ({ onNavigate, currentTab }) => {
 
             <div className="max-h-[60vh] sm:max-h-[70vh] overflow-y-auto p-3 sm:p-4 space-y-2 bg-white">
               {searchQuery.trim() === '' ? (
-                <div className="text-center py-4 sm:py-6 text-[#0A2540] space-y-2">
+                <div className="text-center py-4 sm:py-6 text-slate-900 space-y-2">
                   <p className="text-xs sm:text-sm font-medium">Quickly search across VINS College portal</p>
                   <div className="flex flex-wrap justify-center gap-1.5 sm:gap-2 pt-2">
                     {['CSE', 'Mechanical', 'Admissions', 'Placement', 'AICTE', 'NAAC'].map((tag) => (
                       <button
                         key={tag}
                         onClick={() => setSearchQuery(tag)}
-                        className="px-3 py-1 bg-[#0A2540]/10 hover:bg-[#0A2540] hover:text-white rounded-full text-xs font-bold text-[#0A2540] transition-colors cursor-pointer border-2 border-[#0A2540]/20"
+                        className="px-3 py-1 bg-orange-50 hover:bg-[#FF6B00] hover:text-white rounded-full text-xs font-bold text-slate-900 transition-colors cursor-pointer border-2 border-orange-200"
                       >
                         {tag}
                       </button>
@@ -219,29 +219,29 @@ export const TopBar: React.FC<TopBarProps> = ({ onNavigate, currentTab }) => {
                     <div
                       key={i}
                       onClick={res.action}
-                      className="p-3 rounded-2xl bg-white hover:bg-[#1E40AF]/10 border-2 border-[#0A2540]/20 hover:border-[#1E40AF] cursor-pointer flex items-center justify-between group transition-all active:scale-95"
+                      className="p-3 rounded-2xl bg-white hover:bg-orange-50 border-2 border-orange-200 hover:border-[#FF6B00] cursor-pointer flex items-center justify-between group transition-all active:scale-95"
                     >
                       <div className="min-w-0">
                         <span className="text-[10px] uppercase font-bold text-[#FF6B00] tracking-wider block">
                           {res.type}
                         </span>
-                        <h4 className="text-xs sm:text-sm font-bold text-[#0A2540] truncate">
+                        <h4 className="text-xs sm:text-sm font-bold text-slate-900 truncate">
                           {res.title}
                         </h4>
-                        <p className="text-xs text-[#0A2540]/70 truncate">{res.subtitle}</p>
+                        <p className="text-xs text-slate-500 truncate">{res.subtitle}</p>
                       </div>
-                      <ArrowRight className="w-4 h-4 text-[#0A2540] group-hover:translate-x-1 transition-all shrink-0 ml-2" />
+                      <ArrowRight className="w-4 h-4 text-slate-900 group-hover:translate-x-1 transition-all shrink-0 ml-2" />
                     </div>
                   ))}
                 </div>
               ) : (
-                <div className="text-center py-6 sm:py-8 text-[#0A2540]">
+                <div className="text-center py-6 sm:py-8 text-slate-900">
                   <p className="text-xs sm:text-sm font-medium">No results found for &ldquo;{searchQuery}&rdquo;</p>
                 </div>
               )}
             </div>
 
-            <div className="p-2.5 sm:p-3 bg-white border-t-2 border-[#0A2540]/15 flex items-center justify-between text-xs text-[#0A2540] font-bold">
+            <div className="p-2.5 sm:p-3 bg-white border-t-2 border-[#FF6B00]/15 flex items-center justify-between text-xs text-slate-900 font-bold">
               <span>Press ESC to close</span>
               <span className="hidden sm:inline text-[#FF6B00] counselling-badge">Counselling Code: 4982</span>
             </div>

@@ -28,12 +28,12 @@ export const NaacPage: React.FC<NaacPageProps> = ({ initialView = 'naac' }) => {
   ];
 
   return (
-    <div className="bg-[#FFFFFF] text-[#0A2540] min-h-screen">
+    <div className="bg-[#FFFFFF] text-slate-900 min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-10">
         
         {/* Header Banner - Premium */}
         <ScrollReveal direction="up" distance={20}>
-          <div className="bg-[#0A2540] text-white p-8 sm:p-12 rounded-3xl border border-white/20 shadow-3d-deep space-y-4 relative overflow-hidden">
+          <div className="bg-gradient-to-r from-[#FF6B00] via-[#FF7A1A] to-[#E05E00] text-white p-8 sm:p-12 rounded-3xl border border-orange-400 shadow-xl space-y-4 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-96 h-96 bg-white/8 rounded-full blur-3xl pointer-events-none" />
             <div className="absolute -bottom-16 -left-16 w-64 h-64 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
 
@@ -56,9 +56,9 @@ export const NaacPage: React.FC<NaacPageProps> = ({ initialView = 'naac' }) => {
               href="https://www.vinsengineeringcollege.org/naac/index.php"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-white hover:bg-white/90 text-[#0A2540] font-black text-xs uppercase tracking-wider px-5 py-3 rounded-full shadow-lg flex items-center gap-2 transition-all cursor-pointer"
+              className="bg-white hover:bg-white/90 text-slate-900 font-black text-xs uppercase tracking-wider px-5 py-3 rounded-full shadow-lg flex items-center gap-2 transition-all cursor-pointer"
             >
-              <ExternalLink className="w-4 h-4 text-[#0A2540]" />
+              <ExternalLink className="w-4 h-4 text-slate-900" />
               Official NAAC Portal &amp; SSR (Click Here)
             </a>
 
@@ -66,7 +66,7 @@ export const NaacPage: React.FC<NaacPageProps> = ({ initialView = 'naac' }) => {
               <button
                 onClick={() => setActiveTab('naac')}
                 className={`px-4 py-2 rounded-full font-bold text-xs transition-all cursor-pointer ${
-                  activeTab === 'naac' ? 'bg-white text-[#0A2540] shadow-md' : 'text-white hover:bg-white/10'
+                  activeTab === 'naac' ? 'bg-white text-slate-900 shadow-md' : 'text-white hover:bg-white/10'
                 }`}
               >
                 NAAC Criteria &amp; SSR
@@ -75,7 +75,7 @@ export const NaacPage: React.FC<NaacPageProps> = ({ initialView = 'naac' }) => {
               <button
                 onClick={() => setActiveTab('iqac')}
                 className={`px-4 py-2 rounded-full font-bold text-xs transition-all cursor-pointer ${
-                  activeTab === 'iqac' ? 'bg-white text-[#0A2540] shadow-md' : 'text-white hover:bg-white/10'
+                  activeTab === 'iqac' ? 'bg-white text-slate-900 shadow-md' : 'text-white hover:bg-white/10'
                 }`}
               >
                 IQAC Composition
@@ -84,7 +84,7 @@ export const NaacPage: React.FC<NaacPageProps> = ({ initialView = 'naac' }) => {
               <button
                 onClick={() => setActiveTab('rti')}
                 className={`px-4 py-2 rounded-full font-bold text-xs transition-all cursor-pointer ${
-                  activeTab === 'rti' ? 'bg-white text-[#0A2540] shadow-md' : 'text-white hover:bg-white/10'
+                  activeTab === 'rti' ? 'bg-white text-slate-900 shadow-md' : 'text-white hover:bg-white/10'
                 }`}
               >
                 RTI Committee
@@ -95,11 +95,11 @@ export const NaacPage: React.FC<NaacPageProps> = ({ initialView = 'naac' }) => {
         </ScrollReveal>
 
         {/* Video Embed Section */}
-        <div className="bg-[#0A2540] text-white rounded-3xl p-6 sm:p-8 border border-white/20 shadow-xl space-y-4">
+        <div className="bg-[#FF6B00] text-white rounded-3xl p-6 sm:p-8 border border-white/20 shadow-xl space-y-4">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-white/20 pb-3 gap-3">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-white text-[#0A2540] flex items-center justify-center font-bold">
-                <Video className="w-5 h-5 text-[#0A2540]" />
+              <div className="w-10 h-10 rounded-xl bg-white text-slate-900 flex items-center justify-center font-bold">
+                <Video className="w-5 h-5 text-slate-900" />
               </div>
               <div>
                 <h2 className="text-xl font-bold text-white font-playfair">VINS Campus &amp; Academic Video</h2>
@@ -111,9 +111,9 @@ export const NaacPage: React.FC<NaacPageProps> = ({ initialView = 'naac' }) => {
               href="https://youtu.be/LtP5bsUIWew?si=_WX5lBdkREoxqx1B"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 bg-white text-[#0A2540] hover:bg-white/90 text-xs font-bold rounded-full transition-all flex items-center gap-2 self-start sm:self-auto shadow-md"
+              className="px-4 py-2 bg-white text-slate-900 hover:bg-white/90 text-xs font-bold rounded-full transition-all flex items-center gap-2 self-start sm:self-auto shadow-md"
             >
-              <Play className="w-4 h-4 fill-current text-[#0A2540]" />
+              <Play className="w-4 h-4 fill-current text-slate-900" />
               Watch on YouTube
             </a>
           </div>
@@ -137,25 +137,25 @@ export const NaacPage: React.FC<NaacPageProps> = ({ initialView = 'naac' }) => {
               {NAAC_CRITERIA.map((crit) => (
                 <div
                   key={crit.id}
-                  className="bg-white rounded-3xl p-6 border-2 border-[#0A2540]/20 shadow-sm hover:shadow-xl hover:border-[#0A2540] transition-all space-y-4 flex flex-col justify-between group"
+                  className="bg-white rounded-3xl p-6 border-2 border-orange-200 shadow-sm hover:shadow-xl hover:border-[#FF6B00] transition-all space-y-4 flex flex-col justify-between group"
                 >
                   <div className="space-y-3">
-                    <div className="w-12 h-12 rounded-2xl bg-[#0A2540] text-white flex items-center justify-center font-black text-base shadow-sm">
+                    <div className="w-12 h-12 rounded-2xl bg-[#FF6B00] text-white flex items-center justify-center font-black text-base shadow-sm">
                       0{crit.id}
                     </div>
 
-                    <h3 className="font-bold text-[#0A2540] text-lg leading-snug">
+                    <h3 className="font-bold text-slate-900 text-lg leading-snug">
                       {crit.title}
                     </h3>
 
-                    <p className="text-xs text-[#0A2540]/90 leading-relaxed font-medium">{crit.description}</p>
+                    <p className="text-xs text-slate-700 leading-relaxed font-medium">{crit.description}</p>
 
-                    <div className="pt-2 border-t-2 border-[#0A2540]/10 space-y-1.5">
-                      <p className="text-xs font-bold text-[#0A2540]">Key Quality Indicators:</p>
-                      <ul className="text-xs text-[#0A2540]/90 space-y-1 font-medium">
+                    <div className="pt-2 border-t-2 border-[#FF6B00]/10 space-y-1.5">
+                      <p className="text-xs font-bold text-slate-900">Key Quality Indicators:</p>
+                      <ul className="text-xs text-slate-700 space-y-1 font-medium">
                         {crit.keyIndicators.map((ind, idx) => (
                           <li key={idx} className="flex items-start gap-2">
-                            <CheckCircle2 className="w-3.5 h-3.5 text-[#0A2540] shrink-0 mt-0.5" />
+                            <CheckCircle2 className="w-3.5 h-3.5 text-slate-900 shrink-0 mt-0.5" />
                             <span>{ind}</span>
                           </li>
                         ))}
@@ -163,13 +163,13 @@ export const NaacPage: React.FC<NaacPageProps> = ({ initialView = 'naac' }) => {
                     </div>
                   </div>
 
-                  <div className="pt-3 border-t-2 border-[#0A2540]/10 flex items-center justify-between">
-                    <span className="text-[11px] font-bold text-[#0A2540]/70">Criterion 0{crit.id} SSR PDF</span>
+                  <div className="pt-3 border-t-2 border-[#FF6B00]/10 flex items-center justify-between">
+                    <span className="text-[11px] font-bold text-slate-500">Criterion 0{crit.id} SSR PDF</span>
                     <a
                       href="https://www.vinsengineeringcollege.org/naac/index.php"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-3.5 py-1.5 bg-[#0A2540] text-white text-xs font-bold rounded-full hover:bg-[#0A2540]/90 flex items-center gap-1 shadow-xs transition-all"
+                      className="px-3.5 py-1.5 bg-[#FF6B00] text-white text-xs font-bold rounded-full hover:bg-[#FF6B00]/90 flex items-center gap-1 shadow-xs transition-all"
                     >
                       View SSR
                       <ExternalLink className="w-3.5 h-3.5" />
@@ -180,19 +180,19 @@ export const NaacPage: React.FC<NaacPageProps> = ({ initialView = 'naac' }) => {
             </div>
 
             {/* Institutional Records & SSR Links */}
-            <div className="bg-white rounded-3xl p-6 sm:p-8 border-2 border-[#0A2540]/20 shadow-md space-y-4">
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b-2 border-[#0A2540]/15 pb-4 gap-3">
+            <div className="bg-white rounded-3xl p-6 sm:p-8 border-2 border-orange-200 shadow-md space-y-4">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b-2 border-[#FF6B00]/15 pb-4 gap-3">
                 <div>
-                  <h3 className="font-bold text-[#0A2540] text-xl font-playfair">
+                  <h3 className="font-bold text-slate-900 text-xl font-playfair">
                     Institutional Quality Reports &amp; Disclosures
                   </h3>
-                  <p className="text-xs text-[#0A2540]/80 font-medium">Official statutory documentation submitted to NAAC</p>
+                  <p className="text-xs text-slate-600 font-medium">Official statutory documentation submitted to NAAC</p>
                 </div>
                 <a
                   href="https://www.vinsengineeringcollege.org/naac/index.php"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-5 py-2.5 bg-[#0A2540] hover:bg-[#0A2540]/90 text-white font-bold text-xs rounded-full transition-all flex items-center gap-2 shadow-md self-start sm:self-auto"
+                  className="px-5 py-2.5 bg-[#FF6B00] hover:bg-[#FF6B00]/90 text-white font-bold text-xs rounded-full transition-all flex items-center gap-2 shadow-md self-start sm:self-auto"
                 >
                   <ExternalLink className="w-4 h-4" />
                   NAAC Portal Link
@@ -206,7 +206,7 @@ export const NaacPage: React.FC<NaacPageProps> = ({ initialView = 'naac' }) => {
                     href="https://www.vinsengineeringcollege.org/naac/index.php"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-2.5 rounded-2xl bg-white hover:bg-[#0A2540] text-[#0A2540] hover:text-white border-2 border-[#0A2540]/20 hover:border-[#0A2540] font-bold text-xs transition-all flex items-center gap-2 shadow-xs"
+                    className="px-4 py-2.5 rounded-2xl bg-white hover:bg-[#FF6B00] text-slate-900 hover:text-white border-2 border-orange-200 hover:border-[#FF6B00] font-bold text-xs transition-all flex items-center gap-2 shadow-xs"
                   >
                     <FileText className="w-4 h-4 text-current" />
                     {rec}
@@ -223,18 +223,18 @@ export const NaacPage: React.FC<NaacPageProps> = ({ initialView = 'naac' }) => {
           <div className="space-y-8">
             
             {/* About IQAC Text */}
-            <div className="bg-white rounded-3xl p-6 sm:p-8 border-2 border-[#0A2540]/20 shadow-md space-y-4">
-              <div className="flex items-center gap-3 border-b-2 border-[#0A2540]/15 pb-3">
-                <div className="w-12 h-12 rounded-2xl bg-[#0A2540] text-white flex items-center justify-center font-bold shadow-md">
+            <div className="bg-white rounded-3xl p-6 sm:p-8 border-2 border-orange-200 shadow-md space-y-4">
+              <div className="flex items-center gap-3 border-b-2 border-[#FF6B00]/15 pb-3">
+                <div className="w-12 h-12 rounded-2xl bg-[#FF6B00] text-white flex items-center justify-center font-bold shadow-md">
                   <ShieldCheck className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h2 className="text-2xl font-bold text-[#0A2540] font-playfair">ABOUT IQAC</h2>
-                  <p className="text-xs text-[#0A2540] font-bold">Established 2nd July 2019</p>
+                  <h2 className="text-2xl font-bold text-slate-900 font-playfair">ABOUT IQAC</h2>
+                  <p className="text-xs text-slate-900 font-bold">Established 2nd July 2019</p>
                 </div>
               </div>
 
-              <div className="space-y-3 text-xs sm:text-sm text-[#0A2540]/90 leading-relaxed font-medium">
+              <div className="space-y-3 text-xs sm:text-sm text-slate-700 leading-relaxed font-medium">
                 <p>
                   The IQAC of the college was established on <strong>2nd July 2019</strong> after a year&apos;s time of inspection of the college. The prime task of the IQAC is to develop a system for conscious, consistent and catalytic improvement in the overall performance of the Institution. The cell precisely plans the quality initiatives of the institution by ensuring the quality culture, institutionalizing and internalizing quality parameters in adherence to the norms of National Assessment and Accreditation Council of India.
                 </p>
@@ -245,18 +245,18 @@ export const NaacPage: React.FC<NaacPageProps> = ({ initialView = 'naac' }) => {
             </div>
 
             {/* 10 IQAC Members Table */}
-            <div className="bg-white rounded-3xl border-2 border-[#0A2540]/20 overflow-hidden shadow-md space-y-4 p-6 sm:p-8">
-              <div className="flex items-center justify-between border-b-2 border-[#0A2540]/15 pb-3">
+            <div className="bg-white rounded-3xl border-2 border-orange-200 overflow-hidden shadow-md space-y-4 p-6 sm:p-8">
+              <div className="flex items-center justify-between border-b-2 border-[#FF6B00]/15 pb-3">
                 <div className="flex items-center gap-2">
-                  <Users className="w-5 h-5 text-[#0A2540]" />
-                  <h3 className="font-bold text-[#0A2540] text-lg font-playfair">Composition of IQAC Members</h3>
+                  <Users className="w-5 h-5 text-slate-900" />
+                  <h3 className="font-bold text-slate-900 text-lg font-playfair">Composition of IQAC Members</h3>
                 </div>
-                <span className="text-xs font-bold text-[#0A2540] bg-white px-3 py-1 rounded-full border border-[#0A2540]/20">AY 2025-26</span>
+                <span className="text-xs font-bold text-slate-900 bg-white px-3 py-1 rounded-full border border-orange-200">AY 2025-26</span>
               </div>
 
-              <div className="overflow-x-auto rounded-2xl border-2 border-[#0A2540]/20">
+              <div className="overflow-x-auto rounded-2xl border-2 border-orange-200">
                 <table className="w-full text-left text-xs">
-                  <thead className="bg-[#0A2540] text-white font-bold">
+                  <thead className="bg-[#FF6B00] text-white font-bold">
                     <tr>
                       <th className="p-3.5 text-center w-16">S.No</th>
                       <th className="p-3.5">Member Name</th>
@@ -264,14 +264,14 @@ export const NaacPage: React.FC<NaacPageProps> = ({ initialView = 'naac' }) => {
                       <th className="p-3.5">Position</th>
                     </tr>
                   </thead>
-                  <tbody className="divide-y divide-[#0A2540]/15 text-[#0A2540] font-semibold">
+                  <tbody className="divide-y divide-orange-100 text-slate-900 font-semibold">
                     {IQAC_MEMBERS.map((m) => (
-                      <tr key={m.sNo} className="hover:bg-[#0A2540]/5 transition-colors">
+                      <tr key={m.sNo} className="hover:bg-[#FF6B00]/5 transition-colors">
                         <td className="p-3.5 text-center font-black">{m.sNo}</td>
                         <td className="p-3.5 font-bold text-base">{m.name}</td>
                         <td className="p-3.5 text-xs">{m.designation}</td>
                         <td className="p-3.5">
-                          <span className="px-3 py-1 rounded-full bg-[#0A2540] text-white font-bold text-[11px]">
+                          <span className="px-3 py-1 rounded-full bg-[#FF6B00] text-white font-bold text-[11px]">
                             {m.position}
                           </span>
                         </td>
@@ -287,50 +287,50 @@ export const NaacPage: React.FC<NaacPageProps> = ({ initialView = 'naac' }) => {
 
         {/* View 3: RTI Members */}
         {activeTab === 'rti' && (
-          <div className="bg-white rounded-3xl p-6 sm:p-8 border-2 border-[#0A2540]/20 shadow-md space-y-6">
-            <div className="border-b-2 border-[#0A2540]/15 pb-4 flex items-center justify-between">
+          <div className="bg-white rounded-3xl p-6 sm:p-8 border-2 border-orange-200 shadow-md space-y-6">
+            <div className="border-b-2 border-[#FF6B00]/15 pb-4 flex items-center justify-between">
               <div>
-                <h2 className="text-2xl font-bold text-[#0A2540] font-playfair">Right to Information (RTI) Members</h2>
-                <p className="text-xs text-[#0A2540]/80 font-medium">Statutory Disclosure &amp; Grievance Redressal Cell</p>
+                <h2 className="text-2xl font-bold text-slate-900 font-playfair">Right to Information (RTI) Members</h2>
+                <p className="text-xs text-slate-600 font-medium">Statutory Disclosure &amp; Grievance Redressal Cell</p>
               </div>
-              <span className="px-4 py-1.5 bg-[#0A2540] text-white font-bold text-xs rounded-full">
+              <span className="px-4 py-1.5 bg-[#FF6B00] text-white font-bold text-xs rounded-full">
                 Statutory Body
               </span>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
-              <div className="bg-[#0A2540] text-white p-5 rounded-2xl space-y-1 shadow-md">
+              <div className="bg-[#FF6B00] text-white p-5 rounded-2xl space-y-1 shadow-md">
                 <span className="text-[10px] text-white/80 font-bold uppercase tracking-wider">Chairperson</span>
                 <p className="font-bold text-base text-white">{RTI_MEMBERS.chairperson.name}</p>
                 <p className="text-white/90">{RTI_MEMBERS.chairperson.role}</p>
               </div>
 
-              <div className="bg-[#0A2540] text-white p-5 rounded-2xl space-y-1 shadow-md">
+              <div className="bg-[#FF6B00] text-white p-5 rounded-2xl space-y-1 shadow-md">
                 <span className="text-[10px] text-white/80 font-bold uppercase tracking-wider">Management Rep</span>
                 <p className="font-bold text-base text-white">{RTI_MEMBERS.managementRep.name}</p>
                 <p className="text-white/90">{RTI_MEMBERS.managementRep.role}</p>
               </div>
 
-              <div className="bg-[#0A2540] text-white p-5 rounded-2xl space-y-1 shadow-md">
+              <div className="bg-[#FF6B00] text-white p-5 rounded-2xl space-y-1 shadow-md">
                 <span className="text-[10px] text-white/80 font-bold uppercase tracking-wider">Co-ordinator</span>
                 <p className="font-bold text-base text-white">{RTI_MEMBERS.coordinator.name}</p>
                 <p className="text-white/90">{RTI_MEMBERS.coordinator.role}</p>
               </div>
 
-              <div className="bg-[#0A2540] text-white p-5 rounded-2xl space-y-1 shadow-md">
+              <div className="bg-[#FF6B00] text-white p-5 rounded-2xl space-y-1 shadow-md">
                 <span className="text-[10px] text-white/80 font-bold uppercase tracking-wider">Secretary</span>
                 <p className="font-bold text-base text-white">{RTI_MEMBERS.secretary.name}</p>
                 <p className="text-white/90">{RTI_MEMBERS.secretary.role}</p>
               </div>
             </div>
 
-            <div className="pt-4 border-t-2 border-[#0A2540]/15 space-y-3">
-              <h3 className="font-bold text-[#0A2540] text-base">Committee Members:</h3>
+            <div className="pt-4 border-t-2 border-[#FF6B00]/15 space-y-3">
+              <h3 className="font-bold text-slate-900 text-base">Committee Members:</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
                 {RTI_MEMBERS.members.map((mem, idx) => (
-                  <div key={idx} className="bg-white p-4 rounded-2xl border-2 border-[#0A2540]/20 text-xs space-y-0.5 shadow-xs">
-                    <p className="font-bold text-[#0A2540] text-sm">{mem.name}</p>
-                    <p className="text-[#0A2540]/80 font-medium">{mem.role}</p>
+                  <div key={idx} className="bg-white p-4 rounded-2xl border-2 border-orange-200 text-xs space-y-0.5 shadow-xs">
+                    <p className="font-bold text-slate-900 text-sm">{mem.name}</p>
+                    <p className="text-slate-600 font-medium">{mem.role}</p>
                   </div>
                 ))}
               </div>
@@ -339,26 +339,26 @@ export const NaacPage: React.FC<NaacPageProps> = ({ initialView = 'naac' }) => {
         )}
 
         {/* Reports & IQAC Photo Gallery Section */}
-        <section className="bg-white rounded-3xl p-6 sm:p-8 border-2 border-[#0A2540]/20 shadow-md space-y-6">
-          <div className="flex items-center gap-3 border-b-2 border-[#0A2540]/15 pb-4">
-            <div className="w-12 h-12 rounded-2xl bg-[#0A2540] text-white flex items-center justify-center font-bold shadow-md">
+        <section className="bg-white rounded-3xl p-6 sm:p-8 border-2 border-orange-200 shadow-md space-y-6">
+          <div className="flex items-center gap-3 border-b-2 border-[#FF6B00]/15 pb-4">
+            <div className="w-12 h-12 rounded-2xl bg-[#FF6B00] text-white flex items-center justify-center font-bold shadow-md">
               <ImageIcon className="w-6 h-6 text-white" />
             </div>
             <div>
-              <h2 className="text-2xl font-bold text-[#0A2540] font-playfair">IQAC Quality Audit &amp; Review Gallery</h2>
-              <p className="text-xs text-[#0A2540]/80 font-semibold">Inspection Sessions, Quality Workshops &amp; NAAC Seminars</p>
+              <h2 className="text-2xl font-bold text-slate-900 font-playfair">IQAC Quality Audit &amp; Review Gallery</h2>
+              <p className="text-xs text-slate-600 font-semibold">Inspection Sessions, Quality Workshops &amp; NAAC Seminars</p>
             </div>
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
             {naacGallery.map((g, idx) => (
-              <div key={idx} className="bg-white rounded-2xl overflow-hidden aspect-video relative group border-2 border-[#0A2540]/20 shadow-xs hover:border-[#0A2540] transition-all">
+              <div key={idx} className="bg-white rounded-2xl overflow-hidden aspect-video relative group border-2 border-orange-200 shadow-xs hover:border-[#FF6B00] transition-all">
                 <img
                   src="https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?auto=format&fit=crop&q=80&w=600"
                   alt={g.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform"
                 />
-                <div className="absolute inset-0 bg-[#0A2540]/85 p-3 flex flex-col justify-end text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="absolute inset-0 bg-[#FF6B00]/85 p-3 flex flex-col justify-end text-white opacity-0 group-hover:opacity-100 transition-opacity">
                   <p className="text-xs font-bold text-white leading-tight">{g.title}</p>
                 </div>
               </div>

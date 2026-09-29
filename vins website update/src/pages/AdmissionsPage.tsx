@@ -92,15 +92,15 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({ initialAnchor = 
   const scholarshipDoc = allDocs.find(d => d.id === 'doc-scholarship') || allDocs[2] || allDocs[0];
 
   return (
-    <div className="bg-[#FFFFFF] text-[#0A2540] min-h-screen">
+    <div className="bg-[#FFFFFF] text-slate-900 min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8">
         
         {/* Admissions Hero Section */}
         <ScrollReveal direction="up" distance={24}>
-          <div className="bg-[#0A2540] text-white p-8 sm:p-14 lg:p-16 rounded-3xl border border-white/20 shadow-3d-deep relative overflow-hidden space-y-6">
+          <div className="bg-[#FF6B00] text-white p-8 sm:p-14 lg:p-16 rounded-3xl border border-white/20 shadow-3d-deep relative overflow-hidden space-y-6">
             {/* Decorative depth orbs */}
-            <div className="absolute top-0 right-0 w-96 h-96 bg-[#1E40AF]/25 rounded-full blur-3xl pointer-events-none" />
-            <div className="absolute -bottom-10 -left-10 w-72 h-72 bg-[#FF6B00]/15 rounded-full blur-2xl pointer-events-none" />
+            <div className="absolute top-0 right-0 w-96 h-96 bg-white/20 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute -bottom-10 -left-10 w-72 h-72 bg-[#FF7A1A]/30 rounded-full blur-2xl pointer-events-none" />
 
           {/* Badge Label: ADMISSIONS OPEN 2026-2027 */}
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FF6B00] text-white font-bold text-xs tracking-wider uppercase shadow-md">
@@ -129,7 +129,7 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({ initialAnchor = 
 
             <button
               onClick={() => scrollTo('scholarships')}
-              className="px-6 sm:px-8 py-3.5 rounded-full bg-transparent border-2 border-white text-white font-bold text-xs sm:text-sm tracking-wider uppercase hover:bg-white hover:text-[#0A2540] hover:scale-105 active:scale-95 transition-all shadow-lg cursor-pointer"
+              className="px-6 sm:px-8 py-3.5 rounded-full bg-transparent border-2 border-white text-white font-bold text-xs sm:text-sm tracking-wider uppercase hover:bg-white hover:text-[#FF6B00] hover:scale-105 active:scale-95 transition-all shadow-lg cursor-pointer"
             >
               SCHOLARSHIPS &amp; AID
             </button>
@@ -154,7 +154,7 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({ initialAnchor = 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           
           {/* Left Sub-Nav Sidebar */}
-          <div className="lg:col-span-3 sticky top-24 bg-white rounded-3xl border-2 border-[#0A2540]/15 p-4 shadow-md space-y-1.5">
+          <div className="lg:col-span-3 sticky top-24 bg-white rounded-3xl border-2 border-orange-100 p-4 shadow-md space-y-1.5">
             <span className="text-xs font-bold text-[#FF6B00] uppercase tracking-wider block px-3 py-1">
               Admissions Directory
             </span>
@@ -173,8 +173,8 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({ initialAnchor = 
                 onClick={() => scrollTo(nav.id)}
                 className={`w-full text-left px-3.5 py-2.5 rounded-2xl text-xs font-bold transition-all cursor-pointer ${
                   activeSection === nav.id
-                    ? 'bg-[#0A2540] text-white shadow-md'
-                    : 'text-[#0A2540] hover:bg-[#1E40AF]/10 hover:text-[#1E40AF]'
+                    ? 'bg-[#FF6B00] text-white shadow-md'
+                    : 'text-slate-900 hover:bg-orange-50 hover:text-[#FF6B00]'
                 }`}
               >
                 {nav.label}
@@ -186,38 +186,38 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({ initialAnchor = 
           <div className="lg:col-span-9 space-y-10">
             
             {/* Section 1: UG Eligibility Criteria */}
-            <div id="eligibility-ug" className="bg-white rounded-3xl p-6 sm:p-8 border-2 border-[#0A2540]/15 shadow-md space-y-6 scroll-mt-28">
-              <div className="border-b-2 border-[#0A2540]/15 pb-4">
+            <div id="eligibility-ug" className="bg-white rounded-3xl p-6 sm:p-8 border-2 border-orange-100 shadow-md space-y-6 scroll-mt-28">
+              <div className="border-b-2 border-[#FF6B00]/15 pb-4">
                 <span className="text-xs font-bold text-[#FF6B00] uppercase tracking-wider">As per Government Norms</span>
-                <h2 className="text-2xl sm:text-3xl font-bold text-[#0A2540] font-poppins">UG Courses — Eligibility Criteria</h2>
-                <p className="text-xs text-[#0A2540]/80 mt-1 font-medium">Qualified Examinations and Minimum Marks for Admission to B.E. Degree Courses</p>
+                <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 font-poppins">UG Courses — Eligibility Criteria</h2>
+                <p className="text-xs text-slate-600 mt-1 font-medium">Qualified Examinations and Minimum Marks for Admission to B.E. Degree Courses</p>
               </div>
 
               {/* HSC Criteria Table */}
               <div className="space-y-3">
-                <h3 className="text-sm font-bold text-[#0A2540] flex items-center gap-2">
+                <h3 className="text-sm font-bold text-slate-900 flex items-center gap-2">
                   <GraduationCap className="w-5 h-5 text-[#FF6B00]" />
                   <span>1. HSC (10+2) Eligibility</span>
                 </h3>
-                <p className="text-xs sm:text-sm text-[#0A2540]/90 leading-relaxed font-medium">
+                <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-medium">
                   A pass in the HSC or its equivalent with a minimum average percentage in <strong>Mathematics, Physics and Chemistry</strong> put together as given below:
                 </p>
 
-                <div className="overflow-x-auto rounded-2xl border-2 border-[#0A2540]/15">
+                <div className="overflow-x-auto rounded-2xl border-2 border-orange-100">
                   <table className="w-full text-left text-xs">
-                    <thead className="bg-[#0A2540] text-white font-bold">
+                    <thead className="bg-[#FF6B00] text-white font-bold">
                       <tr>
                         <th className="p-3.5 w-16 text-center">S.No.</th>
                         <th className="p-3.5">Community</th>
                         <th className="p-3.5">A pass with minimum average marks in Maths, Physics &amp; Chemistry</th>
                       </tr>
                     </thead>
-                    <tbody className="divide-y divide-[#0A2540]/15 text-[#0A2540] font-bold">
+                    <tbody className="divide-y divide-orange-100 text-slate-900 font-bold">
                       {ELIGIBILITY_CRITERIA_DATA.ugHsc.map((row, idx) => (
-                        <tr key={idx} className="hover:bg-[#0A2540]/5">
+                        <tr key={idx} className="hover:bg-[#FF6B00]/5">
                           <td className="p-3.5 text-center font-black">{idx + 1}</td>
                           <td className="p-3.5 font-bold">{row.community}</td>
-                          <td className="p-3.5 font-black text-[#0A2540] bg-[#0A2540]/5">{row.minMarks}</td>
+                          <td className="p-3.5 font-black text-slate-900 bg-orange-50/50">{row.minMarks}</td>
                         </tr>
                       ))}
                     </tbody>
@@ -227,27 +227,27 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({ initialAnchor = 
 
               {/* Diploma Criteria Table */}
               <div className="space-y-3 pt-2">
-                <h3 className="text-sm font-bold text-[#0A2540] flex items-center gap-2">
+                <h3 className="text-sm font-bold text-slate-900 flex items-center gap-2">
                   <Award className="w-5 h-5 text-[#FF6B00]" />
                   <span>2. Diploma Candidates (Direct 2nd Year Lateral Entry)</span>
                 </h3>
-                <p className="text-xs sm:text-sm text-[#0A2540]/90 leading-relaxed font-medium">
+                <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-medium">
                   Candidates who have passed <strong>10+3 Diploma</strong> (any stream) recognized by Central / State Governments can join directly in second year of Engineering.
                 </p>
 
-                <div className="overflow-x-auto rounded-2xl border-2 border-[#0A2540]/15">
+                <div className="overflow-x-auto rounded-2xl border-2 border-orange-100">
                   <table className="w-full text-left text-xs">
-                    <thead className="bg-[#0A2540] text-white font-bold">
+                    <thead className="bg-[#FF6B00] text-white font-bold">
                       <tr>
                         <th className="p-3.5">Community Category</th>
                         <th className="p-3.5">Required Minimum Aggregate Marks in Diploma Semesters</th>
                       </tr>
                     </thead>
-                    <tbody className="divide-y divide-[#0A2540]/15 text-[#0A2540] font-bold">
+                    <tbody className="divide-y divide-orange-100 text-slate-900 font-bold">
                       {ELIGIBILITY_CRITERIA_DATA.ugDiploma.map((row, idx) => (
-                        <tr key={idx} className="hover:bg-[#0A2540]/5">
+                        <tr key={idx} className="hover:bg-[#FF6B00]/5">
                           <td className="p-3.5 font-bold">{row.community}</td>
-                          <td className="p-3.5 font-black text-[#0A2540]">{row.minMarks}</td>
+                          <td className="p-3.5 font-black text-slate-900">{row.minMarks}</td>
                         </tr>
                       ))}
                     </tbody>
@@ -257,18 +257,18 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({ initialAnchor = 
             </div>
 
             {/* Section 2: PG Eligibility Criteria */}
-            <div id="eligibility-pg" className="bg-white rounded-3xl p-6 sm:p-8 border-2 border-[#0A2540]/15 shadow-md space-y-6 scroll-mt-28">
-              <div className="border-b-2 border-[#0A2540]/15 pb-4">
+            <div id="eligibility-pg" className="bg-white rounded-3xl p-6 sm:p-8 border-2 border-orange-100 shadow-md space-y-6 scroll-mt-28">
+              <div className="border-b-2 border-[#FF6B00]/15 pb-4">
                 <span className="text-xs font-bold text-[#FF6B00] uppercase tracking-wider">As per Government Norms</span>
-                <h2 className="text-2xl sm:text-3xl font-bold text-[#0A2540] font-poppins">PG Courses — Eligibility Criteria</h2>
-                <p className="text-xs text-[#0A2540]/80 mt-1 font-medium">Eligibility Qualifications for admission to M.B.A. / M.E. degree programmes</p>
+                <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 font-poppins">PG Courses — Eligibility Criteria</h2>
+                <p className="text-xs text-slate-600 mt-1 font-medium">Eligibility Qualifications for admission to M.B.A. / M.E. degree programmes</p>
               </div>
 
               {/* MBA Criteria */}
-              <div className="rounded-3xl border-2 border-[#1E40AF]/20 overflow-hidden shadow-lg">
+              <div className="rounded-3xl border-2 border-orange-200 overflow-hidden shadow-lg">
 
                 {/* Header strip — Deep Navy */}
-                <div className="bg-[#0A2540] px-6 py-4 flex items-center gap-3">
+                <div className="bg-[#FF6B00] px-6 py-4 flex items-center gap-3">
                   <div className="w-9 h-9 rounded-xl bg-[#FF6B00] flex items-center justify-center shadow-md shrink-0">
                     <GraduationCap className="w-5 h-5 text-white" />
                   </div>
@@ -284,15 +284,15 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({ initialAnchor = 
                 <div className="bg-white px-6 py-5 space-y-4">
 
                   {/* Description with highlighted percentages */}
-                  <div className="bg-blue-50 border border-[#1E40AF]/20 rounded-2xl px-4 py-3.5 text-xs sm:text-sm text-[#0A2540] leading-relaxed font-medium">
+                  <div className="bg-blue-50 border border-orange-200 rounded-2xl px-4 py-3.5 text-xs sm:text-sm text-slate-900 leading-relaxed font-medium">
                     A pass in a recognized Bachelor&apos;s degree of minimum 3 years duration with at least&nbsp;
                     <span className="inline-flex items-center gap-1 font-black text-[#FF6B00]">
                       50% marks
                     </span>
                     &nbsp;
-                    <span className="text-[#0A2540]/80">(</span>
+                    <span className="text-slate-600">(</span>
                     <span className="font-black text-[#FF6B00]">45%</span>
-                    <span className="text-[#0A2540]/80"> for reserved categories)</span>
+                    <span className="text-slate-600"> for reserved categories)</span>
                     &nbsp;in the qualifying degree examination:
                   </div>
 
@@ -301,19 +301,19 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({ initialAnchor = 
                     {ELIGIBILITY_CRITERIA_DATA.mbaPatterns.map((pat, idx) => (
                       <div
                         key={idx}
-                        className="group flex items-center gap-3 bg-white border-2 border-[#1E40AF]/15 hover:border-[#FF6B00]/60 hover:bg-orange-50/40 rounded-2xl px-4 py-3 transition-all duration-200 shadow-xs"
+                        className="group flex items-center gap-3 bg-white border-2 border-orange-100 hover:border-[#FF6B00]/60 hover:bg-orange-50/40 rounded-2xl px-4 py-3 transition-all duration-200 shadow-xs"
                       >
                         <span className="w-6 h-6 rounded-full bg-[#FF6B00] flex items-center justify-center shrink-0 shadow-sm group-hover:scale-110 transition-transform duration-200">
                           <CheckCircle2 className="w-3.5 h-3.5 text-white" />
                         </span>
-                        <span className="text-xs font-semibold text-[#0A2540] leading-snug">{pat}</span>
+                        <span className="text-xs font-semibold text-slate-900 leading-snug">{pat}</span>
                       </div>
                     ))}
                   </div>
 
                   {/* Footer note */}
-                  <div className="flex items-start gap-2 pt-1 text-[11px] text-[#1E40AF] font-semibold">
-                    <span className="mt-0.5 w-4 h-4 rounded-full bg-[#1E40AF]/10 flex items-center justify-center shrink-0 text-[10px] font-black text-[#1E40AF]">i</span>
+                  <div className="flex items-start gap-2 pt-1 text-[11px] text-[#FF6B00] font-semibold">
+                    <span className="mt-0.5 w-4 h-4 rounded-full bg-orange-100 flex items-center justify-center shrink-0 text-[10px] font-black text-[#FF6B00]">i</span>
                     <span>Candidates must meet the minimum qualifying marks as mandated by Anna University / TANCET norms.</span>
                   </div>
                 </div>
@@ -321,16 +321,16 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({ initialAnchor = 
 
               {/* M.E. Programs Criteria */}
               <div className="space-y-3">
-                <h3 className="text-sm font-bold text-[#0A2540]">M.E. Degree Programmes Eligibility</h3>
-                <p className="text-xs sm:text-sm text-[#0A2540]/90 font-medium">
+                <h3 className="text-sm font-bold text-slate-900">M.E. Degree Programmes Eligibility</h3>
+                <p className="text-xs sm:text-sm text-slate-700 font-medium">
                   Pass in a recognized Bachelor&apos;s degree or equivalent in the relevant field with at least <strong>50% marks</strong> (<strong>45%</strong> for reserved categories):
                 </p>
 
                 <div className="space-y-2.5">
                   {ELIGIBILITY_CRITERIA_DATA.mePrograms.map((me, idx) => (
-                    <div key={idx} className="p-4 bg-white rounded-2xl border-2 border-[#0A2540]/15 space-y-1 shadow-xs">
-                      <p className="text-xs font-bold text-[#0A2540] text-sm">{me.program}</p>
-                      <p className="text-xs text-[#0A2540]/80 font-medium"><strong>Qualifying Degree:</strong> {me.qualifyingDegree}</p>
+                    <div key={idx} className="p-4 bg-white rounded-2xl border-2 border-orange-100 space-y-1 shadow-xs">
+                      <p className="text-xs font-bold text-slate-900 text-sm">{me.program}</p>
+                      <p className="text-xs text-slate-600 font-medium"><strong>Qualifying Degree:</strong> {me.qualifyingDegree}</p>
                     </div>
                   ))}
                 </div>
@@ -338,18 +338,18 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({ initialAnchor = 
             </div>
 
             {/* Section 3: Programs Offered (Intake & Est Year) */}
-            <div id="programs" className="bg-white rounded-3xl p-6 sm:p-8 border-2 border-[#0A2540]/15 shadow-md space-y-6 scroll-mt-28">
-              <div className="border-b-2 border-[#0A2540]/15 pb-4">
+            <div id="programs" className="bg-white rounded-3xl p-6 sm:p-8 border-2 border-orange-100 shadow-md space-y-6 scroll-mt-28">
+              <div className="border-b-2 border-[#FF6B00]/15 pb-4">
                 <span className="text-xs font-bold text-[#FF6B00] uppercase tracking-wider">Sanctioned Intake &amp; Details</span>
-                <h2 className="text-2xl sm:text-3xl font-bold text-[#0A2540] font-poppins">Courses Offered</h2>
+                <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 font-poppins">Courses Offered</h2>
               </div>
 
               {/* UG Courses List */}
               <div className="space-y-3">
-                <h3 className="text-sm font-bold text-[#0A2540] uppercase tracking-wider">Undergraduate (UG) Courses</h3>
-                <div className="overflow-x-auto rounded-2xl border-2 border-[#0A2540]/15">
+                <h3 className="text-sm font-bold text-slate-900 uppercase tracking-wider">Undergraduate (UG) Courses</h3>
+                <div className="overflow-x-auto rounded-2xl border-2 border-orange-100">
                   <table className="w-full text-left text-xs">
-                    <thead className="bg-[#0A2540] text-white font-bold">
+                    <thead className="bg-[#FF6B00] text-white font-bold">
                       <tr>
                         <th className="p-3.5 w-14 text-center">S.No</th>
                         <th className="p-3.5">Degree &amp; Branch</th>
@@ -358,13 +358,13 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({ initialAnchor = 
                         <th className="p-3.5 text-center">Duration</th>
                       </tr>
                     </thead>
-                    <tbody className="divide-y divide-[#0A2540]/15 text-[#0A2540] font-bold">
+                    <tbody className="divide-y divide-orange-100 text-slate-900 font-bold">
                       {UG_COURSES_LIST.map((c, idx) => (
-                        <tr key={c.id} className="hover:bg-[#0A2540]/5">
+                        <tr key={c.id} className="hover:bg-[#FF6B00]/5">
                           <td className="p-3.5 text-center font-black">{idx + 1}</td>
                           <td className="p-3.5 font-bold text-sm">{c.name}</td>
                           <td className="p-3.5 text-center">{c.establishmentYear}</td>
-                          <td className="p-3.5 text-center font-black bg-[#0A2540]/5">{c.sanctionedIntake}</td>
+                          <td className="p-3.5 text-center font-black bg-orange-50/50">{c.sanctionedIntake}</td>
                           <td className="p-3.5 text-center">{c.durationYears} Yrs</td>
                         </tr>
                       ))}
@@ -375,10 +375,10 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({ initialAnchor = 
 
               {/* PG Courses List */}
               <div className="space-y-3 pt-4">
-                <h3 className="text-sm font-bold text-[#0A2540] uppercase tracking-wider">Postgraduate (PG) Courses</h3>
-                <div className="overflow-x-auto rounded-2xl border-2 border-[#0A2540]/15">
+                <h3 className="text-sm font-bold text-slate-900 uppercase tracking-wider">Postgraduate (PG) Courses</h3>
+                <div className="overflow-x-auto rounded-2xl border-2 border-orange-100">
                   <table className="w-full text-left text-xs">
-                    <thead className="bg-[#0A2540] text-white font-bold">
+                    <thead className="bg-[#FF6B00] text-white font-bold">
                       <tr>
                         <th className="p-3.5 w-14 text-center">S.No</th>
                         <th className="p-3.5">Degree &amp; Branch</th>
@@ -387,13 +387,13 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({ initialAnchor = 
                         <th className="p-3.5 text-center">Duration</th>
                       </tr>
                     </thead>
-                    <tbody className="divide-y divide-[#0A2540]/15 text-[#0A2540] font-bold">
+                    <tbody className="divide-y divide-orange-100 text-slate-900 font-bold">
                       {PG_COURSES_LIST.map((c, idx) => (
-                        <tr key={c.id} className="hover:bg-[#0A2540]/5">
+                        <tr key={c.id} className="hover:bg-[#FF6B00]/5">
                           <td className="p-3.5 text-center font-black">{idx + 1}</td>
                           <td className="p-3.5 font-bold text-sm">{c.name}</td>
                           <td className="p-3.5 text-center">{c.establishmentYear}</td>
-                          <td className="p-3.5 text-center font-black bg-[#0A2540]/5">{c.sanctionedIntake}</td>
+                          <td className="p-3.5 text-center font-black bg-orange-50/50">{c.sanctionedIntake}</td>
                           <td className="p-3.5 text-center">{c.durationYears} Yrs</td>
                         </tr>
                       ))}
@@ -404,38 +404,38 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({ initialAnchor = 
             </div>
 
             {/* Section 4: Prospectus Downloads & Documents */}
-            <div id="prospectus" className="bg-white rounded-3xl p-6 sm:p-8 border-2 border-[#0A2540]/15 shadow-md space-y-6 scroll-mt-28">
-              <div className="border-b-2 border-[#0A2540]/15 pb-4 flex items-center justify-between">
+            <div id="prospectus" className="bg-white rounded-3xl p-6 sm:p-8 border-2 border-orange-100 shadow-md space-y-6 scroll-mt-28">
+              <div className="border-b-2 border-[#FF6B00]/15 pb-4 flex items-center justify-between">
                 <div>
                   <span className="text-xs font-bold text-[#FF6B00] uppercase tracking-wider">Official Downloads</span>
-                  <h2 className="text-2xl sm:text-3xl font-bold text-[#0A2540] font-poppins">College Prospectus &amp; Application Forms</h2>
+                  <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 font-poppins">College Prospectus &amp; Application Forms</h2>
                 </div>
                 <span className="px-3.5 py-1 bg-[#FF6B00] text-white font-bold text-xs rounded-full">PDF Download</span>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="bg-white p-6 rounded-3xl border-2 border-[#0A2540]/20 space-y-4 flex flex-col justify-between shadow-xs">
+                <div className="bg-white p-6 rounded-3xl border-2 border-orange-200 space-y-4 flex flex-col justify-between shadow-xs">
                   <div className="space-y-2">
-                    <div className="w-12 h-12 rounded-2xl bg-[#0A2540] text-white flex items-center justify-center font-bold shadow-md">
+                    <div className="w-12 h-12 rounded-2xl bg-[#FF6B00] text-white flex items-center justify-center font-bold shadow-md">
                       <BookOpen className="w-6 h-6 text-[#FF6B00]" />
                     </div>
-                    <h3 className="font-bold text-[#0A2540] text-lg font-poppins">College Official Prospectus</h3>
-                    <p className="text-xs text-[#0A2540]/80 font-medium">
+                    <h3 className="font-bold text-slate-900 text-lg font-poppins">College Official Prospectus</h3>
+                    <p className="text-xs text-slate-600 font-medium">
                       Detailed official prospectus detailing eligibility, campus infrastructure, hostel, bus routes, placement history, and fee structure.
                     </p>
                   </div>
                   <button
                     onClick={() => setSelectedDoc(prospectusDoc)}
-                    className="w-full py-3.5 bg-[#0A2540] hover:bg-[#1E40AF] text-white font-bold rounded-full text-xs transition-all flex items-center justify-center gap-2 shadow-md cursor-pointer"
+                    className="w-full py-3.5 bg-[#FF6B00] hover:bg-[#E05E00] text-white font-bold rounded-full text-xs transition-all flex items-center justify-center gap-2 shadow-md cursor-pointer"
                   >
                     <Download className="w-4 h-4 text-[#FF6B00]" />
                     View &amp; Download Prospectus (PDF)
                   </button>
                 </div>
 
-                <div className="bg-[#0A2540] text-white p-6 rounded-3xl border border-white/20 space-y-4 flex flex-col justify-between shadow-xl">
+                <div className="bg-[#FF6B00] text-white p-6 rounded-3xl border border-white/20 space-y-4 flex flex-col justify-between shadow-xl">
                   <div className="space-y-2">
-                    <div className="w-12 h-12 rounded-2xl bg-white text-[#0A2540] flex items-center justify-center font-bold shadow-md">
+                    <div className="w-12 h-12 rounded-2xl bg-white text-slate-900 flex items-center justify-center font-bold shadow-md">
                       <FileText className="w-6 h-6 text-[#FF6B00]" />
                     </div>
                     <h3 className="font-bold text-white text-lg font-poppins">Printable Application Form</h3>
@@ -455,7 +455,7 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({ initialAnchor = 
             </div>
 
             {/* Section 5: Live Online Admission Form (UG / PG) */}
-            <div id="online-form" className="bg-[#0A2540] text-white rounded-3xl p-6 sm:p-10 border border-white/20 shadow-2xl space-y-6 scroll-mt-28">
+            <div id="online-form" className="bg-gradient-to-br from-[#FF6B00] via-[#FF7A1A] to-[#E05E00] text-white rounded-3xl p-6 sm:p-10 border border-orange-400 shadow-2xl space-y-6 scroll-mt-28">
               <div className="flex flex-wrap items-center justify-between border-b border-white/15 pb-4 gap-4">
                 <div>
                   <span className="text-xs font-bold text-[#FF6B00] uppercase tracking-widest">Instant Seat Reservation</span>
@@ -484,12 +484,12 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({ initialAnchor = 
               </div>
 
               {formSubmitted ? (
-                <div className="bg-white text-[#0A2540] rounded-3xl p-8 text-center space-y-4 shadow-xl">
+                <div className="bg-white text-slate-900 rounded-3xl p-8 text-center space-y-4 shadow-xl">
                   <div className="w-16 h-16 bg-[#FF6B00] text-white rounded-full flex items-center justify-center mx-auto shadow-md">
                     <CheckCircle2 className="w-10 h-10 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-[#0A2540] font-poppins">Application Received Successfully!</h3>
-                  <p className="text-xs sm:text-sm text-[#0A2540]/90 max-w-md mx-auto leading-relaxed font-medium">
+                  <h3 className="text-2xl font-bold text-slate-900 font-poppins">Application Received Successfully!</h3>
+                  <p className="text-xs sm:text-sm text-slate-700 max-w-md mx-auto leading-relaxed font-medium">
                     Thank you, <strong>{formData.fullName}</strong>. Your online application for academic year <strong>{formData.academicYear}</strong> has been logged. Our VINS Admission Officer will reach out to you on <strong>{formData.phone}</strong> shortly.
                   </p>
                   <button
@@ -506,7 +506,7 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({ initialAnchor = 
                     <select
                       value={formData.academicYear}
                       onChange={(e) => setFormData({ ...formData, academicYear: e.target.value })}
-                      className="w-full px-4 py-3 bg-white text-[#0A2540] rounded-2xl font-bold focus:outline-none focus:ring-2 focus:ring-[#FF6B00]"
+                      className="w-full px-4 py-3 bg-white text-slate-900 rounded-2xl font-bold focus:outline-none focus:ring-2 focus:ring-[#FF6B00]"
                     >
                       <option value="2027 - 2028">Academic Year 2027 - 2028</option>
                       <option value="2026 - 2027">Academic Year 2026 - 2027</option>
@@ -521,7 +521,7 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({ initialAnchor = 
                       value={formData.fullName}
                       onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                       placeholder="Enter full student name"
-                      className="w-full px-4 py-3 bg-white text-[#0A2540] placeholder-slate-400 font-bold rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#FF6B00]"
+                      className="w-full px-4 py-3 bg-white text-slate-900 placeholder-slate-400 font-bold rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#FF6B00]"
                     />
                   </div>
 
@@ -532,7 +532,7 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({ initialAnchor = 
                       required
                       value={formData.dob}
                       onChange={(e) => setFormData({ ...formData, dob: e.target.value })}
-                      className="w-full px-4 py-3 bg-white text-[#0A2540] font-bold rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#FF6B00]"
+                      className="w-full px-4 py-3 bg-white text-slate-900 font-bold rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#FF6B00]"
                     />
                   </div>
 
@@ -544,7 +544,7 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({ initialAnchor = 
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       placeholder="10 digit mobile phone number"
-                      className="w-full px-4 py-3 bg-white text-[#0A2540] placeholder-slate-400 font-bold rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#FF6B00]"
+                      className="w-full px-4 py-3 bg-white text-slate-900 placeholder-slate-400 font-bold rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#FF6B00]"
                     />
                   </div>
 
@@ -555,7 +555,7 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({ initialAnchor = 
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       placeholder="student@example.com"
-                      className="w-full px-4 py-3 bg-white text-[#0A2540] placeholder-slate-400 font-bold rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#FF6B00]"
+                      className="w-full px-4 py-3 bg-white text-slate-900 placeholder-slate-400 font-bold rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#FF6B00]"
                     />
                   </div>
 
@@ -566,7 +566,7 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({ initialAnchor = 
                     <select
                       value={formData.preferredCourse}
                       onChange={(e) => setFormData({ ...formData, preferredCourse: e.target.value })}
-                      className="w-full px-4 py-3 bg-white text-[#0A2540] font-bold rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#FF6B00]"
+                      className="w-full px-4 py-3 bg-white text-slate-900 font-bold rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#FF6B00]"
                     >
                       {formCategory === 'UG' ? (
                         UG_COURSES_LIST.map((course) => (
@@ -591,7 +591,7 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({ initialAnchor = 
                       value={formData.percentage}
                       onChange={(e) => setFormData({ ...formData, percentage: e.target.value })}
                       placeholder="e.g. 85.5% or Cutoff 165"
-                      className="w-full px-4 py-3 bg-white text-[#0A2540] placeholder-slate-400 font-bold rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#FF6B00]"
+                      className="w-full px-4 py-3 bg-white text-slate-900 placeholder-slate-400 font-bold rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#FF6B00]"
                     />
                   </div>
 
@@ -602,7 +602,7 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({ initialAnchor = 
                       value={formData.city}
                       onChange={(e) => setFormData({ ...formData, city: e.target.value })}
                       placeholder="e.g. Nagercoil / Kanyakumari"
-                      className="w-full px-4 py-3 bg-white text-[#0A2540] placeholder-slate-400 font-bold rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#FF6B00]"
+                      className="w-full px-4 py-3 bg-white text-slate-900 placeholder-slate-400 font-bold rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#FF6B00]"
                     />
                   </div>
 
@@ -639,43 +639,43 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({ initialAnchor = 
             </div>
 
             {/* Section 6: Admission Helpline & Contact Details */}
-            <div id="helpline" className="bg-white rounded-3xl p-6 sm:p-8 border-2 border-[#0A2540]/15 shadow-md space-y-6 scroll-mt-28">
-              <div className="border-b-2 border-[#0A2540]/15 pb-4">
+            <div id="helpline" className="bg-white rounded-3xl p-6 sm:p-8 border-2 border-orange-100 shadow-md space-y-6 scroll-mt-28">
+              <div className="border-b-2 border-[#FF6B00]/15 pb-4">
                 <span className="text-xs font-bold text-[#FF6B00] uppercase tracking-wider">Direct Campus Contact</span>
-                <h2 className="text-2xl sm:text-3xl font-bold text-[#0A2540] font-poppins">Admission Helpline &amp; Office Hours</h2>
+                <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 font-poppins">Admission Helpline &amp; Office Hours</h2>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
-                <div className="bg-white p-5 rounded-2xl border-2 border-[#0A2540]/15 space-y-3 shadow-xs">
-                  <div className="flex items-center gap-3 text-[#0A2540]">
+                <div className="bg-white p-5 rounded-2xl border-2 border-orange-100 space-y-3 shadow-xs">
+                  <div className="flex items-center gap-3 text-slate-900">
                     <Phone className="w-5 h-5 text-[#FF6B00] shrink-0" />
-                    <p className="font-bold text-[#0A2540] text-sm">Admission Hotline Numbers</p>
+                    <p className="font-bold text-slate-900 text-sm">Admission Hotline Numbers</p>
                   </div>
-                  <div className="space-y-1 text-[#0A2540]/80 pl-8 font-medium">
+                  <div className="space-y-1 text-slate-600 pl-8 font-medium">
                     <p><strong>Hotline 1:</strong> +91 9787747072</p>
                     <p><strong>Hotline 2:</strong> +91 9787747071</p>
                     <p><strong>Cell Contact:</strong> 9787747072, 9787455000, 9787747740</p>
                   </div>
                 </div>
 
-                <div className="bg-white p-5 rounded-2xl border-2 border-[#0A2540]/15 space-y-3 shadow-xs">
-                  <div className="flex items-center gap-3 text-[#0A2540]">
+                <div className="bg-white p-5 rounded-2xl border-2 border-orange-100 space-y-3 shadow-xs">
+                  <div className="flex items-center gap-3 text-slate-900">
                     <Mail className="w-5 h-5 text-[#FF6B00] shrink-0" />
-                    <p className="font-bold text-[#0A2540] text-sm">Email Admissions &amp; Queries</p>
+                    <p className="font-bold text-slate-900 text-sm">Email Admissions &amp; Queries</p>
                   </div>
-                  <div className="space-y-1 text-[#0A2540]/80 pl-8 font-medium">
+                  <div className="space-y-1 text-slate-600 pl-8 font-medium">
                     <p><strong>Email:</strong> vinsengg@gmail.com</p>
                     <p><strong>Info Mail:</strong> info@vins.ac.in</p>
                     <p><strong>Counselling Code:</strong> 4982 (Anna University)</p>
                   </div>
                 </div>
 
-                <div className="bg-white p-5 rounded-2xl border-2 border-[#0A2540]/15 space-y-3 shadow-xs">
-                  <div className="flex items-center gap-3 text-[#0A2540]">
+                <div className="bg-white p-5 rounded-2xl border-2 border-orange-100 space-y-3 shadow-xs">
+                  <div className="flex items-center gap-3 text-slate-900">
                     <Building className="w-5 h-5 text-[#FF6B00] shrink-0" />
-                    <p className="font-bold text-[#0A2540] text-sm">Campus Address</p>
+                    <p className="font-bold text-slate-900 text-sm">Campus Address</p>
                   </div>
-                  <p className="text-[#0A2540]/80 leading-relaxed pl-8 font-medium">
+                  <p className="text-slate-600 leading-relaxed pl-8 font-medium">
                     Vins Christian College of Engineering,<br />
                     Vins Nagar, Chunkankadai,<br />
                     Nagercoil - 629 807, Kanyakumari District,<br />
@@ -683,12 +683,12 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({ initialAnchor = 
                   </p>
                 </div>
 
-                <div className="bg-white p-5 rounded-2xl border-2 border-[#0A2540]/15 space-y-3 shadow-xs">
-                  <div className="flex items-center gap-3 text-[#0A2540]">
+                <div className="bg-white p-5 rounded-2xl border-2 border-orange-100 space-y-3 shadow-xs">
+                  <div className="flex items-center gap-3 text-slate-900">
                     <Clock className="w-5 h-5 text-[#FF6B00] shrink-0" />
-                    <p className="font-bold text-[#0A2540] text-sm">Admission Cell Working Hours</p>
+                    <p className="font-bold text-slate-900 text-sm">Admission Cell Working Hours</p>
                   </div>
-                  <div className="space-y-1 text-[#0A2540]/80 pl-8 font-medium">
+                  <div className="space-y-1 text-slate-600 pl-8 font-medium">
                     <p><strong>Mon - Fri:</strong> 9.00 am - 5.00 pm</p>
                     <p><strong>Sat:</strong> 9.00 am - 12.00 pm</p>
                     <p><strong>Sun:</strong> Closed</p>
@@ -698,19 +698,19 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({ initialAnchor = 
             </div>
 
             {/* Section 7: Scholarship Schemes */}
-            <div id="scholarships" className="bg-white rounded-3xl p-6 sm:p-8 border-2 border-[#0A2540]/15 shadow-md space-y-4 scroll-mt-28">
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b-2 border-[#0A2540]/15 pb-3 gap-2">
-                <h2 className="text-xl sm:text-2xl font-bold text-[#0A2540] font-poppins">Scholarships &amp; Fee Waivers</h2>
+            <div id="scholarships" className="bg-white rounded-3xl p-6 sm:p-8 border-2 border-orange-100 shadow-md space-y-4 scroll-mt-28">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b-2 border-[#FF6B00]/15 pb-3 gap-2">
+                <h2 className="text-xl sm:text-2xl font-bold text-slate-900 font-poppins">Scholarships &amp; Fee Waivers</h2>
                 <span className="px-3.5 py-1 bg-[#FF6B00] text-white font-bold text-xs rounded-full">Merit Aids</span>
               </div>
 
-              <p className="text-xs sm:text-sm text-[#0A2540]/80 leading-relaxed font-medium">
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
                 VINS Engineering offers merit scholarships up to 100% tuition waiver for school toppers, first-generation graduates, sports achievers at state level, and single-parent wards.
               </p>
 
               <button
                 onClick={() => setSelectedDoc(scholarshipDoc)}
-                className="px-6 py-3 bg-[#0A2540] hover:bg-[#1E40AF] text-white text-xs font-bold rounded-full transition-all flex items-center gap-2 w-full sm:w-auto justify-center cursor-pointer shadow-md"
+                className="px-6 py-3 bg-[#FF6B00] hover:bg-[#E05E00] text-white text-xs font-bold rounded-full transition-all flex items-center gap-2 w-full sm:w-auto justify-center cursor-pointer shadow-md"
               >
                 <Download className="w-4 h-4 text-[#FF6B00]" />
                 Download Scholarship Application Form (DOCX)

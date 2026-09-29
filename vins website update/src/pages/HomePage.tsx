@@ -622,7 +622,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onTabChange, onOpenExplodedV
                           alt={evt.title}
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         />
-                        <div className="absolute top-2.5 left-2.5 bg-[#0A2540] text-white text-[10px] font-black px-2.5 py-0.5 rounded-full uppercase tracking-wider">
+                        <div className="absolute top-2.5 left-2.5 bg-[#FF6B00] text-white text-[10px] font-black px-2.5 py-0.5 rounded-full uppercase tracking-wider">
                           {evt.category || 'Event'}
                         </div>
                       </div>
@@ -637,7 +637,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onTabChange, onOpenExplodedV
                           {evt.subtitle && <span className="text-slate-400 font-normal">· {evt.subtitle}</span>}
                         </div>
 
-                        <h3 className="text-base font-bold font-playfair text-[#252528] group-hover:text-[#0A2540] transition-colors leading-snug line-clamp-2">
+                        <h3 className="text-base font-bold font-playfair text-[#252528] group-hover:text-[#FF6B00] transition-colors leading-snug line-clamp-2">
                           {evt.title}
                         </h3>
 
@@ -1051,12 +1051,12 @@ export const HomePage: React.FC<HomePageProps> = ({ onTabChange, onOpenExplodedV
                         <span className="text-[10px] font-extrabold text-[#7A4B00] uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-amber-100/80 border border-amber-300/60 inline-block">
                           {img.category}
                         </span>
-                        <h3 className="text-xs sm:text-sm font-bold font-playfair text-[#252528] group-hover:text-[#0A2540] transition-colors truncate">
+                        <h3 className="text-xs sm:text-sm font-bold font-playfair text-[#252528] group-hover:text-[#FF6B00] transition-colors truncate">
                           {img.title}
                         </h3>
                       </div>
 
-                      <div className="w-8 h-8 rounded-full bg-[#0A2540] group-hover:bg-[#FF6B00] text-white flex items-center justify-center shrink-0 shadow-sm transition-colors duration-300">
+                      <div className="w-8 h-8 rounded-full bg-[#FF6B00] group-hover:bg-[#FF6B00] text-white flex items-center justify-center shrink-0 shadow-sm transition-colors duration-300">
                         <Eye className="w-3.5 h-3.5 text-white" />
                       </div>
                     </div>
@@ -1072,9 +1072,9 @@ export const HomePage: React.FC<HomePageProps> = ({ onTabChange, onOpenExplodedV
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-slate-900/80 backdrop-blur-2xl text-white rounded-3xl p-6 sm:p-12 lg:p-14 shadow-[0_16px_48px_rgba(0,0,0,0.4)] border border-white/25 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center relative overflow-hidden">
             
-            {/* Subtle Royal Indigo / Orange lighting accents */}
-            <div className="absolute top-0 right-0 w-80 h-80 bg-[#1E40AF]/30 rounded-full blur-3xl pointer-events-none" />
-            <div className="absolute -bottom-10 -left-10 w-60 h-60 bg-[#FF6B00]/20 rounded-full blur-2xl pointer-events-none" />
+            {/* Subtle Orange lighting accents */}
+            <div className="absolute top-0 right-0 w-80 h-80 bg-[#FF6B00]/30 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute -bottom-10 -left-10 w-60 h-60 bg-[#FF7A1A]/20 rounded-full blur-2xl pointer-events-none" />
 
             <div className="lg:col-span-7 space-y-4 relative z-10">
               <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#FF6B00] text-white text-xs font-bold tracking-wider uppercase shadow-md">
@@ -1101,7 +1101,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onTabChange, onOpenExplodedV
 
                 <button
                   onClick={() => onTabChange('admissions', 'scholarships')}
-                  className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-[#0A2540] btn-micro text-xs font-bold uppercase tracking-widest px-5 sm:px-6 py-3.5 rounded-full cursor-pointer shadow-lg transition-all flex items-center justify-center gap-2 w-full sm:w-auto"
+                  className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-[#FF6B00] btn-micro text-xs font-bold uppercase tracking-widest px-5 sm:px-6 py-3.5 rounded-full cursor-pointer shadow-lg transition-all flex items-center justify-center gap-2 w-full sm:w-auto"
                 >
                   <span>SCHOLARSHIPS &amp; AID</span>
                 </button>
@@ -1111,7 +1111,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onTabChange, onOpenExplodedV
             <div className="lg:col-span-5 relative z-10">
               <FloatingElement duration={7.2} distance={6} floatType="gentle" className="w-full">
                 <div className="rounded-2xl sm:rounded-3xl overflow-hidden border-2 border-white/30 shadow-2xl p-1.5 bg-white/10 backdrop-blur-xs">
-                  <div className="w-full aspect-[4/3] rounded-xl sm:rounded-2xl overflow-hidden bg-[#061727]">
+                  <div className="w-full aspect-[4/3] rounded-xl sm:rounded-2xl overflow-hidden bg-gradient-to-br from-[#E05E00] to-[#B34700]">
                     <img 
                       src="/images/college events and news galeery/5 (1).jpg" 
                       alt="VINS College Students" 

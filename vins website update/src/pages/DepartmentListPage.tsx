@@ -24,12 +24,12 @@ export const DepartmentListPage: React.FC<DepartmentListPageProps> = ({ onSelect
   });
 
   return (
-    <div className="bg-[#FFFFFF] text-[#0A2540] min-h-screen">
+    <div className="bg-[#FFFFFF] text-slate-900 min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8">
         
         {/* Header Banner - Premium Academic */}
         <ScrollReveal direction="up" distance={20}>
-          <div className="bg-[#0A2540] text-white p-8 sm:p-12 rounded-3xl border border-white/20 shadow-3d-deep space-y-4 relative overflow-hidden">
+          <div className="bg-gradient-to-r from-[#FF6B00] via-[#FF7A1A] to-[#E05E00] text-white p-8 sm:p-12 rounded-3xl border border-orange-400 shadow-xl space-y-4 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-96 h-96 bg-white/8 rounded-full blur-3xl pointer-events-none" />
             <div className="absolute -bottom-16 -left-16 w-64 h-64 bg-[#FF6B00]/10 rounded-full blur-3xl pointer-events-none" />
             
@@ -49,30 +49,30 @@ export const DepartmentListPage: React.FC<DepartmentListPageProps> = ({ onSelect
         </ScrollReveal>
 
         {/* Search & Category Filter Bar */}
-        <div className="bg-white rounded-3xl p-5 border-2 border-[#0A2540]/20 shadow-md flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="bg-white rounded-3xl p-5 border-2 border-orange-200 shadow-md flex flex-col sm:flex-row items-center justify-between gap-4">
           {/* Search Input */}
           <div className="relative w-full sm:w-80">
-            <Search className="w-4 h-4 text-[#0A2540] absolute left-3.5 top-3.5" />
+            <Search className="w-4 h-4 text-slate-900 absolute left-3.5 top-3.5" />
             <input
               type="text"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               placeholder="Search department or degree..."
-              className="w-full pl-10 pr-4 py-2.5 bg-white border-2 border-[#0A2540]/25 rounded-2xl text-sm font-bold text-[#0A2540] placeholder-[#0A2540]/50 focus:outline-none focus:border-[#0A2540]"
+              className="w-full pl-10 pr-4 py-2.5 bg-white border-2 border-orange-200 rounded-2xl text-sm font-bold text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#FF6B00]"
             />
           </div>
 
           {/* Category Filter Pills */}
           <div className="flex items-center gap-2 w-full sm:w-auto overflow-x-auto">
-            <Filter className="w-4 h-4 text-[#0A2540] shrink-0 hidden sm:inline" />
+            <Filter className="w-4 h-4 text-slate-900 shrink-0 hidden sm:inline" />
             {(['All', 'UG', 'PG', 'Management'] as const).map((cat) => (
               <button
                 key={cat}
                 onClick={() => setSelectedCategory(cat)}
                 className={`px-4 py-2.5 rounded-full text-xs sm:text-sm font-extrabold transition-all shrink-0 cursor-pointer ${
                   selectedCategory === cat
-                    ? 'bg-[#0A2540] text-white shadow-md border-2 border-[#0A2540]'
-                    : 'bg-white text-[#0A2540] hover:bg-[#0A2540]/10 border-2 border-[#0A2540]/20'
+                    ? 'bg-[#FF6B00] text-white shadow-md border-2 border-[#FF6B00]'
+                    : 'bg-white text-slate-900 hover:bg-[#FF6B00]/10 border-2 border-orange-200'
                 }`}
               >
                 {cat === 'All' ? 'All Programs' : cat === 'UG' ? 'UG Engineering (B.E.)' : cat === 'PG' ? 'PG Engineering (M.E.)' : 'MBA Management'}
@@ -94,7 +94,7 @@ export const DepartmentListPage: React.FC<DepartmentListPageProps> = ({ onSelect
               >
                 <div className="bg-white rounded-3xl border border-gray-200/80 overflow-hidden shadow-3d-soft hover:shadow-3d-hover transition-all cursor-pointer flex flex-col justify-between h-full group">
                   {/* Course Image Banner */}
-                  <div className="relative h-48 overflow-hidden bg-[#0A2540]">
+                  <div className="relative h-48 overflow-hidden bg-[#FF6B00]">
                     {dept.courseImage ? (
                       <img
                         src={dept.courseImage}
@@ -103,38 +103,38 @@ export const DepartmentListPage: React.FC<DepartmentListPageProps> = ({ onSelect
                         loading="lazy"
                       />
                     ) : (
-                      <div className="w-full h-full bg-gradient-to-br from-[#0A2540] to-[#1E40AF] flex items-center justify-center">
+                      <div className="w-full h-full bg-gradient-to-br from-[#FF6B00] to-[#E05E00] flex items-center justify-center">
                         <BookOpen className="w-12 h-12 text-white/40" />
                       </div>
                     )}
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540]/60 to-transparent opacity-70" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#FF6B00]/60 to-transparent opacity-70" />
 
                     {/* Degree badge overlay */}
                     <div className="absolute top-3 left-3">
-                      <span className="px-3 py-1 rounded-full bg-[#0A2540]/90 text-white font-bold text-[11px] shadow-md border border-white/25 backdrop-blur-sm">
+                      <span className="px-3 py-1 rounded-full bg-[#FF6B00] text-white font-bold text-[11px] shadow-md border border-white/25 backdrop-blur-sm">
                         {dept.degree} · {dept.category}
                       </span>
                     </div>
 
                     {/* Intake badge overlay */}
                     <div className="absolute top-3 right-3">
-                      <span className="px-3 py-1 rounded-full bg-white/90 text-[#0A2540] font-bold text-[11px] shadow-md border border-[#0A2540]/20 backdrop-blur-sm">
+                      <span className="px-3 py-1 rounded-full bg-white/90 text-slate-900 font-bold text-[11px] shadow-md border border-orange-200 backdrop-blur-sm">
                         {dept.intake} Seats
                       </span>
                     </div>
                   </div>
 
                   <div className="p-5 sm:p-6 space-y-3 flex-1">
-                    <h3 className="text-base sm:text-lg font-bold font-playfair text-[#0A2540] group-hover:text-[#FF6B00] transition-colors leading-snug">
+                    <h3 className="text-base sm:text-lg font-bold font-playfair text-slate-900 group-hover:text-[#FF6B00] transition-colors leading-snug">
                       {dept.name}
                     </h3>
 
-                    <p className="text-xs text-[#0A2540]/75 line-clamp-2 leading-relaxed">
+                    <p className="text-xs text-slate-600 line-clamp-2 leading-relaxed">
                       {dept.description}
                     </p>
 
                     <div className="pt-2 border-t border-gray-100">
-                      <p className="text-xs font-semibold text-[#0A2540]/70">HoD: <span className="text-[#0A2540] font-bold">{dept.hodName}</span></p>
+                      <p className="text-xs font-semibold text-slate-500">HoD: <span className="text-slate-900 font-bold">{dept.hodName}</span></p>
                     </div>
                   </div>
 

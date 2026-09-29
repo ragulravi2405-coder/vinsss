@@ -30,7 +30,7 @@ export const Image3DCard: React.FC<Image3DCardProps> = ({
       viewport={{ once: true, margin: '-30px' }}
       transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
       onClick={onClick}
-      className={`group relative overflow-hidden rounded-2xl sm:rounded-3xl bg-[#0A2540]/5 border border-[#0A2540]/10 shadow-3d-card hover:shadow-3d-hover transition-all duration-500 ease-out cursor-pointer ${className}`}
+      className={`group relative overflow-hidden rounded-2xl sm:rounded-3xl bg-orange-50/50 border border-orange-100 shadow-3d-card hover:shadow-3d-hover transition-all duration-500 ease-out cursor-pointer ${className}`}
       style={{ transformStyle: 'preserve-3d' }}
     >
       {/* Image Container with Smooth Zoom */}
@@ -43,12 +43,12 @@ export const Image3DCard: React.FC<Image3DCardProps> = ({
         />
 
         {/* Subtle Ambient Light Sheen */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540]/70 via-[#0A2540]/10 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-300 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#FF6B00]/70 via-[#FF6B00]/10 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-300 pointer-events-none" />
 
         {/* Optional Badge */}
         {badge && (
           <div className="absolute top-3 left-3 z-10">
-            <span className="badge-academic bg-white/90 text-[#0A2540] border border-white/40 shadow-xs backdrop-blur-md">
+            <span className="badge-academic bg-white/90 text-slate-900 border border-white/40 shadow-xs backdrop-blur-md">
               {badge}
             </span>
           </div>
@@ -59,7 +59,7 @@ export const Image3DCard: React.FC<Image3DCardProps> = ({
       {(title || subtitle) && (
         <div className="p-4 sm:p-5 bg-white/95 backdrop-blur-md border-t border-gray-100 flex flex-col gap-1 transition-colors group-hover:bg-white">
           {title && (
-            <h4 className="text-sm sm:text-base font-bold text-[#0A2540] font-sans group-hover:text-[#FF6B00] transition-colors line-clamp-1">
+            <h4 className="text-sm sm:text-base font-bold text-slate-900 font-sans group-hover:text-[#FF6B00] transition-colors line-clamp-1">
               {title}
             </h4>
           )}

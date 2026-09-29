@@ -107,12 +107,12 @@ export const ExplodedWebsiteView: React.FC<ExplodedWebsiteViewProps> = ({
       title: 'Top Utility & Emergency Contact Bar',
       badge: 'LAYER 01',
       tag: 'Helpline & TNEA Code 4983',
-      color: '#0A2540',
-      accentColor: '#FF6B00',
+      color: '#FF6B00',
+      accentColor: '#FFFFFF',
       zMultiplier: 3.2,
       tab: 'contact' as NavigationTab,
       content: (
-        <div className="p-3.5 sm:p-4 bg-[#0A2540] text-white flex flex-wrap items-center justify-between gap-3 text-xs">
+        <div className="p-3.5 sm:p-4 bg-[#FF6B00] text-white flex flex-wrap items-center justify-between gap-3 text-xs">
           <div className="flex items-center gap-3">
             <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-amber-400/20 text-amber-300 font-bold text-[10px] uppercase tracking-wider">
               <Sparkles className="w-3 h-3" /> TNEA Code: 4983
@@ -138,17 +138,17 @@ export const ExplodedWebsiteView: React.FC<ExplodedWebsiteViewProps> = ({
       badge: 'LAYER 02',
       tag: 'Institutional Identity & Nav Links',
       color: '#FFFFFF',
-      accentColor: '#0A2540',
+      accentColor: '#FF6B00',
       zMultiplier: 2.2,
       tab: 'home' as NavigationTab,
       content: (
-        <div className="p-4 bg-white/95 backdrop-blur-md border-b border-slate-200 flex items-center justify-between text-[#0A2540] shadow-sm">
+        <div className="p-4 bg-white/95 backdrop-blur-md border-b border-slate-200 flex items-center justify-between text-slate-900 shadow-sm">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-[#0A2540] text-amber-400 font-cinzel font-black flex items-center justify-center text-sm shadow">
+            <div className="w-10 h-10 rounded-full bg-[#FF6B00] text-amber-400 font-cinzel font-black flex items-center justify-center text-sm shadow">
               VINS
             </div>
             <div>
-              <h4 className="font-playfair font-black text-sm text-[#0A2540] leading-tight">
+              <h4 className="font-playfair font-black text-sm text-slate-900 leading-tight">
                 VINS Christian College of Engineering
               </h4>
               <p className="text-[10px] text-slate-500 font-semibold tracking-wide">
@@ -156,7 +156,7 @@ export const ExplodedWebsiteView: React.FC<ExplodedWebsiteViewProps> = ({
               </p>
             </div>
           </div>
-          <div className="hidden lg:flex items-center gap-4 text-xs font-bold text-[#0A2540]">
+          <div className="hidden lg:flex items-center gap-4 text-xs font-bold text-slate-900">
             <span className="text-[#FF6B00] border-b-2 border-[#FF6B00] pb-0.5">Home</span>
             <span className="hover:text-[#FF6B00]">About</span>
             <span className="hover:text-[#FF6B00]">Admissions</span>
@@ -172,12 +172,12 @@ export const ExplodedWebsiteView: React.FC<ExplodedWebsiteViewProps> = ({
       title: 'Hero Banner, 3D Parallax & Counseling Hub',
       badge: 'LAYER 03',
       tag: 'Prime Value Proposition & Admissions 2026',
-      color: '#0A2540',
-      accentColor: '#FF6B00',
+      color: '#FF6B00',
+      accentColor: '#E05E00',
       zMultiplier: 1.2,
       tab: 'admissions' as NavigationTab,
       content: (
-        <div className="p-6 sm:p-8 bg-gradient-to-br from-[#0A2540] via-[#0F365E] to-[#0A2540] text-white relative overflow-hidden">
+        <div className="p-6 sm:p-8 bg-gradient-to-br from-[#FF6B00] via-[#FF7A1A] to-[#E05E00] text-white relative overflow-hidden">
           <div className="absolute top-0 right-0 w-72 h-72 bg-[#FF6B00]/15 rounded-full blur-3xl pointer-events-none" />
           <div className="relative z-10 max-w-xl space-y-3">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 border border-white/25 text-amber-300 text-xs font-bold uppercase tracking-wider">
@@ -207,15 +207,15 @@ export const ExplodedWebsiteView: React.FC<ExplodedWebsiteViewProps> = ({
       badge: 'LAYER 04',
       tag: 'B.E., M.E., MBA Academic Architecture',
       color: '#FFFFFF',
-      accentColor: '#0A2540',
+      accentColor: '#FF6B00',
       zMultiplier: 0.2,
       tab: 'department' as NavigationTab,
       content: (
-        <div className="p-5 sm:p-6 bg-slate-50 border-t border-slate-200 text-[#0A2540]">
+        <div className="p-5 sm:p-6 bg-slate-50 border-t border-slate-200 text-slate-900">
           <div className="flex items-center justify-between mb-3.5">
             <div>
               <span className="text-[10px] font-black uppercase tracking-widest text-[#FF6B00]">Departments</span>
-              <h3 className="font-playfair font-bold text-base text-[#0A2540]">Undergraduate &amp; Postgraduate Programs</h3>
+              <h3 className="font-playfair font-bold text-base text-slate-900">Undergraduate &amp; Postgraduate Programs</h3>
             </div>
             <span className="text-xs font-bold text-slate-500">6 Core Disciplines</span>
           </div>
@@ -230,7 +230,7 @@ export const ExplodedWebsiteView: React.FC<ExplodedWebsiteViewProps> = ({
             ].map((dept, i) => (
               <div key={i} className="p-2.5 rounded-xl bg-white border border-slate-200 shadow-sm">
                 <span className="text-xs font-black text-[#FF6B00]">{dept.code}</span>
-                <p className="text-[11px] font-bold text-[#0A2540] truncate">{dept.name}</p>
+                <p className="text-[11px] font-bold text-slate-900 truncate">{dept.name}</p>
                 <span className="text-[9px] text-slate-500 font-semibold">{dept.seats}</span>
               </div>
             ))}
@@ -248,25 +248,25 @@ export const ExplodedWebsiteView: React.FC<ExplodedWebsiteViewProps> = ({
       zMultiplier: -0.8,
       tab: 'campus' as NavigationTab,
       content: (
-        <div className="p-5 sm:p-6 bg-white border-t border-slate-200 text-[#0A2540]">
+        <div className="p-5 sm:p-6 bg-white border-t border-slate-200 text-slate-900">
           <div className="flex items-center justify-between mb-3">
             <span className="text-[10px] font-black uppercase tracking-widest text-emerald-600">Infrastructure</span>
             <span className="text-xs text-slate-500 font-bold">15-Acre Smart Campus</span>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center text-xs">
-            <div className="p-2.5 rounded-xl bg-slate-50 border border-slate-200 font-bold text-[#0A2540]">
+            <div className="p-2.5 rounded-xl bg-slate-50 border border-slate-200 font-bold text-slate-900">
               <Building className="w-4 h-4 mx-auto mb-1 text-emerald-600" />
               1500-Seat AC Auditorium
             </div>
-            <div className="p-2.5 rounded-xl bg-slate-50 border border-slate-200 font-bold text-[#0A2540]">
+            <div className="p-2.5 rounded-xl bg-slate-50 border border-slate-200 font-bold text-slate-900">
               <GraduationCap className="w-4 h-4 mx-auto mb-1 text-sky-600" />
               Digital Library &amp; Delnet
             </div>
-            <div className="p-2.5 rounded-xl bg-slate-50 border border-slate-200 font-bold text-[#0A2540]">
+            <div className="p-2.5 rounded-xl bg-slate-50 border border-slate-200 font-bold text-slate-900">
               <Shield className="w-4 h-4 mx-auto mb-1 text-amber-600" />
               Safe Hostels &amp; Fleet Buses
             </div>
-            <div className="p-2.5 rounded-xl bg-slate-50 border border-slate-200 font-bold text-[#0A2540]">
+            <div className="p-2.5 rounded-xl bg-slate-50 border border-slate-200 font-bold text-slate-900">
               <Sparkles className="w-4 h-4 mx-auto mb-1 text-rose-600" />
               NSS, YRC &amp; Cultural Fests
             </div>
@@ -279,12 +279,12 @@ export const ExplodedWebsiteView: React.FC<ExplodedWebsiteViewProps> = ({
       title: 'Statutory Compliance & Accreditation Footer',
       badge: 'LAYER 06',
       tag: 'NAAC, AICTE Approvals, Anti-Ragging & Map',
-      color: '#0A2540',
-      accentColor: '#F59E0B',
+      color: '#E05E00',
+      accentColor: '#FFFFFF',
       zMultiplier: -1.8,
       tab: 'naac' as NavigationTab,
       content: (
-        <div className="p-5 bg-[#0A2540] text-white border-t border-white/10 flex flex-wrap items-center justify-between gap-3 text-xs">
+        <div className="p-5 bg-[#FF6B00] text-white border-t border-white/10 flex flex-wrap items-center justify-between gap-3 text-xs">
           <div>
             <p className="font-bold text-amber-300">VINS Christian College of Engineering</p>
             <p className="text-[11px] text-slate-400">© 2026 All Rights Reserved · Accredited Campus</p>
@@ -318,7 +318,7 @@ export const ExplodedWebsiteView: React.FC<ExplodedWebsiteViewProps> = ({
       <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-[#0284C7]/15 rounded-full blur-[140px] pointer-events-none" />
 
       {/* Top Interactive Controls HUD */}
-      <header className="relative z-50 bg-[#0A2540]/90 backdrop-blur-xl border-b border-white/15 px-4 sm:px-6 py-3.5 flex flex-wrap items-center justify-between gap-3 shadow-2xl">
+      <header className="relative z-50 bg-[#FF6B00] backdrop-blur-xl border-b border-white/15 px-4 sm:px-6 py-3.5 flex flex-wrap items-center justify-between gap-3 shadow-2xl">
         <div className="flex items-center gap-3">
           <div className="w-8 h-8 rounded-xl bg-gradient-to-tr from-[#FF6B00] to-amber-400 flex items-center justify-center text-white shadow-md">
             <Layers className="w-4 h-4" />
@@ -448,7 +448,7 @@ export const ExplodedWebsiteView: React.FC<ExplodedWebsiteViewProps> = ({
                   className={`absolute -top-3 left-4 z-30 px-3 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider flex items-center gap-2 border shadow-lg transition-all ${
                     isActive 
                       ? 'bg-[#FF6B00] text-white border-amber-300 scale-105' 
-                      : 'bg-[#0A2540] text-amber-300 border-white/20'
+                      : 'bg-[#FF6B00] text-amber-300 border-white/20'
                   }`}
                   style={{ transform: 'translateZ(15px)' }}
                 >
@@ -479,7 +479,7 @@ export const ExplodedWebsiteView: React.FC<ExplodedWebsiteViewProps> = ({
       </div>
 
       {/* Bottom Information Footer Bar */}
-      <footer className="relative z-50 bg-[#0A2540]/90 backdrop-blur-xl border-t border-white/15 px-4 sm:px-6 py-2.5 flex flex-wrap items-center justify-between text-xs text-slate-300">
+      <footer className="relative z-50 bg-[#FF6B00] backdrop-blur-xl border-t border-white/15 px-4 sm:px-6 py-2.5 flex flex-wrap items-center justify-between text-xs text-slate-300">
         <div className="flex items-center gap-2 sm:gap-4">
           <span className="font-bold text-amber-400 flex items-center gap-1.5">
             <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" /> VINS Web Engine 2026

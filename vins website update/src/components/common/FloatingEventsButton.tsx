@@ -20,7 +20,7 @@ export const FloatingEventsButton: React.FC<FloatingEventsButtonProps> = ({ onCl
         transition={{ duration: 0.5, delay: 0.8 }}
         whileHover={{ scale: 1.05, y: -2 }}
         whileTap={{ scale: 0.92 }}
-        className="group relative flex items-center gap-1.5 sm:gap-2.5 px-2 py-2 sm:px-4.5 sm:py-3 rounded-full bg-[#0A2540]/95 hover:bg-[#0A2540] text-white shadow-xl hover:shadow-2xl border border-amber-400/40 backdrop-blur-md transition-all duration-300 cursor-pointer select-none active:brightness-110 max-w-[120px] sm:max-w-full"
+        className="group relative flex items-center gap-1.5 sm:gap-2.5 px-2 py-2 sm:px-4.5 sm:py-3 rounded-full bg-[#FF6B00] hover:bg-[#FF6B00] text-white shadow-xl hover:shadow-2xl border border-amber-400/40 backdrop-blur-md transition-all duration-300 cursor-pointer select-none active:brightness-110 max-w-[120px] sm:max-w-full"
       >
         {/* Subtle Ambient Glow */}
         <div className="absolute -inset-0.5 rounded-full bg-gradient-to-r from-amber-400/30 to-orange-500/30 blur-sm opacity-60 group-hover:opacity-100 transition-opacity pointer-events-none" />

@@ -40,13 +40,13 @@ export const AboutPage: React.FC<AboutPageProps> = ({ initialAnchor = 'vision' }
       
       {/* Header Banner — Deep Navy Blue with Cinematic 3D Parallax Depth */}
       <ScrollReveal direction="up" distance={20}>
-        <div className="bg-[#0A2540] text-white p-8 sm:p-12 rounded-3xl border border-white/20 shadow-3d-deep space-y-4 relative overflow-hidden">
+        <div className="bg-gradient-to-r from-[#FF6B00] via-[#FF7A1A] to-[#E05E00] text-white p-8 sm:p-12 rounded-3xl border border-orange-400 shadow-xl space-y-4 relative overflow-hidden">
           <img
             src="/images/college events and news galeery/h9.jpg"
             alt="VINS College Campus"
             className="absolute inset-0 w-full h-full object-cover opacity-25 filter brightness-90 pointer-events-none scale-105"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0A2540] via-[#061727]/85 to-transparent pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B00] via-[#E05E00]/85 to-transparent pointer-events-none" />
           <div className="relative z-10 space-y-3">
             <div className="badge-academic bg-gradient-to-r from-[#FF6B00] to-[#E05E00] text-white border border-white/25 shadow-md">
               <Sparkles className="w-3.5 h-3.5 text-white" />
@@ -66,7 +66,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ initialAnchor = 'vision' }
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         
         {/* Left Sub-Nav Sidebar */}
-        <div className="lg:col-span-3 sticky top-24 bg-white rounded-3xl border-2 border-[#0A2540]/15 p-4 shadow-md space-y-1.5">
+        <div className="lg:col-span-3 sticky top-24 bg-white rounded-3xl border-2 border-orange-100 p-4 shadow-md space-y-1.5">
           <span className="text-xs font-bold text-[#FF6B00] uppercase tracking-wider block px-3 py-1">
             Section Directory
           </span>
@@ -83,11 +83,11 @@ export const AboutPage: React.FC<AboutPageProps> = ({ initialAnchor = 'vision' }
               onClick={() => scrollTo(id)}
               className={`w-full text-left px-3.5 py-2.5 rounded-2xl text-xs font-bold transition-all flex items-center gap-2 cursor-pointer ${
                 activeSection === id
-                  ? 'bg-[#0A2540] text-white shadow-md'
-                  : 'text-[#0A2540] hover:bg-[#1E40AF]/10 hover:text-[#1E40AF]'
+                  ? 'bg-[#FF6B00] text-white shadow-md'
+                  : 'text-slate-900 hover:bg-orange-50 hover:text-[#FF6B00]'
               }`}
             >
-              <Icon className={`w-4 h-4 shrink-0 ${activeSection === id ? 'text-[#FF6B00]' : 'text-[#1E40AF]'}`} />
+              <Icon className={`w-4 h-4 shrink-0 ${activeSection === id ? 'text-[#FF6B00]' : 'text-[#FF6B00]'}`} />
               {label}
             </button>
           ))}
@@ -97,14 +97,14 @@ export const AboutPage: React.FC<AboutPageProps> = ({ initialAnchor = 'vision' }
         <div className="lg:col-span-9 space-y-10">
           
           {/* Section 1: Vision & Mission */}
-          <div id="vision" className="bg-white rounded-3xl p-6 sm:p-8 border-2 border-[#0A2540]/15 shadow-md space-y-6 scroll-mt-28">
-            <div className="flex items-center gap-3 border-b-2 border-[#0A2540]/10 pb-4">
+          <div id="vision" className="bg-white rounded-3xl p-6 sm:p-8 border-2 border-orange-100 shadow-md space-y-6 scroll-mt-28">
+            <div className="flex items-center gap-3 border-b-2 border-[#FF6B00]/10 pb-4">
               <div className="w-10 h-10 rounded-xl bg-[#FF6B00] flex items-center justify-center shadow-md">
                 <Target className="w-5 h-5 text-white" />
               </div>
               <div>
-                <h2 className="text-xl font-bold font-poppins text-[#0A2540]">Vision &amp; Mission</h2>
-                <p className="text-xs text-[#1E40AF] font-semibold">Institutional Goals &amp; Long-Term Educational Objectives</p>
+                <h2 className="text-xl font-bold font-poppins text-slate-900">Vision &amp; Mission</h2>
+                <p className="text-xs text-[#FF6B00] font-semibold">Institutional Goals &amp; Long-Term Educational Objectives</p>
               </div>
             </div>
 
@@ -113,13 +113,13 @@ export const AboutPage: React.FC<AboutPageProps> = ({ initialAnchor = 'vision' }
               <TiltCard maxTilt={5} scale={1.015} className="h-full">
                 <div className="bg-white rounded-2xl p-6 sm:p-7 space-y-3 border border-gray-200 hover:border-[#FF6B00]/40 transition-all shadow-3d-soft h-full flex flex-col justify-between">
                   <div className="space-y-3">
-                    <div className="flex items-center gap-2 text-[#0A2540] font-bold text-sm uppercase tracking-wider">
+                    <div className="flex items-center gap-2 text-slate-900 font-bold text-sm uppercase tracking-wider">
                       <div className="w-8 h-8 rounded-lg bg-orange-50 text-[#FF6B00] flex items-center justify-center">
                         <Compass className="w-4 h-4 text-[#FF6B00]" />
                       </div>
                       <span className="font-playfair text-base">Our Vision</span>
                     </div>
-                    <p className="text-xs sm:text-sm text-[#0A2540]/85 leading-relaxed italic">
+                    <p className="text-xs sm:text-sm text-slate-700 leading-relaxed italic">
                       &ldquo;{VISION_MISSION_DATA.vision}&rdquo;
                     </p>
                   </div>
@@ -128,7 +128,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ initialAnchor = 'vision' }
 
               {/* Mission Card with 3D Tilt */}
               <TiltCard maxTilt={5} scale={1.015} className="h-full">
-                <div className="bg-[#0A2540] rounded-2xl p-6 sm:p-7 space-y-3 border border-white/15 shadow-3d-card text-white h-full flex flex-col justify-between">
+                <div className="bg-[#FF6B00] rounded-2xl p-6 sm:p-7 space-y-3 border border-white/15 shadow-3d-card text-white h-full flex flex-col justify-between">
                   <div className="space-y-3">
                     <div className="flex items-center gap-2 text-white font-bold text-sm uppercase tracking-wider">
                       <div className="w-8 h-8 rounded-lg bg-white/15 text-amber-300 flex items-center justify-center">
@@ -146,32 +146,32 @@ export const AboutPage: React.FC<AboutPageProps> = ({ initialAnchor = 'vision' }
           </div>
 
           {/* Section 2: College Profile */}
-          <div id="profile" className="bg-white rounded-3xl p-6 sm:p-8 border-2 border-[#0A2540]/15 shadow-md space-y-6 scroll-mt-28">
-            <div className="flex items-center gap-3 border-b-2 border-[#0A2540]/10 pb-4">
-              <div className="w-10 h-10 rounded-xl bg-[#1E40AF] flex items-center justify-center shadow-md">
+          <div id="profile" className="bg-white rounded-3xl p-6 sm:p-8 border-2 border-orange-100 shadow-md space-y-6 scroll-mt-28">
+            <div className="flex items-center gap-3 border-b-2 border-[#FF6B00]/10 pb-4">
+              <div className="w-10 h-10 rounded-xl bg-[#FF6B00] flex items-center justify-center shadow-md">
                 <Building2 className="w-5 h-5 text-white" />
               </div>
               <div>
-                <h2 className="text-xl font-bold font-poppins text-[#0A2540]">College Profile</h2>
-                <p className="text-xs text-[#1E40AF] font-semibold">History, AICTE Approval, and Campus Infrastructure</p>
+                <h2 className="text-xl font-bold font-poppins text-slate-900">College Profile</h2>
+                <p className="text-xs text-[#FF6B00] font-semibold">History, AICTE Approval, and Campus Infrastructure</p>
               </div>
             </div>
 
-            <div className="space-y-4 text-xs text-[#0A2540]/85 leading-relaxed">
-              <div className="bg-blue-50 border border-[#1E40AF]/20 rounded-2xl p-5">
-                <p className="font-bold text-[#0A2540] text-sm">
+            <div className="space-y-4 text-xs text-slate-700 leading-relaxed">
+              <div className="bg-orange-50 border border-orange-200 rounded-2xl p-5">
+                <p className="font-bold text-slate-900 text-sm">
                   {COLLEGE_PROFILE_DATA.welcomeText}
                 </p>
               </div>
 
               <div className="space-y-2 pt-1">
-                <p className="text-xs text-[#0A2540]/85 leading-relaxed">{COLLEGE_PROFILE_DATA.historyP1}</p>
-                <p className="text-xs text-[#0A2540]/85 leading-relaxed">{COLLEGE_PROFILE_DATA.womensCollegeP}</p>
-                <p className="text-xs text-[#0A2540]/85 leading-relaxed font-semibold">📍 {COLLEGE_PROFILE_DATA.connectivity}</p>
+                <p className="text-xs text-slate-700 leading-relaxed">{COLLEGE_PROFILE_DATA.historyP1}</p>
+                <p className="text-xs text-slate-700 leading-relaxed">{COLLEGE_PROFILE_DATA.womensCollegeP}</p>
+                <p className="text-xs text-slate-700 leading-relaxed font-semibold">📍 {COLLEGE_PROFILE_DATA.connectivity}</p>
               </div>
 
               {/* Official AICTE / Anna University Affiliation Notice */}
-              <div className="bg-[#0A2540] rounded-2xl p-5 border border-white/15 flex items-center gap-4 mt-4 shadow-md">
+              <div className="bg-[#FF6B00] rounded-2xl p-5 border border-white/15 flex items-center gap-4 mt-4 shadow-md">
                 <Landmark className="w-8 h-8 text-[#FF6B00] shrink-0" />
                 <div className="space-y-1">
                   <h4 className="font-bold text-sm text-white">Statutory Approval &amp; Affiliation Status</h4>
@@ -184,28 +184,28 @@ export const AboutPage: React.FC<AboutPageProps> = ({ initialAnchor = 'vision' }
           </div>
 
           {/* Section 3: Founder Chairman Desk */}
-          <div id="chairman" className="bg-white rounded-3xl p-6 sm:p-8 border-2 border-[#0A2540]/15 shadow-md space-y-6 scroll-mt-28">
-            <div className="flex items-center gap-4 border-b-2 border-[#0A2540]/10 pb-4">
+          <div id="chairman" className="bg-white rounded-3xl p-6 sm:p-8 border-2 border-orange-100 shadow-md space-y-6 scroll-mt-28">
+            <div className="flex items-center gap-4 border-b-2 border-[#FF6B00]/10 pb-4">
               <div className="w-10 h-10 rounded-xl bg-[#FF6B00] flex items-center justify-center shadow-md">
                 <Award className="w-5 h-5 text-white" />
               </div>
               <div>
-                <h2 className="text-xl font-bold font-poppins text-[#0A2540]">Founder Chairman</h2>
-                <p className="text-xs text-[#1E40AF] font-bold">{FOUNDER_CHAIRMAN_DATA.name}</p>
+                <h2 className="text-xl font-bold font-poppins text-slate-900">Founder Chairman</h2>
+                <p className="text-xs text-[#FF6B00] font-bold">{FOUNDER_CHAIRMAN_DATA.name}</p>
               </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
               {/* Chairman Photo with 3D Depth */}
               <div className="md:col-span-4 space-y-3">
-                <div className="img-3d-frame bg-[#0A2540] aspect-[3/4] border-2 border-[#0A2540]/15 shadow-3d-card">
+                <div className="img-3d-frame bg-[#FF6B00] aspect-[3/4] border-2 border-orange-100 shadow-3d-card">
                   <img
                     src="/images/chairman and pricipal img/chairman img.jpg"
                     alt={FOUNDER_CHAIRMAN_DATA.name}
                     className="w-full h-full object-cover object-top"
                   />
                 </div>
-                <div className="bg-[#0A2540] text-white p-4 sm:p-5 rounded-2xl border border-white/10 text-xs space-y-2 shadow-3d-soft">
+                <div className="bg-[#FF6B00] text-white p-4 sm:p-5 rounded-2xl border border-white/10 text-xs space-y-2 shadow-3d-soft">
                   <p className="font-bold text-base font-playfair text-white">{FOUNDER_CHAIRMAN_DATA.name}</p>
                   <p className="text-white/80 font-medium">{FOUNDER_CHAIRMAN_DATA.designation}</p>
                   <div className="pt-2 border-t border-white/15 text-[11px] text-white/70 space-y-1">
@@ -217,12 +217,12 @@ export const AboutPage: React.FC<AboutPageProps> = ({ initialAnchor = 'vision' }
 
               {/* Chairman Message */}
               <div className="md:col-span-8 space-y-4">
-                <div className="bg-blue-50 border border-[#1E40AF]/20 p-4 rounded-2xl text-[#0A2540]">
-                  <p className="italic text-xs leading-relaxed text-[#0A2540]/85">&ldquo;{FOUNDER_CHAIRMAN_DATA.aboutIntro}&rdquo;</p>
+                <div className="bg-orange-50 border border-orange-200 p-4 rounded-2xl text-slate-900">
+                  <p className="italic text-xs leading-relaxed text-slate-700">&ldquo;{FOUNDER_CHAIRMAN_DATA.aboutIntro}&rdquo;</p>
                 </div>
 
-                <div className="space-y-3 text-xs text-[#0A2540]/85 leading-relaxed">
-                  <h3 className="font-bold font-poppins text-[#0A2540] text-sm uppercase tracking-wide flex items-center gap-2 border-b-2 border-[#0A2540]/10 pb-2">
+                <div className="space-y-3 text-xs text-slate-700 leading-relaxed">
+                  <h3 className="font-bold font-poppins text-slate-900 text-sm uppercase tracking-wide flex items-center gap-2 border-b-2 border-[#FF6B00]/10 pb-2">
                     <Quote className="w-4 h-4 text-[#FF6B00]" />
                     Chairman's Address to Students &amp; Parents
                   </h3>
@@ -231,10 +231,10 @@ export const AboutPage: React.FC<AboutPageProps> = ({ initialAnchor = 'vision' }
                   ))}
                 </div>
 
-                <div className="pt-4 border-t-2 border-[#0A2540]/10 flex items-center justify-between text-xs">
+                <div className="pt-4 border-t-2 border-[#FF6B00]/10 flex items-center justify-between text-xs">
                   <div>
-                    <p className="font-bold text-[#0A2540]">{FOUNDER_CHAIRMAN_DATA.name}</p>
-                    <p className="text-[#1E40AF] font-bold">Founder Chairman, Vins Group of Engineering Colleges</p>
+                    <p className="font-bold text-slate-900">{FOUNDER_CHAIRMAN_DATA.name}</p>
+                    <p className="text-[#FF6B00] font-bold">Founder Chairman, Vins Group of Engineering Colleges</p>
                   </div>
                 </div>
               </div>
@@ -242,21 +242,21 @@ export const AboutPage: React.FC<AboutPageProps> = ({ initialAnchor = 'vision' }
           </div>
 
           {/* Section 4: Principal Desk */}
-          <div id="principal" className="bg-white rounded-3xl p-6 sm:p-8 border-2 border-[#0A2540]/15 shadow-md space-y-6 scroll-mt-28">
-            <div className="flex items-center gap-4 border-b-2 border-[#0A2540]/10 pb-4">
-              <div className="w-10 h-10 rounded-xl bg-[#1E40AF] flex items-center justify-center shadow-md">
+          <div id="principal" className="bg-white rounded-3xl p-6 sm:p-8 border-2 border-orange-100 shadow-md space-y-6 scroll-mt-28">
+            <div className="flex items-center gap-4 border-b-2 border-[#FF6B00]/10 pb-4">
+              <div className="w-10 h-10 rounded-xl bg-[#FF6B00] flex items-center justify-center shadow-md">
                 <UserCheck className="w-5 h-5 text-white" />
               </div>
               <div>
-                <h2 className="text-xl font-bold font-poppins text-[#0A2540]">Principal's Desk</h2>
-                <p className="text-xs text-[#1E40AF] font-bold">{PRINCIPAL_DESK_DATA.name}</p>
+                <h2 className="text-xl font-bold font-poppins text-slate-900">Principal's Desk</h2>
+                <p className="text-xs text-[#FF6B00] font-bold">{PRINCIPAL_DESK_DATA.name}</p>
               </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
               {/* Principal Photo with 3D Depth */}
               <div className="md:col-span-4 space-y-3">
-                <div className="img-3d-frame bg-[#0A2540] aspect-[3/4] border-2 border-[#0A2540]/15 shadow-3d-card">
+                <div className="img-3d-frame bg-[#FF6B00] aspect-[3/4] border-2 border-orange-100 shadow-3d-card">
                   <img
                     src="/images/chairman and pricipal img/principal img.jpg"
                     alt={PRINCIPAL_DESK_DATA.name}
@@ -264,27 +264,27 @@ export const AboutPage: React.FC<AboutPageProps> = ({ initialAnchor = 'vision' }
                   />
                 </div>
                 <div className="bg-white p-4 sm:p-5 rounded-2xl border border-gray-200 text-xs space-y-1 text-center shadow-3d-soft">
-                  <p className="font-bold text-base font-playfair text-[#0A2540]">{PRINCIPAL_DESK_DATA.name}</p>
+                  <p className="font-bold text-base font-playfair text-slate-900">{PRINCIPAL_DESK_DATA.name}</p>
                   <p className="text-[#FF6B00] font-bold">Principal, Vins Christian College of Engineering</p>
                 </div>
               </div>
 
               {/* Principal Message */}
               <div className="md:col-span-8 space-y-4">
-                <h3 className="font-bold font-poppins text-[#0A2540] text-sm uppercase tracking-wide border-b-2 border-[#0A2540]/10 pb-2 flex items-center gap-2">
+                <h3 className="font-bold font-poppins text-slate-900 text-sm uppercase tracking-wide border-b-2 border-[#FF6B00]/10 pb-2 flex items-center gap-2">
                   <Quote className="w-4 h-4 text-[#FF6B00]" />
                   Academic Leadership &amp; Vision Message
                 </h3>
-                <div className="space-y-3 text-xs text-[#0A2540]/85 leading-relaxed">
+                <div className="space-y-3 text-xs text-slate-700 leading-relaxed">
                   {PRINCIPAL_DESK_DATA.messageParagraphs.map((para, idx) => (
                     <p key={idx}>{para}</p>
                   ))}
                 </div>
 
-                <div className="pt-4 border-t-2 border-[#0A2540]/10 flex items-center justify-between text-xs">
+                <div className="pt-4 border-t-2 border-[#FF6B00]/10 flex items-center justify-between text-xs">
                   <div>
-                    <p className="font-bold text-[#0A2540]">{PRINCIPAL_DESK_DATA.name}</p>
-                    <p className="text-[#1E40AF] font-bold">Principal, Vins Christian College of Engineering</p>
+                    <p className="font-bold text-slate-900">{PRINCIPAL_DESK_DATA.name}</p>
+                    <p className="text-[#FF6B00] font-bold">Principal, Vins Christian College of Engineering</p>
                   </div>
                 </div>
               </div>
@@ -292,37 +292,37 @@ export const AboutPage: React.FC<AboutPageProps> = ({ initialAnchor = 'vision' }
           </div>
 
           {/* Section 5: Administrative Organogram */}
-          <div id="organogram" className="bg-white rounded-3xl p-6 sm:p-8 border-2 border-[#0A2540]/15 shadow-md space-y-6 scroll-mt-28">
-            <div className="flex items-center gap-3 border-b-2 border-[#0A2540]/10 pb-4">
-              <div className="w-10 h-10 rounded-xl bg-[#0A2540] flex items-center justify-center shadow-md">
+          <div id="organogram" className="bg-white rounded-3xl p-6 sm:p-8 border-2 border-orange-100 shadow-md space-y-6 scroll-mt-28">
+            <div className="flex items-center gap-3 border-b-2 border-[#FF6B00]/10 pb-4">
+              <div className="w-10 h-10 rounded-xl bg-[#FF6B00] flex items-center justify-center shadow-md">
                 <Network className="w-5 h-5 text-[#FF6B00]" />
               </div>
               <div>
-                <h2 className="text-xl font-bold font-poppins text-[#0A2540]">Administrative Organogram</h2>
-                <p className="text-xs text-[#1E40AF] font-semibold">Institutional Governance Hierarchy &amp; Organizational Structure</p>
+                <h2 className="text-xl font-bold font-poppins text-slate-900">Administrative Organogram</h2>
+                <p className="text-xs text-[#FF6B00] font-semibold">Institutional Governance Hierarchy &amp; Organizational Structure</p>
               </div>
             </div>
 
-            <div className="bg-blue-50 border border-[#1E40AF]/20 rounded-2xl p-6 flex flex-col items-center space-y-4">
+            <div className="bg-orange-50 border border-orange-200 rounded-2xl p-6 flex flex-col items-center space-y-4">
               {/* Top box */}
-              <div className="bg-[#0A2540] text-white font-bold text-xs rounded-2xl shadow-md text-center w-64 px-4 py-3 border border-white/15">
+              <div className="bg-[#FF6B00] text-white font-bold text-xs rounded-2xl shadow-md text-center w-64 px-4 py-3 border border-white/15">
                 Board of Management / Founder Chairman
               </div>
-              <div className="w-0.5 h-6 bg-[#0A2540]/30" />
+              <div className="w-0.5 h-6 bg-orange-200" />
               {/* Middle box */}
               <div className="bg-[#FF6B00] text-white font-bold rounded-2xl shadow-md text-center w-64 px-4 py-3 text-sm border border-white/20">
                 Principal &amp; Academic Council
               </div>
-              <div className="w-0.5 h-6 bg-[#0A2540]/30" />
+              <div className="w-0.5 h-6 bg-orange-200" />
               {/* Bottom row */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 w-full max-w-2xl">
-                <div className="bg-white border-2 border-[#1E40AF]/20 hover:border-[#FF6B00]/50 text-[#0A2540] font-bold text-xs rounded-2xl shadow-xs text-center px-3 py-3 transition-all">
+                <div className="bg-white border-2 border-orange-200 hover:border-[#FF6B00]/50 text-slate-900 font-bold text-xs rounded-2xl shadow-xs text-center px-3 py-3 transition-all">
                   Heads of Departments (HODs)
                 </div>
-                <div className="bg-white border-2 border-[#1E40AF]/20 hover:border-[#FF6B00]/50 text-[#0A2540] font-bold text-xs rounded-2xl shadow-xs text-center px-3 py-3 transition-all">
+                <div className="bg-white border-2 border-orange-200 hover:border-[#FF6B00]/50 text-slate-900 font-bold text-xs rounded-2xl shadow-xs text-center px-3 py-3 transition-all">
                   Training &amp; Placement Head
                 </div>
-                <div className="bg-white border-2 border-[#1E40AF]/20 hover:border-[#FF6B00]/50 text-[#0A2540] font-bold text-xs rounded-2xl shadow-xs text-center px-3 py-3 transition-all">
+                <div className="bg-white border-2 border-orange-200 hover:border-[#FF6B00]/50 text-slate-900 font-bold text-xs rounded-2xl shadow-xs text-center px-3 py-3 transition-all">
                   Administrative Officer &amp; Labs
                 </div>
               </div>

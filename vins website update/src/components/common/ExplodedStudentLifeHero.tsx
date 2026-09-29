@@ -420,7 +420,7 @@ export const ExplodedStudentLifeHero: React.FC<ExplodedStudentLifeHeroProps> = (
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
-              className="bg-[#0A2540] border border-amber-400/50 rounded-2xl p-4 max-w-xs w-full text-white shadow-2xl space-y-3"
+              className="bg-[#FF6B00] border border-amber-400/50 rounded-2xl p-4 max-w-xs w-full text-white shadow-2xl space-y-3"
             >
               <div className="flex items-center justify-between">
                 <span className="text-xs font-black uppercase text-amber-300 flex items-center gap-1">

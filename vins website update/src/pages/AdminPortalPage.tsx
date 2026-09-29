@@ -579,11 +579,11 @@ export const AdminPortalPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#FFFFFF] text-[#0A2540] pb-24 font-sans">
+    <div className="min-h-screen bg-[#FFFFFF] text-slate-900 pb-24 font-sans">
       
       {/* Toast Notification */}
       {successToast && (
-        <div className="fixed bottom-6 right-6 z-50 bg-[#0A2540] text-white px-5 py-3.5 rounded-2xl shadow-2xl flex items-center gap-3 border-2 border-white animate-fade-in">
+        <div className="fixed bottom-6 right-6 z-50 bg-[#FF6B00] text-white px-5 py-3.5 rounded-2xl shadow-2xl flex items-center gap-3 border-2 border-white animate-fade-in">
           <CheckCircle2 className="w-5 h-5 text-white shrink-0" />
           <span className="text-sm font-bold">{successToast}</span>
         </div>
@@ -600,9 +600,9 @@ export const AdminPortalPage: React.FC = () => {
 
       {/* Media Picker Modal */}
       {mediaPickerTarget && (
-        <div className="fixed inset-0 z-50 bg-[#0A2540]/75 backdrop-blur-xs flex items-center justify-center p-4">
-          <div className="bg-white rounded-3xl max-w-3xl w-full max-h-[85vh] flex flex-col shadow-2xl border-2 border-[#0A2540] overflow-hidden animate-fade-in">
-            <div className="px-6 py-4 bg-[#0A2540] text-white flex items-center justify-between">
+        <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4">
+          <div className="bg-white rounded-3xl max-w-3xl w-full max-h-[85vh] flex flex-col shadow-2xl border-2 border-[#FF6B00] overflow-hidden animate-fade-in">
+            <div className="px-6 py-4 bg-[#FF6B00] text-white flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <FolderOpen className="w-5 h-5 text-white" />
                 <h3 className="font-bold text-base text-white font-playfair">Select College Media Asset</h3>
@@ -615,9 +615,9 @@ export const AdminPortalPage: React.FC = () => {
               </button>
             </div>
 
-            <div className="p-4 bg-white border-b-2 border-[#0A2540]/15 flex items-center justify-between text-xs font-bold text-[#0A2540]">
+            <div className="p-4 bg-white border-b-2 border-[#FF6B00]/15 flex items-center justify-between text-xs font-bold text-slate-900">
               <span>Choose from existing high-res photos already in the portal:</span>
-              <span className="bg-[#0A2540] text-white px-3 py-1 rounded-full text-[11px]">{mediaAssets.length} Assets Available</span>
+              <span className="bg-[#FF6B00] text-white px-3 py-1 rounded-full text-[11px]">{mediaAssets.length} Assets Available</span>
             </div>
             <div className="p-4 overflow-y-auto max-h-[55vh] grid grid-cols-2 sm:grid-cols-3 gap-3">
               {mediaAssets.map((asset) => (
@@ -628,19 +628,19 @@ export const AdminPortalPage: React.FC = () => {
                     setMediaPickerTarget(null);
                     showToast(`Selected asset: ${asset.name}`);
                   }}
-                  className="bg-white border-2 border-[#0A2540]/20 hover:border-[#0A2540] rounded-2xl p-2 cursor-pointer group space-y-1.5 transition-all shadow-xs"
+                  className="bg-white border-2 border-orange-200 hover:border-[#FF6B00] rounded-2xl p-2 cursor-pointer group space-y-1.5 transition-all shadow-xs"
                 >
-                  <div className="aspect-video bg-white rounded-xl overflow-hidden border border-[#0A2540]/20">
+                  <div className="aspect-video bg-white rounded-xl overflow-hidden border border-orange-200">
                     <img src={asset.path} alt={asset.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
                   </div>
-                  <p className="text-xs font-bold text-[#0A2540] truncate">{asset.name}</p>
+                  <p className="text-xs font-bold text-slate-900 truncate">{asset.name}</p>
                 </div>
               ))}
             </div>
-            <div className="p-4 bg-white border-t-2 border-[#0A2540]/15 text-right">
+            <div className="p-4 bg-white border-t-2 border-[#FF6B00]/15 text-right">
               <button
                 onClick={() => setMediaPickerTarget(null)}
-                className="px-5 py-2 bg-[#0A2540] text-white rounded-full font-bold text-xs cursor-pointer shadow-md hover:bg-[#0A2540]/90"
+                className="px-5 py-2 bg-[#FF6B00] text-white rounded-full font-bold text-xs cursor-pointer shadow-md hover:bg-[#FF6B00]/90"
               >
                 Close Picker
               </button>
@@ -669,20 +669,20 @@ export const AdminPortalPage: React.FC = () => {
       )}
 
       {/* Top Banner Header */}
-      <div className="bg-[#0A2540] text-white py-8 border-b border-white/20 shadow-xl">
+      <div className="bg-[#FF6B00] text-white py-8 border-b border-white/20 shadow-xl">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
             
             <div className="flex items-center gap-3.5">
-              <div className="w-12 h-12 rounded-2xl bg-white text-[#0A2540] border border-white flex items-center justify-center shadow-md">
-                <ShieldCheck className="w-6 h-6 text-[#0A2540]" />
+              <div className="w-12 h-12 rounded-2xl bg-white text-slate-900 border border-white flex items-center justify-center shadow-md">
+                <ShieldCheck className="w-6 h-6 text-slate-900" />
               </div>
               <div>
                 <div className="flex items-center gap-2">
                   <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-white font-playfair">
                     VINS Administration Content Portal
                   </h1>
-                  <span className="px-3 py-0.5 text-[10px] font-black uppercase bg-white text-[#0A2540] rounded-full">
+                  <span className="px-3 py-0.5 text-[10px] font-black uppercase bg-white text-slate-900 rounded-full">
                     Authority
                   </span>
                 </div>
@@ -695,8 +695,8 @@ export const AdminPortalPage: React.FC = () => {
             <div className="flex items-center gap-2.5">
               {isAdminLoggedIn ? (
                 <>
-                  <div className="flex items-center gap-1.5 px-4 py-2 rounded-full bg-white text-[#0A2540] text-xs font-bold shadow-md">
-                    <Unlock className="w-3.5 h-3.5 text-[#0A2540]" />
+                  <div className="flex items-center gap-1.5 px-4 py-2 rounded-full bg-white text-slate-900 text-xs font-bold shadow-md">
+                    <Unlock className="w-3.5 h-3.5 text-slate-900" />
                     <span>Logged In (Super Admin)</span>
                   </div>
                   <button
@@ -706,7 +706,7 @@ export const AdminPortalPage: React.FC = () => {
                         showToast('Reset to default official college records.');
                       }
                     }}
-                    className="px-4 py-2 rounded-full bg-white/20 hover:bg-white text-white hover:text-[#0A2540] border border-white/40 text-xs font-bold transition-all flex items-center gap-1.5 cursor-pointer shadow-xs"
+                    className="px-4 py-2 rounded-full bg-white/20 hover:bg-white text-white hover:text-[#FF6B00] border border-white/40 text-xs font-bold transition-all flex items-center gap-1.5 cursor-pointer shadow-xs"
                     title="Reset modified data to factory defaults"
                   >
                     <RefreshCw className="w-3.5 h-3.5" />
@@ -717,7 +717,7 @@ export const AdminPortalPage: React.FC = () => {
                       setIsAdminLoggedIn(false);
                       showToast('Logged out of Admin Portal.');
                     }}
-                    className="px-4 py-2 rounded-full bg-white text-[#0A2540] hover:bg-white/90 text-xs font-bold transition-all cursor-pointer shadow-md"
+                    className="px-4 py-2 rounded-full bg-white text-slate-900 hover:bg-white/90 text-xs font-bold transition-all cursor-pointer shadow-md"
                   >
                     Lock Console
                   </button>
@@ -738,21 +738,21 @@ export const AdminPortalPage: React.FC = () => {
         
         {/* If Not Logged In, Show Friendly Unlock Screen with Default Option */}
         {!isAdminLoggedIn ? (
-          <div className="max-w-md mx-auto my-12 bg-white p-8 rounded-3xl border-2 border-[#0A2540] shadow-2xl text-center space-y-6">
-            <div className="w-16 h-16 bg-[#0A2540] text-white rounded-3xl mx-auto flex items-center justify-center shadow-lg">
+          <div className="max-w-md mx-auto my-12 bg-white p-8 rounded-3xl border-2 border-[#FF6B00] shadow-2xl text-center space-y-6">
+            <div className="w-16 h-16 bg-[#FF6B00] text-white rounded-3xl mx-auto flex items-center justify-center shadow-lg">
               <Lock className="w-8 h-8 text-white" />
             </div>
 
             <div className="space-y-1">
-              <h2 className="text-2xl font-bold text-[#0A2540] font-playfair">Admin Console Authorization</h2>
-              <p className="text-xs text-[#0A2540]/80 font-medium">
+              <h2 className="text-2xl font-bold text-slate-900 font-playfair">Admin Console Authorization</h2>
+              <p className="text-xs text-slate-600 font-medium">
                 Authorized staff and web administrators can manage all gallery photos, PDF documents, news circulars, and departmental lab images.
               </p>
             </div>
 
             <form onSubmit={handleLogin} className="space-y-4">
               <div className="text-left">
-                <label className="block text-xs font-bold text-[#0A2540] mb-1.5">
+                <label className="block text-xs font-bold text-slate-900 mb-1.5">
                   Admin Passcode / PIN
                 </label>
                 <input
@@ -760,27 +760,27 @@ export const AdminPortalPage: React.FC = () => {
                   value={passcode}
                   onChange={(e) => setPasscode(e.target.value)}
                   placeholder="Enter passcode (e.g. vins2026)"
-                  className="w-full bg-white border-2 border-[#0A2540]/30 rounded-2xl px-4 py-3 text-sm font-bold text-[#0A2540] placeholder-[#0A2540]/50 focus:outline-none focus:border-[#0A2540]"
+                  className="w-full bg-white border-2 border-[#FF6B00]/30 rounded-2xl px-4 py-3 text-sm font-bold text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#FF6B00]"
                 />
               </div>
 
               {authError && (
-                <p className="text-xs font-bold text-[#0A2540] text-left flex items-center gap-1">
-                  <AlertCircle className="w-3.5 h-3.5 text-[#0A2540]" />
+                <p className="text-xs font-bold text-slate-900 text-left flex items-center gap-1">
+                  <AlertCircle className="w-3.5 h-3.5 text-slate-900" />
                   {authError}
                 </p>
               )}
 
               <button
                 type="submit"
-                className="w-full py-3.5 bg-[#0A2540] hover:bg-[#0A2540]/90 text-white font-extrabold rounded-full text-sm uppercase tracking-wider transition-all shadow-lg active:scale-98 flex items-center justify-center gap-2 cursor-pointer"
+                className="w-full py-3.5 bg-[#FF6B00] hover:bg-[#FF6B00]/90 text-white font-extrabold rounded-full text-sm uppercase tracking-wider transition-all shadow-lg active:scale-98 flex items-center justify-center gap-2 cursor-pointer"
               >
                 <Unlock className="w-4 h-4 text-white" />
                 <span>Unlock Full Admin Editor</span>
               </button>
             </form>
 
-            <div className="pt-2 border-t-2 border-[#0A2540]/15 text-xs text-[#0A2540]/70 font-medium">
+            <div className="pt-2 border-t-2 border-[#FF6B00]/15 text-xs text-slate-500 font-medium">
               <span>Admin PIN default is preset for administrators. Click unlock to proceed.</span>
             </div>
           </div>
@@ -789,13 +789,13 @@ export const AdminPortalPage: React.FC = () => {
           <div className="space-y-8">
             
             {/* Quick Navigation Tabs */}
-            <div className="flex items-center gap-2 overflow-x-auto pb-2 border-b-2 border-[#0A2540]/20 scrollbar-none">
+            <div className="flex items-center gap-2 overflow-x-auto pb-2 border-b-2 border-[#FF6B00]/20 scrollbar-none">
               <button
                 onClick={() => setActiveTab('buttons')}
                 className={`px-5 py-2.5 rounded-full font-bold text-xs sm:text-sm transition-all flex items-center gap-2 whitespace-nowrap cursor-pointer ${
                   activeTab === 'buttons'
-                    ? 'bg-[#0A2540] text-white shadow-md border-2 border-[#0A2540]'
-                    : 'bg-white text-[#0A2540] hover:bg-[#0A2540]/10 border-2 border-[#0A2540]/20'
+                    ? 'bg-[#FF6B00] text-white shadow-md border-2 border-[#FF6B00]'
+                    : 'bg-white text-slate-900 hover:bg-[#FF6B00]/10 border-2 border-orange-200'
                 }`}
               >
                 <Sparkles className="w-4 h-4 text-current" />
@@ -806,8 +806,8 @@ export const AdminPortalPage: React.FC = () => {
                 onClick={() => setActiveTab('banner')}
                 className={`px-5 py-2.5 rounded-full font-bold text-xs sm:text-sm transition-all flex items-center gap-2 whitespace-nowrap cursor-pointer ${
                   activeTab === 'banner'
-                    ? 'bg-[#0A2540] text-white shadow-md border-2 border-[#0A2540]'
-                    : 'bg-white text-[#0A2540] hover:bg-[#0A2540]/10 border-2 border-[#0A2540]/20'
+                    ? 'bg-[#FF6B00] text-white shadow-md border-2 border-[#FF6B00]'
+                    : 'bg-white text-slate-900 hover:bg-[#FF6B00]/10 border-2 border-orange-200'
                 }`}
               >
                 <Megaphone className="w-4 h-4 text-current" />
@@ -818,8 +818,8 @@ export const AdminPortalPage: React.FC = () => {
                 onClick={() => setActiveTab('gallery')}
                 className={`px-5 py-2.5 rounded-full font-bold text-xs sm:text-sm transition-all flex items-center gap-2 whitespace-nowrap cursor-pointer ${
                   activeTab === 'gallery'
-                    ? 'bg-[#0A2540] text-white shadow-md border-2 border-[#0A2540]'
-                    : 'bg-white text-[#0A2540] hover:bg-[#0A2540]/10 border-2 border-[#0A2540]/20'
+                    ? 'bg-[#FF6B00] text-white shadow-md border-2 border-[#FF6B00]'
+                    : 'bg-white text-slate-900 hover:bg-[#FF6B00]/10 border-2 border-orange-200'
                 }`}
               >
                 <ImageIcon className="w-4 h-4 text-current" />
@@ -830,8 +830,8 @@ export const AdminPortalPage: React.FC = () => {
                 onClick={() => setActiveTab('documents')}
                 className={`px-5 py-2.5 rounded-full font-bold text-xs sm:text-sm transition-all flex items-center gap-2 whitespace-nowrap cursor-pointer ${
                   activeTab === 'documents'
-                    ? 'bg-[#0A2540] text-white shadow-md border-2 border-[#0A2540]'
-                    : 'bg-white text-[#0A2540] hover:bg-[#0A2540]/10 border-2 border-[#0A2540]/20'
+                    ? 'bg-[#FF6B00] text-white shadow-md border-2 border-[#FF6B00]'
+                    : 'bg-white text-slate-900 hover:bg-[#FF6B00]/10 border-2 border-orange-200'
                 }`}
               >
                 <FileText className="w-4 h-4 text-current" />
@@ -842,8 +842,8 @@ export const AdminPortalPage: React.FC = () => {
                 onClick={() => setActiveTab('events')}
                 className={`px-5 py-2.5 rounded-full font-bold text-xs sm:text-sm transition-all flex items-center gap-2 whitespace-nowrap cursor-pointer ${
                   activeTab === 'events'
-                    ? 'bg-[#0A2540] text-white shadow-md border-2 border-[#0A2540]'
-                    : 'bg-white text-[#0A2540] hover:bg-[#0A2540]/10 border-2 border-[#0A2540]/20'
+                    ? 'bg-[#FF6B00] text-white shadow-md border-2 border-[#FF6B00]'
+                    : 'bg-white text-slate-900 hover:bg-[#FF6B00]/10 border-2 border-orange-200'
                 }`}
               >
                 <Calendar className="w-4 h-4 text-current" />
@@ -854,8 +854,8 @@ export const AdminPortalPage: React.FC = () => {
                 onClick={() => setActiveTab('slides')}
                 className={`px-5 py-2.5 rounded-full font-bold text-xs sm:text-sm transition-all flex items-center gap-2 whitespace-nowrap cursor-pointer ${
                   activeTab === 'slides'
-                    ? 'bg-[#0A2540] text-white shadow-md border-2 border-[#0A2540]'
-                    : 'bg-white text-[#0A2540] hover:bg-[#0A2540]/10 border-2 border-[#0A2540]/20'
+                    ? 'bg-[#FF6B00] text-white shadow-md border-2 border-[#FF6B00]'
+                    : 'bg-white text-slate-900 hover:bg-[#FF6B00]/10 border-2 border-orange-200'
                 }`}
               >
                 <Layout className="w-4 h-4 text-current" />
@@ -866,8 +866,8 @@ export const AdminPortalPage: React.FC = () => {
                 onClick={() => setActiveTab('departments')}
                 className={`px-5 py-2.5 rounded-full font-bold text-xs sm:text-sm transition-all flex items-center gap-2 whitespace-nowrap cursor-pointer ${
                   activeTab === 'departments'
-                    ? 'bg-[#0A2540] text-white shadow-md border-2 border-[#0A2540]'
-                    : 'bg-white text-[#0A2540] hover:bg-[#0A2540]/10 border-2 border-[#0A2540]/20'
+                    ? 'bg-[#FF6B00] text-white shadow-md border-2 border-[#FF6B00]'
+                    : 'bg-white text-slate-900 hover:bg-[#FF6B00]/10 border-2 border-orange-200'
                 }`}
               >
                 <Layers className="w-4 h-4 text-current" />
@@ -878,8 +878,8 @@ export const AdminPortalPage: React.FC = () => {
                 onClick={() => setActiveTab('notifications')}
                 className={`px-5 py-2.5 rounded-full font-bold text-xs sm:text-sm transition-all flex items-center gap-2 whitespace-nowrap cursor-pointer ${
                   activeTab === 'notifications'
-                    ? 'bg-[#0A2540] text-white shadow-md border-2 border-[#0A2540]'
-                    : 'bg-white text-[#0A2540] hover:bg-[#0A2540]/10 border-2 border-[#0A2540]/20'
+                    ? 'bg-[#FF6B00] text-white shadow-md border-2 border-[#FF6B00]'
+                    : 'bg-white text-slate-900 hover:bg-[#FF6B00]/10 border-2 border-orange-200'
                 }`}
               >
                 <Megaphone className="w-4 h-4 text-current" />
@@ -902,8 +902,8 @@ export const AdminPortalPage: React.FC = () => {
                 onClick={() => setActiveTab('admissions')}
                 className={`px-5 py-2.5 rounded-full font-bold text-xs sm:text-sm transition-all flex items-center gap-2 whitespace-nowrap cursor-pointer ${
                   activeTab === 'admissions'
-                    ? 'bg-[#0A2540] text-white shadow-md border-2 border-[#0A2540]'
-                    : 'bg-white text-[#0A2540] hover:bg-[#0A2540]/10 border-2 border-[#0A2540]/20'
+                    ? 'bg-[#FF6B00] text-white shadow-md border-2 border-[#FF6B00]'
+                    : 'bg-white text-slate-900 hover:bg-[#FF6B00]/10 border-2 border-orange-200'
                 }`}
               >
                 <GraduationCap className="w-4 h-4 text-current" />
@@ -914,8 +914,8 @@ export const AdminPortalPage: React.FC = () => {
                 onClick={() => setActiveTab('contact')}
                 className={`px-5 py-2.5 rounded-full font-bold text-xs sm:text-sm transition-all flex items-center gap-2 whitespace-nowrap cursor-pointer ${
                   activeTab === 'contact'
-                    ? 'bg-[#0A2540] text-white shadow-md border-2 border-[#0A2540]'
-                    : 'bg-white text-[#0A2540] hover:bg-[#0A2540]/10 border-2 border-[#0A2540]/20'
+                    ? 'bg-[#FF6B00] text-white shadow-md border-2 border-[#FF6B00]'
+                    : 'bg-white text-slate-900 hover:bg-[#FF6B00]/10 border-2 border-orange-200'
                 }`}
               >
                 <Bell className="w-4 h-4 text-current" />
@@ -929,8 +929,8 @@ export const AdminPortalPage: React.FC = () => {
                 {/* Header row */}
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                   <div>
-                    <h3 className="font-bold text-lg text-[#0A2540] flex items-center gap-2">
-                      <GraduationCap className="w-5 h-5 text-[#0A2540]" />
+                    <h3 className="font-bold text-lg text-slate-900 flex items-center gap-2">
+                      <GraduationCap className="w-5 h-5 text-slate-900" />
                       Admission Applications
                     </h3>
                     <p className="text-xs text-slate-500 mt-0.5">Read from <code className="bg-slate-100 px-1 rounded">vins_college.admission_applications</code></p>
@@ -944,7 +944,7 @@ export const AdminPortalPage: React.FC = () => {
                         .catch(err => setAdmissionsError(err.message))
                         .finally(() => setAdmissionsLoading(false));
                     }}
-                    className="flex items-center gap-1.5 px-4 py-2 bg-[#0A2540] text-white rounded-full text-xs font-bold hover:bg-[#0A2540]/90 transition-all cursor-pointer shadow-sm"
+                    className="flex items-center gap-1.5 px-4 py-2 bg-[#FF6B00] text-white rounded-full text-xs font-bold hover:bg-[#FF6B00]/90 transition-all cursor-pointer shadow-sm"
                   >
                     <RefreshCw className="w-3.5 h-3.5" />
                     Refresh
@@ -960,13 +960,13 @@ export const AdminPortalPage: React.FC = () => {
                       placeholder="Search by name, email, phone or course..."
                       value={admissionSearch}
                       onChange={e => setAdmissionSearch(e.target.value)}
-                      className="w-full pl-8 pr-3 py-2.5 text-xs bg-white border border-slate-300 rounded-xl focus:outline-none focus:border-[#0A2540]"
+                      className="w-full pl-8 pr-3 py-2.5 text-xs bg-white border border-slate-300 rounded-xl focus:outline-none focus:border-[#FF6B00]"
                     />
                   </div>
                   <select
                     value={admissionStatusFilter}
                     onChange={e => setAdmissionStatusFilter(e.target.value)}
-                    className="px-3 py-2.5 text-xs bg-white border border-slate-300 rounded-xl focus:outline-none focus:border-[#0A2540] cursor-pointer"
+                    className="px-3 py-2.5 text-xs bg-white border border-slate-300 rounded-xl focus:outline-none focus:border-[#FF6B00] cursor-pointer"
                   >
                     <option value="all">All Statuses</option>
                     <option value="pending">Pending</option>
@@ -979,7 +979,7 @@ export const AdminPortalPage: React.FC = () => {
                 {/* Loading / Error */}
                 {admissionsLoading && (
                   <div className="flex items-center justify-center py-12">
-                    <div className="flex items-center gap-3 text-[#0A2540]">
+                    <div className="flex items-center gap-3 text-slate-900">
                       <RefreshCw className="w-5 h-5 animate-spin" />
                       <span className="text-sm font-medium">Loading admission records from MySQL...</span>
                     </div>
@@ -1004,8 +1004,8 @@ export const AdminPortalPage: React.FC = () => {
                   });
                   return (
                     <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
-                      <div className="px-5 py-3 bg-[#0A2540]/5 border-b border-slate-200 flex items-center justify-between">
-                        <span className="text-xs font-bold text-[#0A2540]">
+                      <div className="px-5 py-3 bg-orange-50/50 border-b border-slate-200 flex items-center justify-between">
+                        <span className="text-xs font-bold text-slate-900">
                           {filtered.length} of {admissions.length} Application{admissions.length !== 1 ? 's' : ''}
                         </span>
                         {admissions.length === 0 && (
@@ -1016,19 +1016,19 @@ export const AdminPortalPage: React.FC = () => {
                         <table className="w-full text-xs">
                           <thead>
                             <tr className="bg-slate-50 border-b border-slate-200">
-                              <th className="text-left py-3 px-4 font-bold text-[#0A2540] uppercase tracking-wide text-[10px]">#</th>
-                              <th className="text-left py-3 px-4 font-bold text-[#0A2540] uppercase tracking-wide text-[10px]">Full Name</th>
-                              <th className="text-left py-3 px-4 font-bold text-[#0A2540] uppercase tracking-wide text-[10px]">Email</th>
-                              <th className="text-left py-3 px-4 font-bold text-[#0A2540] uppercase tracking-wide text-[10px]">Phone</th>
-                              <th className="text-left py-3 px-4 font-bold text-[#0A2540] uppercase tracking-wide text-[10px]">Course</th>
-                              <th className="text-left py-3 px-4 font-bold text-[#0A2540] uppercase tracking-wide text-[10px]">Category</th>
-                              <th className="text-left py-3 px-4 font-bold text-[#0A2540] uppercase tracking-wide text-[10px]">Qual.</th>
-                              <th className="text-left py-3 px-4 font-bold text-[#0A2540] uppercase tracking-wide text-[10px]">%</th>
-                              <th className="text-left py-3 px-4 font-bold text-[#0A2540] uppercase tracking-wide text-[10px]">City</th>
-                              <th className="text-left py-3 px-4 font-bold text-[#0A2540] uppercase tracking-wide text-[10px]">Acad. Year</th>
-                              <th className="text-left py-3 px-4 font-bold text-[#0A2540] uppercase tracking-wide text-[10px]">Status</th>
-                              <th className="text-left py-3 px-4 font-bold text-[#0A2540] uppercase tracking-wide text-[10px]">Submitted</th>
-                              <th className="text-right py-3 px-4 font-bold text-[#0A2540] uppercase tracking-wide text-[10px]">Actions</th>
+                              <th className="text-left py-3 px-4 font-bold text-slate-900 uppercase tracking-wide text-[10px]">#</th>
+                              <th className="text-left py-3 px-4 font-bold text-slate-900 uppercase tracking-wide text-[10px]">Full Name</th>
+                              <th className="text-left py-3 px-4 font-bold text-slate-900 uppercase tracking-wide text-[10px]">Email</th>
+                              <th className="text-left py-3 px-4 font-bold text-slate-900 uppercase tracking-wide text-[10px]">Phone</th>
+                              <th className="text-left py-3 px-4 font-bold text-slate-900 uppercase tracking-wide text-[10px]">Course</th>
+                              <th className="text-left py-3 px-4 font-bold text-slate-900 uppercase tracking-wide text-[10px]">Category</th>
+                              <th className="text-left py-3 px-4 font-bold text-slate-900 uppercase tracking-wide text-[10px]">Qual.</th>
+                              <th className="text-left py-3 px-4 font-bold text-slate-900 uppercase tracking-wide text-[10px]">%</th>
+                              <th className="text-left py-3 px-4 font-bold text-slate-900 uppercase tracking-wide text-[10px]">City</th>
+                              <th className="text-left py-3 px-4 font-bold text-slate-900 uppercase tracking-wide text-[10px]">Acad. Year</th>
+                              <th className="text-left py-3 px-4 font-bold text-slate-900 uppercase tracking-wide text-[10px]">Status</th>
+                              <th className="text-left py-3 px-4 font-bold text-slate-900 uppercase tracking-wide text-[10px]">Submitted</th>
+                              <th className="text-right py-3 px-4 font-bold text-slate-900 uppercase tracking-wide text-[10px]">Actions</th>
                             </tr>
                           </thead>
                           <tbody>
@@ -1053,12 +1053,12 @@ export const AdminPortalPage: React.FC = () => {
                                 return (
                                   <tr key={item.id ?? idx} className="border-b border-slate-100 hover:bg-slate-50 transition-colors">
                                     <td className="py-3 px-4 font-bold text-slate-400">{item.id}</td>
-                                    <td className="py-3 px-4 font-semibold text-[#0A2540] whitespace-nowrap">{item.full_name || item.fullName || '—'}</td>
+                                    <td className="py-3 px-4 font-semibold text-slate-900 whitespace-nowrap">{item.full_name || item.fullName || '—'}</td>
                                     <td className="py-3 px-4 text-slate-600">{item.email || '—'}</td>
                                     <td className="py-3 px-4 text-slate-600 whitespace-nowrap">{item.phone || '—'}</td>
                                     <td className="py-3 px-4 text-slate-700 font-medium whitespace-nowrap">{item.preferred_course || item.preferredCourse || '—'}</td>
                                     <td className="py-3 px-4">
-                                      <span className="px-2 py-0.5 bg-[#0A2540]/10 text-[#0A2540] rounded-full font-bold text-[10px]">{item.category || '—'}</span>
+                                      <span className="px-2 py-0.5 bg-orange-50 text-slate-900 rounded-full font-bold text-[10px]">{item.category || '—'}</span>
                                     </td>
                                     <td className="py-3 px-4 text-slate-600">{item.qualification || '—'}</td>
                                     <td className="py-3 px-4 font-bold text-slate-700">{item.percentage ? `${item.percentage}%` : '—'}</td>
@@ -1104,8 +1104,8 @@ export const AdminPortalPage: React.FC = () => {
               <div className="space-y-5">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                   <div>
-                    <h3 className="font-bold text-lg text-[#0A2540] flex items-center gap-2">
-                      <Bell className="w-5 h-5 text-[#0A2540]" />
+                    <h3 className="font-bold text-lg text-slate-900 flex items-center gap-2">
+                      <Bell className="w-5 h-5 text-slate-900" />
                       Contact Inquiries
                     </h3>
                     <p className="text-xs text-slate-500 mt-0.5">Read from <code className="bg-slate-100 px-1 rounded">vins_college.contact_inquiries</code></p>
@@ -1119,7 +1119,7 @@ export const AdminPortalPage: React.FC = () => {
                         .catch(err => console.warn('Refresh notice:', err.message))
                         .finally(() => setContactLoading(false));
                     }}
-                    className="flex items-center gap-1.5 px-4 py-2 bg-[#0A2540] text-white rounded-full text-xs font-bold hover:bg-[#0A2540]/90 transition-all cursor-pointer shadow-sm"
+                    className="flex items-center gap-1.5 px-4 py-2 bg-[#FF6B00] text-white rounded-full text-xs font-bold hover:bg-[#FF6B00]/90 transition-all cursor-pointer shadow-sm"
                   >
                     <RefreshCw className="w-3.5 h-3.5" />
                     Refresh
@@ -1128,7 +1128,7 @@ export const AdminPortalPage: React.FC = () => {
 
                 {contactLoading && (
                   <div className="flex items-center justify-center py-12">
-                    <div className="flex items-center gap-3 text-[#0A2540]">
+                    <div className="flex items-center gap-3 text-slate-900">
                       <RefreshCw className="w-5 h-5 animate-spin" />
                       <span className="text-sm font-medium">Loading contact inquiries...</span>
                     </div>
@@ -1142,8 +1142,8 @@ export const AdminPortalPage: React.FC = () => {
                 )}
                 {!contactLoading && !contactError && (
                   <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
-                    <div className="px-5 py-3 bg-[#0A2540]/5 border-b border-slate-200">
-                      <span className="text-xs font-bold text-[#0A2540]">
+                    <div className="px-5 py-3 bg-orange-50/50 border-b border-slate-200">
+                      <span className="text-xs font-bold text-slate-900">
                         {contactInquiries.length} Inquir{contactInquiries.length !== 1 ? 'ies' : 'y'} in Database
                       </span>
                     </div>
@@ -1151,16 +1151,16 @@ export const AdminPortalPage: React.FC = () => {
                       <table className="w-full text-xs">
                         <thead>
                           <tr className="bg-slate-50 border-b border-slate-200">
-                            <th className="text-left py-3 px-4 font-bold text-[#0A2540] uppercase tracking-wide text-[10px]">#</th>
-                            <th className="text-left py-3 px-4 font-bold text-[#0A2540] uppercase tracking-wide text-[10px]">Name</th>
-                            <th className="text-left py-3 px-4 font-bold text-[#0A2540] uppercase tracking-wide text-[10px]">Email</th>
-                            <th className="text-left py-3 px-4 font-bold text-[#0A2540] uppercase tracking-wide text-[10px]">Phone</th>
-                            <th className="text-left py-3 px-4 font-bold text-[#0A2540] uppercase tracking-wide text-[10px]">Subject</th>
-                            <th className="text-left py-3 px-4 font-bold text-[#0A2540] uppercase tracking-wide text-[10px]">Message</th>
-                            <th className="text-left py-3 px-4 font-bold text-[#0A2540] uppercase tracking-wide text-[10px]">Source</th>
-                            <th className="text-left py-3 px-4 font-bold text-[#0A2540] uppercase tracking-wide text-[10px]">Status</th>
-                            <th className="text-left py-3 px-4 font-bold text-[#0A2540] uppercase tracking-wide text-[10px]">Received</th>
-                            <th className="text-right py-3 px-4 font-bold text-[#0A2540] uppercase tracking-wide text-[10px]">Actions</th>
+                            <th className="text-left py-3 px-4 font-bold text-slate-900 uppercase tracking-wide text-[10px]">#</th>
+                            <th className="text-left py-3 px-4 font-bold text-slate-900 uppercase tracking-wide text-[10px]">Name</th>
+                            <th className="text-left py-3 px-4 font-bold text-slate-900 uppercase tracking-wide text-[10px]">Email</th>
+                            <th className="text-left py-3 px-4 font-bold text-slate-900 uppercase tracking-wide text-[10px]">Phone</th>
+                            <th className="text-left py-3 px-4 font-bold text-slate-900 uppercase tracking-wide text-[10px]">Subject</th>
+                            <th className="text-left py-3 px-4 font-bold text-slate-900 uppercase tracking-wide text-[10px]">Message</th>
+                            <th className="text-left py-3 px-4 font-bold text-slate-900 uppercase tracking-wide text-[10px]">Source</th>
+                            <th className="text-left py-3 px-4 font-bold text-slate-900 uppercase tracking-wide text-[10px]">Status</th>
+                            <th className="text-left py-3 px-4 font-bold text-slate-900 uppercase tracking-wide text-[10px]">Received</th>
+                            <th className="text-right py-3 px-4 font-bold text-slate-900 uppercase tracking-wide text-[10px]">Actions</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -1185,7 +1185,7 @@ export const AdminPortalPage: React.FC = () => {
                               return (
                                 <tr key={item.id ?? idx} className="border-b border-slate-100 hover:bg-slate-50 transition-colors">
                                   <td className="py-3 px-4 font-bold text-slate-400">{item.id}</td>
-                                  <td className="py-3 px-4 font-semibold text-[#0A2540] whitespace-nowrap">{item.name || '—'}</td>
+                                  <td className="py-3 px-4 font-semibold text-slate-900 whitespace-nowrap">{item.name || '—'}</td>
                                   <td className="py-3 px-4 text-slate-600">{item.email || '—'}</td>
                                   <td className="py-3 px-4 text-slate-600 whitespace-nowrap">{item.phone || '—'}</td>
                                   <td className="py-3 px-4 text-slate-700 font-medium">{item.subject || '—'}</td>

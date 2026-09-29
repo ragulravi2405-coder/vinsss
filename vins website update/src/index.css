@@ -206,18 +206,18 @@ html {
 
 :root {
   /* Global Color Palette System */
-  --primary-color: #0A2540;      /* Deep Navy Blue */
-  --primary-hover: #1E40AF;      /* Royal Indigo */
-  --primary-dark: #061727;       /* Darkest Navy */
+  --primary-color: #FF6B00;      /* Deep Navy Blue */
+  --primary-hover: #E05E00;      /* Royal Indigo */
+  --primary-dark: #C44E00;       /* Darkest Navy */
   --accent-orange: #FF6B00;      /* Vibrant Amber Orange */
   --accent-orange-hover: #E05E00;
   
-  --status-blue: #1E40AF;        /* Live Announcements Blue */
-  --status-blue-light: #eff6ff;
+  --status-blue: #FF6B00;        /* Live Announcements Blue */
+  --status-blue-light: #FFF7ED;
 
   --canvas-white: #FFFFFF;       /* Clean White Canvas */
 
-  --text-dark: #0A2540;          /* Deep Navy typography */
+  --text-dark: #1E293B;          /* Deep Navy typography */
   --text-light: #FFFFFF;         /* Crisp White typography */
 
   /* Surface & Border System */
@@ -225,9 +225,9 @@ html {
   --glass-bg-subtle: #FFFFFF;
   --glass-bg-card: #FFFFFF;
   --glass-bg-hover: #FFFFFF;
-  --glass-bg-dark: #0A2540;
-  --glass-bg-darker: #061727;
-  --glass-bg-dark-card: #1E40AF;
+  --glass-bg-dark: #FF6B00;
+  --glass-bg-darker: #E05E00;
+  --glass-bg-dark-card: #FF7A1A;
 
   --glass-border-light: #E2E8F0;
   --glass-border-cement: #E2E8F0;
@@ -379,14 +379,14 @@ button:active {
 
 .bg-valer-dark      { background-color: #1c1c1e; }
 .bg-valer-deep      { background-color: #1c1c1e; }
-.bg-valer-dark      { background-color: #0A2540; }
-.bg-valer-deep      { background-color: #061727; }
-.bg-valer-card      { background-color: #1E40AF; }
+.bg-valer-dark      { background-color: #FF6B00; }
+.bg-valer-deep      { background-color: #E05E00; }
+.bg-valer-card      { background-color: #FF7A1A; }
 .bg-valer-green     { background-color: #FF6B00; }
 .text-valer-green   { color: #FF6B00; }
-.text-valer-dark    { color: #0A2540; }
+.text-valer-dark    { color: #1E293B; }
 .border-valer-green { border-color: #FF6B00; }
-.border-valer-dark  { border-color: #0A2540; }
+.border-valer-dark  { border-color: #FF6B00; }
 
 /* ── PRIMARY CTA & HIGHLIGHT PILL BUTTONS (Vibrant Amber Orange #FF6B00) ── */
 .btn-valer-green,
@@ -436,9 +436,9 @@ button:active {
   outline-offset: 3px;
 }
 
-/* ── SECONDARY BUTTON (Royal Indigo #1E40AF) ── */
+/* ── SECONDARY BUTTON (VINS Orange Gradient) ── */
 .btn-indigo-primary {
-  background: linear-gradient(135deg, #1E40AF 0%, #1D4ED8 100%);
+  background: linear-gradient(135deg, #FF6B00 0%, #E05E00 100%);
   color: #ffffff;
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
@@ -448,18 +448,18 @@ button:active {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  box-shadow: 0 4px 12px rgba(30, 64, 175, 0.3);
+  box-shadow: 0 4px 12px rgba(255, 107, 0, 0.3);
 }
 
 .btn-indigo-primary:hover {
-  background: linear-gradient(135deg, #2563EB 0%, #1E40AF 100%);
+  background: linear-gradient(135deg, #FF7A1A 0%, #FF6B00 100%);
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(30, 64, 175, 0.4);
+  box-shadow: 0 6px 18px rgba(255, 107, 0, 0.4);
 }
 
-/* ── NAVY PRIMARY BUTTON (#0A2540) ── */
+/* ── PRIMARY BUTTON (VINS Orange #FF6B00) ── */
 .btn-navy-primary {
-  background: #0A2540;
+  background: #FF6B00;
   color: #ffffff;
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
@@ -469,13 +469,13 @@ button:active {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  box-shadow: 0 4px 12px rgba(10, 37, 64, 0.3);
+  box-shadow: 0 4px 12px rgba(255, 107, 0, 0.3);
 }
 
 .btn-navy-primary:hover {
-  background: #1E40AF;
+  background: #E05E00;
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(10, 37, 64, 0.4);
+  box-shadow: 0 6px 18px rgba(255, 107, 0, 0.4);
 }
 
 /* ── HERO OUTLINE BUTTON ── */
@@ -517,20 +517,20 @@ button:active {
    PRIMARY INTERACTION SYSTEM — Navy & Orange Theme
    ═══════════════════════════════════════════════════════════ */
 
-/* Standard secondary button — white with Deep Navy text & Orange hover */
+/* Standard secondary button — white with Orange border & hover */
 .btn-gold {
   background: #FFFFFF;
-  color: #0A2540;
+  color: #1E293B;
   font-weight: 700;
   letter-spacing: 0.04em;
-  border: 1.5px solid #0A2540;
+  border: 1.5px solid #FF6B00;
   border-radius: 9999px;
   padding: 0.65rem 1.5rem;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
   transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 4px 16px rgba(10, 37, 64, 0.15);
+  box-shadow: 0 4px 16px rgba(255, 107, 0, 0.15);
 }
 
 .btn-gold:hover {
@@ -1361,7 +1361,7 @@ html, body, #root {
 }
 
 /* ==========================================================================
-   NAVY BLUE (#0A2540) + ROYAL INDIGO (#1E40AF) + AMBER ORANGE (#FF6B00) + WHITE THEME UTILITIES
+   VINS ORANGE (#FF6B00) + WHITE THEME UTILITIES
    ========================================================================== */
 
 /* Sparkle & Floating Particle Glow Keyframes */
@@ -1397,17 +1397,17 @@ html, body, #root {
 
 /* Card Systems */
 .card-navy {
-  background-color: #0A2540 !important;
+  background: linear-gradient(135deg, #FF6B00 0%, #E05E00 100%) !important;
   color: #FFFFFF !important;
-  border: 1.5px solid rgba(255, 255, 255, 0.2) !important;
-  box-shadow: 0 10px 30px rgba(10, 37, 64, 0.35) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 0 10px 30px rgba(255, 107, 0, 0.35) !important;
 }
 
 .card-white {
   background-color: #FFFFFF !important;
-  color: #0A2540 !important;
-  border: 1.5px solid rgba(10, 37, 64, 0.15) !important;
-  box-shadow: 0 8px 24px rgba(10, 37, 64, 0.08) !important;
+  color: #1E293B !important;
+  border: 1.5px solid rgba(255, 107, 0, 0.2) !important;
+  box-shadow: 0 8px 24px rgba(255, 107, 0, 0.08) !important;
 }
 
 .card-white:hover {
@@ -1440,8 +1440,8 @@ html, body, #root {
 
 .btn-white-solid {
   background-color: #FFFFFF !important;
-  color: #0A2540 !important;
-  border: 1.5px solid #0A2540 !important;
+  color: #FF6B00 !important;
+  border: 1.5px solid #FF6B00 !important;
   font-weight: 700 !important;
   padding: 0.7rem 1.5rem !important;
   border-radius: 9999px !important;
@@ -1449,7 +1449,7 @@ html, body, #root {
   align-items: center !important;
   gap: 0.5rem !important;
   transition: all 0.25s ease !important;
-  box-shadow: 0 4px 14px rgba(10, 37, 64, 0.1) !important;
+  box-shadow: 0 4px 14px rgba(255, 107, 0, 0.1) !important;
 }
 
 .btn-white-solid:hover {
